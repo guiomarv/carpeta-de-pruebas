@@ -1,0 +1,75 @@
+A) 
+1- Crear al inicio del fichero, la siguiente función:
+
+@function get-color($n) {   
+  $color: #fff;
+  
+  @if $reference-color == ocean {
+    $color: $_colour-grill1;
+  } @else if $reference-color == forest {
+    $color: $_colour-grill2;
+  } @else {
+    $color: $_colour-grill3;
+  }
+  
+  $color: $color * ($n / 10 + 0.5);
+  @return $color;
+}
+
+
+2- Eliminar los 'ifs' y cambiar a la llamada a la función
+
+//FOR
+@for $i from 1 through $for-elements {  
+  .course#{$i} {
+    width: 100% / $for-elements;  
+    background-color: get-color($i);    
+  }  
+}
+
+//WHILE
+width: $col-width;      
+background-color: get-color($element);        
+$element: $element + 1;
+
+// EACH
+.#{$group} {     
+    width: 100% / $n-group;            
+    background-color: get-color($el-group);  
+    text-transform: uppercase;
+}
+
+----------------------------------------------------------
+
+B) Añadir este código a cada directiva
+//FOR
+@if $i <= $for-elements / 2 { 
+	color: white;
+}
+
+//WHILE
+@if $element <= $max-elements / 2 { 
+	color: white;
+}
+
+//EACH
+@if $el-group <= $n-group / 2 { 
+	color: white;
+}
+
+
+----------------------------------------------------------
+
+C) Libre 
+
+----------------------------------------------------------
+
+
+D) Generar el código css mediante el siguiente código sass:
+
+@each $icon in delete, cancel, add {
+  .#{$icon}-icon {
+    background-image: url('/images/#{$icon}.png');
+  }
+}
+

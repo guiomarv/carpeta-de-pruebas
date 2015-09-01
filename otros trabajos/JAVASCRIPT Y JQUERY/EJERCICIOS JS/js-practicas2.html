@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Documento sin título</title>
+
+
+<script type="text/javascript">
+
+//función para dos parámetros numéricos
+
+
+
+var numero1=prompt("introduzca un número");
+
+var numero2=prompt("introduzca otro número");
+
+
+
+numero1=Number(numero1);
+numero2=Number(numero2);
+
+
+
+
+function cotejar(numero1,numero2)
+
+
+{
+    if(numero1>numero2) {
+		
+	alert("el valor del primero es mayor quel segundo");	
+		
+		return;
+	}
+	
+	if ((numero1<numero2)|| (numero1=numero2)) {
+		
+		return numero1+numero2;
+		
+		
+	}
+	
+	
+}
+
+
+var result=cotejar(numero1,numero2);
+
+alert(result);
+
+
+
+</script>
+</head>
+
+
+
+
+
+<body>
+
+
+
+<p> 
+Funciones: 
+
+Se llaman con el nombre de la función y entre paréntesis el valor que usa. Se recogen declarando una variable nueva. Lo introducido mediante la función prompt es texto (string) por defecto, hay que 
+transformarlo en número mediante la función Number. 
+
+
+</p>
+
+</body>
+</html>

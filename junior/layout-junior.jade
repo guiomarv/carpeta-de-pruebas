@@ -1,0 +1,34 @@
+doctype
+html
+	head
+	meta(charset='utf-8')
+	title Junior
+	link(rel="stylesheet", href="css/estilos.css")    
+	body#portada
+		block content
+			div#inner
+				include /partials/header	
+				//CONTENIDO 
+				div.contenedor.estirar					
+					//caja navegación
+					div.border_top
+						div#noidentificado
+							p Entra en 
+								strong nuestro club
+							a(href="#").boton Regístrate
+							p ¿eres miembro?
+								a(href="#") Identifícate
+								
+					//CONTENEDOR MINISITES
+					div.cuerpo.estirar
+						div.menu.estirar
+							ul.menu.navegacion
+								li
+									a(href="#") JAJAPANDA
+								li
+									a(href="#") GALERÍA
+
+
+		block footer
+	
+

@@ -1,0 +1,18 @@
+Realizar ejemplos similares sobre nuevos elementos.
+
+A) Comentar el primer full-container de blocks.html y descomentar el segundo.  Dando lugar a una nuevo contenido en la página de Blocks
+
+B) Crear un bloque '@mixin' con todas las propiedades comunes de los .blockX que se encuentran al final del fichero block.scss. Incorporarlo en cada .blockX para que el resultado obtenido sea el mismo al actual.
+
+C) Crear un bloque '@media query' cuya condición sea que sí la ventana es redimensionada a un tamaño menor al full-container, este desaparece (mediante display:none);
+
+D) Trabajo con @extend:
+	- .block1: Añadir background-color: white
+	- .block2: Extender de .block1; Añadir font-weight: bold;
+	- .block3: Extender de .block2; Añadir font-size: 40px;
+	- .block4: Extender de .block3; font-family: arial;
+
+	Al extender en cadena/cascada. Los @include y @media anteriores solo serán necesarios en .block1
+
+E) Trabajo con herencia abstracta (placeholder)
+	- Incluir propiedades de box-sizing en un bloque a extender mediante placeholder. 

@@ -1,0 +1,36 @@
+@import "modules/colours";  //Getting the data from _colours.scss
+@import "modules/fonts";    //Getting the data from _fonts.scss
+
+
+/* vars declaration */
+$_title_container-height: 25px;
+$_main_height: 480px;
+$_title_container-width: 950px;
+$_title_container-small-width: $_container-width/4;
+$_title_container-gutter: 20px;
+
+
+/* start style declaration */
+.title-container {
+  position: fixed;  
+  height: $_title_container-height;                //height of the element, plus, paddins containers on it
+  width: $_title_container-width + ($_title_container-gutter * 4);                  //width of the element, plus, paddins of left and right containers
+  margin: $_title_container-gutter;
+  
+  /* Center the elements */
+  $half-width-container: $_title_container-width / 2 + $_title_container-gutter * 3;         //half width of the element, plus, half paddins of left and right containers
+  left: calc(50% - #{$half-width-container});      
+  left: -webkit-calc(50 - #{$half-width-container});  
+  left: -moz-calc(50% - #{$half-width-container});  
+  
+  $half-top-container: ($_main_height/2 + $_title_container-gutter * 2) + $_title_container-height;         //half height of the element, plus, paddings of elements
+  top: calc(50% - #{$half-top-container});      
+  top: -webkit-calc(50 - #{$half-top-container});  
+  top: -moz-calc(50% - #{$half-top-container});  
+  
+  background-color: $_colour1;
+  border: 2px solid $_colour3; 
+  
+  color: $_colour2;
+  text-align: center;
+}

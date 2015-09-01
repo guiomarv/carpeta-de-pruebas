@@ -1,0 +1,120 @@
+/* vars declaration */
+/* start style declaration */
+.full-container {
+  position: fixed;
+  height: 520px;
+  width: 1030px;
+  margin: 20px;
+  /* Center the elements */
+  left: calc(50% - 535px);
+  left: -webkit-calc(50 - 535px);
+  left: -moz-calc(50% - 535px);
+  top: calc(50% - 280px);
+  top: -webkit-calc(50 - 280px);
+  top: -moz-calc(50% - 280px);
+  background-color: transparent;
+  border: 2px solid #003133;
+  text-align: center; }
+  @media screen and (max-width: 1030px) {
+    .full-container {
+      display: none; } }
+
+/* vars declaration */
+/* start style declaration */
+.title-container {
+  position: fixed;
+  height: 25px;
+  width: 1030px;
+  margin: 20px;
+  /* Center the elements */
+  left: calc(50% - 535px);
+  left: -webkit-calc(50 - 535px);
+  left: -moz-calc(50% - 535px);
+  top: calc(50% - 305px);
+  top: -webkit-calc(50 - 305px);
+  top: -moz-calc(50% - 305px);
+  background-color: black;
+  border: 2px solid #003133;
+  color: #fff;
+  text-align: center; }
+
+.row {
+  height: 33.33333%;
+  border-bottom: 2px solid #003133; }
+
+.row:last-child {
+  border-bottom: none; }
+
+.row > div {
+  float: left;
+  height: 100%; }
+
+.course1 {
+  width: 20%;
+  background-color: #5f7961; }
+
+.course2 {
+  width: 20%;
+  background-color: #6f8d71; }
+
+.course3 {
+  width: 20%;
+  background-color: #7fa181; }
+
+.course4 {
+  width: 20%;
+  background-color: #8fb591; }
+
+.course5 {
+  width: 20%;
+  background-color: #9fcaa2; }
+
+.level1 {
+  width: 4.7619%;
+  background-color: #5f7961; }
+
+.level2 {
+  width: 9.52381%;
+  background-color: #6f8d71; }
+
+.level3 {
+  width: 14.28571%;
+  background-color: #7fa181; }
+
+.level4 {
+  width: 19.04762%;
+  background-color: #8fb591; }
+
+.level5 {
+  width: 23.80952%;
+  background-color: #9fcaa2; }
+
+.level6 {
+  width: 28.57143%;
+  background-color: #aedeb2; }
+
+.basic:before {
+  content: "basic"; }
+
+.basic {
+  width: 33.33333%;
+  background-color: #5f7961;
+  text-transform: uppercase; }
+
+.independent:before {
+  content: "independent"; }
+
+.independent {
+  width: 33.33333%;
+  background-color: #6f8d71;
+  text-transform: uppercase; }
+
+.proficient:before {
+  content: "proficient"; }
+
+.proficient {
+  width: 33.33333%;
+  background-color: #7fa181;
+  text-transform: uppercase; }
+
+/*# sourceMappingURL=trace_directives.css.map */

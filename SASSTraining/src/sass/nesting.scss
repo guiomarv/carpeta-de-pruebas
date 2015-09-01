@@ -1,0 +1,101 @@
+@import "modules/all";  //Getting all modules
+@import "partials/all";  //Getting all partials
+
+
+.row1, .row2, .row3, .row4 {  
+  color: $_colour2;
+  background: $_colour1;
+  height: $_container-height / 4 + $_container-gutter / 2;
+  cursor: pointer;
+  @import "modules/list";     //NESTED @IMPORT    //Add the style of the component 'list'
+}
+
+
+.row1, .row3 {            //Style of odd rows
+  background: $_colour4;  
+  
+  .list-overflow {        //NESTING
+    color: $_colour1;
+  } 
+  
+  &:hover {               //REFERENCING PARENTAL SELECTOR
+    background: $_colour4 * 0.5;
+  }   
+}
+
+
+
+.row2, .row4 {            //Style of even rows
+  background: $_colour3;
+  
+  .list-overflow {        //NESTING
+    color: $_colour2;   
+  }
+  
+  &:hover {               //REFERENCING PARENTAL SELECTOR
+    background: $_colour3 / 0.5;
+  }
+}
+
+
+
+.row1 b {                    //First row has different style for bold text
+  font: 30px/32px fantasy {  //NESTED PROPERTIES
+    weight: bold;
+  }
+}
+
+
+
+
+
+
+
+/*-------------------------- EXERCISE --------------------*/
+
+
+
+@mixin colorfondo ($numero-caja){
+  $colorfondo:null;
+  //si es par
+    @if ($numero-caja == 1 or $numero-caja == 2){
+        $colorfondo:$_colour3;
+        }
+    @else{
+        $colorfondo:$_colour4;
+        }
+  background-color:$colorfondo;
+}
+  
+
+.col{
+  height: 100%;
+  width: 50%;
+  float: left;
+
+    &:hover{
+    color: $_colour2;
+    }
+}
+
+.line {
+  height: 50%;
+  width: 100%;
+    &:last-child .col:first-child, &:first-child .col:last-child{
+       @include colorfondo(3);
+    }
+    &:first-child .col:first-child, &:last-child .col:last-child{
+       @include colorfondo(1);
+    }
+
+     i {
+      border{
+        width:   1px;
+        color: $_colour1;
+        style:solid;
+        }
+      } 
+}
+
+
+

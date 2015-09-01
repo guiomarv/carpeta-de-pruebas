@@ -1,0 +1,1172 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es-es" xml:lang="es-es">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Canal Premium</title>
+
+<link rel="shortcut icon" href="/staticFiles/PUBstaticFiles/imgs/site/iconos/favicon.ico">
+
+<link href="/staticFiles/PUBstaticFiles/css/base.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="/staticFiles/PUBstaticFiles/css/box.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="/staticFiles/PUBstaticFiles/css/modulos.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="/staticFiles/PUBstaticFiles/css/comun.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="/staticFiles/PUBstaticFiles/css/modulos02.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="/staticFiles/PUBstaticFiles/css/colorbox.css" rel="stylesheet" type="text/css" media="screen" />
+
+
+	<link href="/staticFiles/PUBstaticFiles/css/premium_home_screenb.css" rel="stylesheet" type="text/css" media="screen" />
+	
+<link href="/staticFiles/PUBstaticFiles/css/js.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="/staticFiles/PUBstaticFiles/css/lightbox-vap.css" rel="stylesheet" type="text/css" media="screen" />
+
+
+<link href="/vgn-ext-templating/common/styles/vgn-ext-templating.css" rel="stylesheet" type="text/css"></link>
+
+
+<script type="text/javascript" src="/staticFiles/PUBstaticFiles/js/funciones.js"></script>
+<script type="text/javascript" src="/staticFiles/PUBstaticFiles/js/jquery-1.3.1.js"></script>
+<script type="text/javascript" src="/staticFiles/PUBstaticFiles/js/premium-jquery-base.js"></script>
+<script type="text/javascript" src="/staticFiles/PUBstaticFiles/js/jquery.colorbox.js"></script>
+
+
+<!--[if lt IE 7]>
+<link rel="stylesheet" type="text/css" href="/staticFiles/PUBstaticFiles/css/ie6.css" media="screen" />
+<script src="/staticFiles/PUBstaticFiles/js/ie7/IE7.js" type="text/javascript"></script>
+<![endif]-->
+
+
+<script>
+
+
+    /* getElementByClass
+    /**********************/
+
+    var allHTMLTags = new Array();
+
+  function getElementByClass1(theClass,secondClass) {
+
+    //Create Array of All HTML Tags
+    var allHTMLTags=document.getElementsByTagName("div");
+    z=0;
+    x=0;
+    y=0;
+    //Loop through all tags using a for loop
+    for (i=0; i<allHTMLTags.length; i++) {
+
+    //Get all tags with the specified class name.
+          if (allHTMLTags[i].className==theClass) {
+           
+	      if(z==1){
+                allHTMLTags[i].style.width="17%";
+                allHTMLTags[i].style.float="right";
+                
+         
+              }        
+
+
+              if (z==0){
+		allHTMLTags[i].style.float="left";
+		allHTMLTags[i].style.width="70%";
+                allHTMLTags[i+1].style.marginRight="0px";
+                
+	       
+          
+               }
+               if(z==6){
+		
+		        allHTMLTags[i].style.width="28%";
+              alert(allHTMLTags[i].style.width);
+	           
+          
+               }
+               z++;
+
+
+
+           }
+           
+           if(allHTMLTags[i].className==secondClass) {
+           	if(y==3){
+           		
+           		allHTMLTags[i-2].style.width="28%";
+           		
+           	}
+           	y++;
+           	allHTMLTags[i].style.height="30em";
+           
+           				
+           	           	
+          }
+    }
+  }
+</script>
+
+
+</head>
+
+<body>
+<script type="text/javascript" src="/staticFiles/PUBstaticFiles/js_pone/s_code.js"></script>
+<noscript> No JavaScript</noscript>
+	<!-- contenedor -->
+	<div id="contenedor">
+		<!-- contenido superior -->
+		<div id="contenidosup">
+
+			<!-- CABECERA -->
+	    <div id="cabecera-home">
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+function cambioidioma() {
+   var c=document.getElementById("select_idioma");
+   var i=c.options.selectedIndex;
+   if(i==-1) return;
+   var v=c.options[i].value;
+   document.location.href='http://www.canalpremium.telefonica.es:80/portal/site/inicio?GAREASONCODE=-1&GARESOURCEID=canalpremiumssf0x122&GAURI=http://www.canalpremium.telefonica.es/&Reason=-1&APPID=canalpremiumssf0x122&URI=http://www.canalpremium.telefonica.es/&lang='+v;
+}
+</script>
+
+<h1><a href="www.telefonica.es" title="Telefónica" target="_blank" class="imgleft" accesskey="T" tabindex="1" ></a></h1>
+
+
+<div class="capasup">
+	<div class="capaenlacehome">
+		<a class="capaenlacehomewww" href="http://www.telefonica.es" target="_blank" title="Telefónica" tabindex="2"><span>www.telefonica.es</span></a>
+	</div>
+
+	<div class="capacambioidioma">
+		<ul class="enlacestop-home solo-home">
+			<li class="selector-idioma-home">
+				<form action="." method="get" id="selector-idioma-home" name="idioma" class="modulo-065 selector-idioma-home" >
+					<label for="select_idioma" style="color:#FFF;" title="Idioma">Idioma:
+						<SELECT id="select_idioma" NAME="select_idioma" onchange="cambioidioma();">
+							
+									<OPTION VALUE="es_ES" SELECTED>Castellano</OPTION>
+									
+									<OPTION VALUE="ca_ES" >Català</OPTION>
+									
+						</SELECT>
+							
+					</label>
+						<!--<input type="image" id="ico_idioma" title="null" alt="null"  src="/portal/templates/template0008/TWQWYaeUcYcTXSfTdSfVceRQVSVeSUaQ/actualizar.gif" style="padding-left:140px;margin-left:5px;margin-top:-11px;*margin-top:-23px;" />-->
+						<button type="submit" id="ico_idioma" title="null" class="idioma-publico-boton">null</button>
+				</form>
+			</li>
+		</ul>
+	</div>
+	
+	<div class="float-right modul0-081" style="margin-right:1.45em;">
+		<a href="http://www.telefonica.es" target="_blank" title="Telefónica">
+			<img src="/staticFiles/PUBstaticFiles/imgs/home/logo_telefonica_cm.gif" id="logo_telefonica_cm" />
+		</a>
+	</div>
+	<br /><br /><br /><br /><br />
+	<div class="float-left margin-top-10">
+		<a href="#" title="Canal Premium. Tecla de Acceso = '1'" accesskey="1" tabindex="4" class="home"><img src="/staticFiles/PUBstaticFiles/imgs/home/blank.gif" width="257" height="29" /></a>
+	</div> 
+</div>
+
+<!--El boton solo es visible si no esta activado javascript-->
+<script>
+	document.getElementById("ico_idioma").style.display = "none";
+</script>
+			</div>
+			<!-- FIN.CABECERA -->
+                
+    <!-- CHIVATO PREMIUM ONE -->
+
+    <!-- FIN.CHIVATO PREMIUM ONE -->
+
+		<!-- Eliminado box login-->
+
+
+
+		</div>
+		<!-- Fin.contenido superior -->
+	<!-- <br class="clear" /> -->
+	</div>
+	<!-- fin.contenedor -->
+
+
+		<!--Inferior inicio-->
+		<div id="contenidoinf">
+
+		<!--Inferior fin-->
+
+				<!-- Begin pageContent -->
+				
+
+				
+
+				
+
+
+
+    
+    
+    
+
+		
+	
+<div style="width:auto">
+
+
+
+<div class="vgn-acpd-portlet" style="width:761.0px;float:left;">
+<div style="margin-right: 10px;">
+
+			    
+    
+
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			
+			<!-- ZONA DONDE SE EMBEBE EL VIDEO -->
+			<div class="cajaflash"> 
+			
+			
+			<!--[if !IE]> -->
+   					<object type="application/x-shockwave-flash" data="/staticFiles/PUBstaticFiles/Banners/CarruselSWF/carrusel-home.swf;pvf204e976e6b0d0a8" height="241" width="755">
+			<!-- <![endif]-->
+			<!--[if IE]>
+   					<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" 
+					codebase="https://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" 
+      				height="241" width="755">
+      				<param name="movie" value="/staticFiles/PUBstaticFiles/Banners/CarruselSWF/carrusel-home.swf"/> 
+			<!--><!--dgx-->
+     				<param name="quality" value="high"/>
+				<param name="allowFullScreen" value="true"/> 
+				<param name="wmode" value="transparent"/>
+				<param name="play" value="false"/>
+				<param name="loop" value="false"/>
+				<param name="allowscriptaccess" value="always"/>
+      				<p>Canal Premium</p>
+   				</object>
+<!-- <![endif]-->
+			</div> 
+		
+			
+
+	 	<span class="descripcion"><a style="margin:50%;" href="/portal/site/inicio/menuitem.075a25a0ea87e596b94fa410fe01b4a0/?vgnextoid=e9aee9ce9ba9c210VgnVCM10000024e5420aRCRD" title="Ver descripción del elemento multimedia" class="descripcion">[D]</a></span>
+
+	
+
+  
+  
+
+
+
+	
+    
+
+
+
+</div>
+</div>
+
+	          
+
+
+
+<div class="vgn-acpd-portlet" style="width:221.0px;float:left;">
+<div style="">
+
+			    
+    
+
+
+  
+    
+
+
+
+
+
+
+
+<style>
+
+.white_content {
+	display: block;
+	position: absolute;
+	top: 15%;
+	left: 15%;
+	width: 70%;
+	height: 70%;
+	z-index:990;
+}
+
+.black_overlay {
+	display: block;
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 1276px;
+	height: 1000px;
+	background-color: black;
+	z-index:980;
+	-moz-opacity: 0.8;
+	opacity:.80;
+	filter: alpha(opacity=80);
+}
+
+
+.contenidoLightbox {
+	padding-top: 16px;
+	padding-bottom: 16px;  
+	background-color: white; 
+}
+
+html>body .contenidoLightbox {width: 99.9%;}
+
+#cboxTopLeft {
+	float: left;
+}
+
+#cboxTopCenter {
+	float: left;
+	width: 98.85%;
+}
+
+#cboxTopRight {
+	float: left;
+}
+
+#cboxBottomLeft {
+	float: left;
+}
+
+#cboxBottomCenter {
+	float: left;
+	width: 98.85%;
+}
+
+#cboxBottomRight {
+	float: left;
+}
+
+</style>
+
+
+
+
+<div id="boxlogin" style="float:right;">
+
+	<div id="boxtabs">
+		
+		<div class="boxtab_cp" style="display: block;">
+		
+			<div class="tab">	
+				
+				<div class="imgstab">
+					<img src="/staticFiles/PUBstaticFiles/imgs/home/login/pest_cp_on.gif" alt="Canal Premium" title="Canal Premium" />
+				</div>			
+				
+				<div class="imgstab2" style="display:none;">
+					<a href="
+						
+						/portal/site/inicio/template.PAGE/menuitem.2cdca461eb5c15dbcf86ae4b495264ca/;jsessionid=rr7sT7GKL2Ps92vvL1yhgmFjYbLmzL9NY76SvKjVvD1TNXc1KBtJ!-1002993732?javax.portlet.tpst=7dd01cf60eb642f2c3a058e30f01b4a0&javax.portlet.prp_7dd01cf60eb642f2c3a058e30f01b4a0=action%3DactionAutenticarUsuario&javax.portlet.begCacheTok=com.vignette.cachetoken&javax.portlet.endCacheTok=com.vignette.cachetoken">
+						<img src="/staticFiles/PUBstaticFiles/imgs/home/login/pest_pone_off.gif" alt="Premium One" title="Premium One" /> 
+					</a>
+				</div>
+				
+				<!-- Capa de los cuadros del formulario -->
+				<div class="formlog">
+				
+					<form name="formulario" class="loginPrincipalAdministrador" method="post"
+						action="
+									
+								/portal/site/inicio/template.MAXIMIZE/action.process/;jsessionid=rr7sT7GKL2Ps92vvL1yhgmFjYbLmzL9NY76SvKjVvD1TNXc1KBtJ!-1002993732?javax.portlet.action=true&javax.portlet.tpst=7dd01cf60eb642f2c3a058e30f01b4a0_ws_MX&javax.portlet.prp_7dd01cf60eb642f2c3a058e30f01b4a0=action%3DactionAutenticarAdministrador&javax.portlet.begCacheTok=com.vignette.cachetoken&javax.portlet.endCacheTok=com.vignette.cachetoken">
+					
+						<fieldset title="Login para Administradores">
+							<label for="usr_name">Usuario</label>
+					 		<input class="cmpuser" type="text" tabindex="8" id="usr_name" name="usr_name" value="" />
+							<label for="pgeac">Contrase&ntilde;a</label>
+							<input type="password" tabindex="9" class="cmppass" id="pgeac" name="pgeac" value="" />
+						</fieldset>
+						
+						<div class = "btnentrar">					
+							<input class = "btnentrar" type="image"  src="/staticFiles/PUBstaticFiles/images/entrar.gif" title="Entrar" tabindex="10" name="btnAceptar" id="btnAceptar" value="btnAceptar" />										
+						</div>
+						<!--[if IE 6]>
+							<div style="display:none;">
+								<input type="text" id="detectarIE6" name="detectarIE6" value="IE6" />
+							</div>	
+						<![endif]-->
+					
+					</form>
+					
+				</div>
+				
+			
+				<div class="linkblanco" >
+				
+					<p>
+						<a class="textoblancoxtra" href='/portal/site/inicio/olvido-clave-administrador' title='¿Olvidó su contraseña?'>
+								¿Olvidó su contraseña?
+						</a>
+					</p>
+				
+					<p>
+						<a class="textoblancoxtra" href='/portal/site/inicio/nuevo-usuario-administrador' title='Alta en Canal Premium'>
+								Alta en Canal Premium
+						</a>
+					</p>
+					<p>
+						<a class="textoblancoxtra" href='/portal/site/inicio/zona-segura-administrador' title='Zona segura' >
+								Zona segura
+						</a>
+					</p>					
+					
+					
+					
+				</div>		
+			
+				
+			</div>
+
+		</div>
+		
+	</div>
+	
+</div>
+
+  
+  
+
+
+
+	
+    
+
+
+
+</div>
+</div>
+
+	          
+
+</div>
+<div style="clear:both;"></div>
+
+
+<div style="width:auto">
+
+
+
+<div class="vgn-acpd-portlet" style="width:268.0px;float:left;">
+<div style="margin-right: 10px;">
+
+			    
+    
+
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+	
+	
+	<!-- Se comenta este div porque se incluye este portlet aislado en un panel, de modo que controlamos su ancho a traves del ancho del panel -->
+     <!-- <div class="columna26 left margin-right-8"> -->
+
+     <div class="box-blancosobregris"><div><div><div><div><div>
+        <div class="box-contenido heightBoxIndex">
+            <h1>Nuevo en Premium</h1>
+            <div class="rayaseparador"></div>
+            <div class="imgnone" title="Evolución de la facturación"><img src="/staticFiles/CPstaticfiles/Facturacion/HomeNovedadesCPEvolucionFacturacion.jpg"  alt="Evolución de la facturación" width="237" height="62" /></div>
+            <p class="texto">
+            	<a href="/portal/site/inicio/menuitem.3d2d0c1db9eae92ccf86ae4b495264ca/?vgnextoid=e9096a54e46b3310VgnVCM10000024e5420aRCRD" class="texto" title="En solo 2 clics dispone de una visión global de las facturas de los últimos 6 meses. " tabindex="">En solo 2 clics dispone de una visión global de las facturas de los últimos 6 meses. </a>
+            </p> 
+
+			
+		
+			<div class="rayaseparador"></div>
+            <p><a href="/portal/site/inicio/menuitem.3d2d0c1db9eae92ccf86ae4b495264ca/?vgnextoid=892da965c6566210VgnVCM100000942546acRCRD" class="textoinfo" title="La sección “ Mi panel” le permite visualizar en una página el estado de sus gestiones habituales.">La sección “ Mi panel” le permite visualizar en una página el estado de sus gestiones habituales.</a></p>
+		
+		        </div>
+    </div></div></div></div></div></div>
+    <!-- </div> -->
+
+  
+  
+
+
+
+	
+    
+
+
+
+</div>
+</div>
+
+	          
+
+
+
+<div class="vgn-acpd-portlet" style="width:254.0px;float:left;">
+<div style="margin-right: 10px;">
+
+			    
+    
+
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+	
+  <!-- Se comenta este div porque se incluye este portlet aislado en un panel, de modo que controlamos su ancho a traves del ancho del panel -->
+  <!-- <div class="columna25 left margin-right-8"> -->
+    <div class="box-blancosobregris"><div><div><div><div><div>
+        <div class="box-contenido heightBoxIndex">
+            <h1>Catálogo</h1>	
+
+			<div class="rayaseparador"></div>          
+            <div class="imgthumb"><img src="/staticFiles/CPstaticfiles/Imagenes/HomePublica/CP_55x70_Imagen_CatalogoSmartphones.jpg" title="Smartphones" alt="Smartphones" width="55" height="70" /></div><br />
+            <span class="textogrisdestacado">Su oficina en la palma de la mano</span>
+            <p class="texto"><a href="/portal/site/inicio/menuitem.3d2d0c1db9eae92ccf86ae4b495264ca/?vgnextoid=232ae73abb290310VgnVCM20000027e5420aRCRD" class="texto" tabindex="" title="¿Por qué conformarse con un móvil cuando puede tener un Smartphone?">¿Por qué conformarse con un móvil cuando puede tener un Smartphone?</a></p> 
+            <br class="clear" />
+		
+			<div class="rayaseparador"></div>          
+            <div class="imgthumb"><img src="/staticFiles/CPstaticfiles/Imagenes/HomePublica/CP_55x70_IMG_HomePublica_MotorolaTK30.jpg" title="Promoción Motorola TK30" alt="Promoción Motorola TK30" width="55" height="70" /></div><br />
+            <span class="textogrisdestacado">Promoción Motorola TK30 por 149 €</span>
+            <p class="texto"><a href="/portal/site/inicio/menuitem.3d2d0c1db9eae92ccf86ae4b495264ca/?vgnextoid=ec1ba965c6566210VgnVCM100000942546acRCRD" class="texto" tabindex="" title="Que nada le distraiga mientras conduce.">Que nada le distraiga mientras conduce.</a></p> 
+            <br class="clear" />
+		
+			<div class="rayaseparador"></div>          
+            <div class="imgthumb"><img src="/staticFiles/CPstaticfiles/Imagenes/HomePublica/CP_55x70_BBPearl9105.jpg" title="BlackBerry® Pearl TM 9105 " alt="BlackBerry® Pearl TM 9105 " width="55" height="70" /></div><br />
+            <span class="textogrisdestacado">Novedades catálogo</span>
+            <p class="texto"><a href="/portal/site/inicio/menuitem.3d2d0c1db9eae92ccf86ae4b495264ca/?vgnextoid=0faca965c6566210VgnVCM100000942546acRCRD" class="texto" tabindex="" title="Motorola Fire 44€ - Samsung Galaxy Mini a 39€.">Motorola Fire 44€ - Samsung Galaxy Mini a 39€.</a></p> 
+            <br class="clear" />
+		
+		</div>
+    </div></div></div></div></div></div>
+  <!-- </div> -->
+		
+		
+
+  
+  
+
+
+
+	
+    
+
+
+
+</div>
+</div>
+
+	          
+
+
+
+<div class="vgn-acpd-portlet" style="width:195.0px;float:left;">
+<div style="margin-right: 10px;">
+
+			    
+    
+
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+	<!-- Se comenta este div porque se incluye este portlet aislado en un panel, de modo que controlamos su ancho a traves del ancho del panel -->
+    <!--<div class="columna19 left margin-right-8"> -->
+     <div class="box-blancosobregris"><div><div><div><div><div>
+        <div class="box-contenido heightBoxIndex">
+            <h1>Noticias</h1>
+			<div class="rayaseparador"></div>
+			<div  id="myContent">
+				
+					<ul>
+						<li class="listaopciones"><span class="textogrisdestacado">05/12/2011</span></li>
+					</ul>
+					<p class="texto">
+						<a href="/portal/site/inicio/menuitem.3d2d0c1db9eae92ccf86ae4b495264ca/?vgnextoid=5b7ee3c5ddd04310VgnVCM10000024e5420aRCRD" class="texto" tabindex="" title="Telefónica y otras doce operadoras lanza el consorcio OVCC">Telefónica y otras doce operadoras lanza el consorcio OVCC</a>
+					</p>
+					
+						<div class="rayaseparadornot"></div>
+					
+					<ul>
+						<li class="listaopciones"><span class="textogrisdestacado">02/12/2011</span></li>
+					</ul>
+					<p class="texto">
+						<a href="/portal/site/inicio/menuitem.3d2d0c1db9eae92ccf86ae4b495264ca/?vgnextoid=bdc3b030d9e04310VgnVCM10000024e5420aRCRD" class="texto" tabindex="" title="Global Delivery Network, Telefónica presenta el vídeo del futuro">Global Delivery Network, Telefónica presenta el vídeo del futuro</a>
+					</p>
+					
+						<div class="rayaseparadornot"></div>
+					
+					<ul>
+						<li class="listaopciones"><span class="textogrisdestacado">01/12/2011</span></li>
+					</ul>
+					<p class="texto">
+						<a href="/portal/site/inicio/menuitem.3d2d0c1db9eae92ccf86ae4b495264ca/?vgnextoid=a31db3943f4f3310VgnVCM10000024e5420aRCRD" class="texto" tabindex="" title="Cloud Computing: la revolución ha llegado">Cloud Computing: la revolución ha llegado</a>
+					</p>
+					
+						<div class="rayaseparadornot"></div>
+					
+					<ul>
+						<li class="listaopciones"><span class="textogrisdestacado">17/11/2011</span></li>
+					</ul>
+					<p class="texto">
+						<a href="/portal/site/inicio/menuitem.3d2d0c1db9eae92ccf86ae4b495264ca/?vgnextoid=906e519bcbe73310VgnVCM10000024e5420aRCRD" class="texto" tabindex="" title="Trend Tropics: el interés de la información compartida.">Trend Tropics: el interés de la información compartida.</a>
+					</p>
+					
+						<div class="rayaseparadornot"></div>
+					
+					<ul>
+						<li class="listaopciones"><span class="textogrisdestacado">16/11/2011</span></li>
+					</ul>
+					<p class="texto">
+						<a href="/portal/site/inicio/menuitem.3d2d0c1db9eae92ccf86ae4b495264ca/?vgnextoid=79c1c2ccfde73310VgnVCM10000024e5420aRCRD" class="texto" tabindex="" title="Caso de éxito: C&A. Sistema inmótico de telegestión de iluminación y...">Caso de éxito: C&A. Sistema inmótico de telegestión de iluminación y...</a>
+					</p>
+					
+						<div class="rayaseparadornot"></div>
+					
+					<ul>
+						<li class="listaopciones"><span class="textogrisdestacado">15/11/2011</span></li>
+					</ul>
+					<p class="texto">
+						<a href="/portal/site/inicio/menuitem.3d2d0c1db9eae92ccf86ae4b495264ca/?vgnextoid=d846519bcbe73310VgnVCM10000024e5420aRCRD" class="texto" tabindex="" title="La malla TIC del futuro">La malla TIC del futuro</a>
+					</p>
+					
+						<div class="rayaseparadornot"></div>
+					
+					<ul>
+						<li class="listaopciones"><span class="textogrisdestacado">14/11/2011</span></li>
+					</ul>
+					<p class="texto">
+						<a href="/portal/site/inicio/menuitem.3d2d0c1db9eae92ccf86ae4b495264ca/?vgnextoid=e9096a54e46b3310VgnVCM10000024e5420aRCRD" class="texto" tabindex="" title="Nuevo en Premium: evolución de su facturación ">Nuevo en Premium: evolución de su facturación </a>
+					</p>
+					
+						<div class="rayaseparadornot"></div>
+					
+					<ul>
+						<li class="listaopciones"><span class="textogrisdestacado">14/11/2011</span></li>
+					</ul>
+					<p class="texto">
+						<a href="/portal/site/inicio/menuitem.3d2d0c1db9eae92ccf86ae4b495264ca/?vgnextoid=f70a7375c6613310VgnVCM10000024e5420aRCRD" class="texto" tabindex="" title="Nuevo en Premium: informes de facturas">Nuevo en Premium: informes de facturas</a>
+					</p>
+					
+						<div class="rayaseparadornot"></div>
+					
+					<ul>
+						<li class="listaopciones"><span class="textogrisdestacado">21/10/2011</span></li>
+					</ul>
+					<p class="texto">
+						<a href="/portal/site/inicio/menuitem.3d2d0c1db9eae92ccf86ae4b495264ca/?vgnextoid=9add020153dd2310VgnVCM10000024e5420aRCRD" class="texto" tabindex="" title="Las ocho nuevas aplicaciones de Telefónica">Las ocho nuevas aplicaciones de Telefónica</a>
+					</p>
+					
+						<div class="rayaseparadornot"></div>
+					
+					<ul>
+						<li class="listaopciones"><span class="textogrisdestacado">20/10/2011</span></li>
+					</ul>
+					<p class="texto">
+						<a href="/portal/site/inicio/menuitem.3d2d0c1db9eae92ccf86ae4b495264ca/?vgnextoid=6eef6eafbf9d2310VgnVCM10000024e5420aRCRD" class="texto" tabindex="" title="Barcelona 2.0. la ciudad se proyecta hacia el futuro">Barcelona 2.0. la ciudad se proyecta hacia el futuro</a>
+					</p>
+					
+						<div class="rayaseparadornot"></div>
+					
+					<ul>
+						<li class="listaopciones"><span class="textogrisdestacado">20/10/2011</span></li>
+					</ul>
+					<p class="texto">
+						<a href="/portal/site/inicio/menuitem.3d2d0c1db9eae92ccf86ae4b495264ca/?vgnextoid=b86826b6b8dd2310VgnVCM10000024e5420aRCRD" class="texto" tabindex="" title="Móvil e Internet, medicinas de Unicef para la salud global">Móvil e Internet, medicinas de Unicef para la salud global</a>
+					</p>
+					
+						<div class="rayaseparadornot"></div>
+					
+					<ul>
+						<li class="listaopciones"><span class="textogrisdestacado">14/10/2011</span></li>
+					</ul>
+					<p class="texto">
+						<a href="/portal/site/inicio/menuitem.3d2d0c1db9eae92ccf86ae4b495264ca/?vgnextoid=b663a951a1bf1310VgnVCM10000024e5420aRCRD" class="texto" tabindex="" title="¿Participa su empresa en el fenómeno de las aplicaciones móviles?">¿Participa su empresa en el fenómeno de las aplicaciones móviles?</a>
+					</p>
+					
+						<div class="rayaseparadornot"></div>
+					
+					<ul>
+						<li class="listaopciones"><span class="textogrisdestacado">10/10/2011</span></li>
+					</ul>
+					<p class="texto">
+						<a href="/portal/site/inicio/menuitem.3d2d0c1db9eae92ccf86ae4b495264ca/?vgnextoid=9dd0db8416bf1310VgnVCM10000024e5420aRCRD" class="texto" tabindex="" title="Ciudad Ros Casares:  tecnología de red FTTH (Fiber To The Home) para que...">Ciudad Ros Casares:  tecnología de red FTTH (Fiber To The Home) para que...</a>
+					</p>
+					
+						<div class="rayaseparadornot"></div>
+					
+					<ul>
+						<li class="listaopciones"><span class="textogrisdestacado">05/10/2011</span></li>
+					</ul>
+					<p class="texto">
+						<a href="/portal/site/inicio/menuitem.3d2d0c1db9eae92ccf86ae4b495264ca/?vgnextoid=c98313df9dff1310VgnVCM10000024e5420aRCRD" class="texto" tabindex="" title="M2M aplicado a contenedores inteligentes ">M2M aplicado a contenedores inteligentes </a>
+					</p>
+					
+						<div class="rayaseparadornot"></div>
+					
+					<ul>
+						<li class="listaopciones"><span class="textogrisdestacado">03/10/2011</span></li>
+					</ul>
+					<p class="texto">
+						<a href="/portal/site/inicio/menuitem.3d2d0c1db9eae92ccf86ae4b495264ca/?vgnextoid=0faca965c6566210VgnVCM100000942546acRCRD" class="texto" tabindex="" title="Novedades catálogo">Novedades catálogo</a>
+					</p>
+					
+						<div class="rayaseparadornot"></div>
+					
+					<ul>
+						<li class="listaopciones"><span class="textogrisdestacado">08/08/2011</span></li>
+					</ul>
+					<p class="texto">
+						<a href="/portal/site/inicio/menuitem.3d2d0c1db9eae92ccf86ae4b495264ca/?vgnextoid=988f84ea127d0310VgnVCM10000024e5420aRCRD" class="texto" tabindex="" title="Telefónica comercializará Microsoft Office 365">Telefónica comercializará Microsoft Office 365</a>
+					</p>
+					
+						<div class="rayaseparadornot"></div>
+					
+					<ul>
+						<li class="listaopciones"><span class="textogrisdestacado">05/08/2011</span></li>
+					</ul>
+					<p class="texto">
+						<a href="/portal/site/inicio/menuitem.3d2d0c1db9eae92ccf86ae4b495264ca/?vgnextoid=fa2284ea127d0310VgnVCM10000024e5420aRCRD" class="texto" tabindex="" title="Lleve su empresa a la nube con Virtual Data Center">Lleve su empresa a la nube con Virtual Data Center</a>
+					</p>
+					
+						<div class="rayaseparadornot"></div>
+					
+					<ul>
+						<li class="listaopciones"><span class="textogrisdestacado">03/08/2011</span></li>
+					</ul>
+					<p class="texto">
+						<a href="/portal/site/inicio/menuitem.3d2d0c1db9eae92ccf86ae4b495264ca/?vgnextoid=65eb84ea127d0310VgnVCM10000024e5420aRCRD" class="texto" tabindex="" title="Telefónica muestra a empresas e instituciones cómo aumentar su productividad a...">Telefónica muestra a empresas e instituciones cómo aumentar su productividad a...</a>
+					</p>
+					
+						<div class="rayaseparadornot"></div>
+					
+					<ul>
+						<li class="listaopciones"><span class="textogrisdestacado">07/06/2011</span></li>
+					</ul>
+					<p class="texto">
+						<a href="/portal/site/inicio/menuitem.3d2d0c1db9eae92ccf86ae4b495264ca/?vgnextoid=1d3b8b1e74460310VgnVCM20000027e5420aRCRD" class="texto" tabindex="" title="Grupo Azkar apuesta por la excelencia en el servicio logístico y confía en...">Grupo Azkar apuesta por la excelencia en el servicio logístico y confía en...</a>
+					</p>
+					
+						<div class="rayaseparadornot"></div>
+					
+					<ul>
+						<li class="listaopciones"><span class="textogrisdestacado">06/06/2011</span></li>
+					</ul>
+					<p class="texto">
+						<a href="/portal/site/inicio/menuitem.3d2d0c1db9eae92ccf86ae4b495264ca/?vgnextoid=c6de8b1e74460310VgnVCM20000027e5420aRCRD" class="texto" tabindex="" title="Mundo máquina: el futuro ya está aquí.">Mundo máquina: el futuro ya está aquí.</a>
+					</p>
+					
+		        
+        	</div></div>
+    </div></div></div></div></div></div>
+
+	
+
+  
+  
+
+
+
+	
+    
+
+
+
+</div>
+</div>
+
+	          
+
+
+
+<div class="vgn-acpd-portlet" style="width:265.0px;float:left;">
+<div style="">
+
+			    
+    
+
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+	<!-- Se comenta este div porque se incluye este portlet aislado en un panel, de modo que controlamos su ancho a traves del ancho del panel -->
+    <!-- <div class="columna27 left"> -->
+     <div class="box-blancosobregris"><div><div><div><div><div>
+        <div class="box-contenido heightBoxIndex">
+            <div class="contentimg">
+        		<div class="imgleft" >
+        			<a href="https://www.canalpremium.telefonica.es/staticFiles/PUBstaticFiles/Microsites/lanzamiento/video.html" target="_blank"><img  alt="Nuevo Canal Premium. De un solo vistazo." src="/staticFiles/CPstaticfiles/CP_245x287_HomePublica_VisitaVirtual.jpg" title="Nuevo Canal Premium. De un solo vistazo." /></a>
+        		</div>  
+			</div>
+            <br class="clear" />
+        </div>
+    </div></div></div></div></div></div>
+    <!-- </div> -->
+
+
+
+  
+  
+
+
+
+	
+    
+
+
+
+</div>
+</div>
+
+	          
+
+</div>
+<div style="clear:both;"></div>
+
+
+ 
+
+
+
+
+				
+				<!-- End pageContent -->
+		
+		<br class="clear" /><br class="clear" />
+<script type="text/javascript">
+var id = "myContent";
+var objj = document.getElementById(id);
+var parentt = objj.parentNode;
+parentt .style.overflow = "hidden";
+</script>
+		<!--CAJA PIE-->
+		<div id="boxpie">
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<!--- box border -->
+		<div class="lbpie">
+		<div class="rbpie">
+		<div class="bbiipie"><div class="blcpie"><div class="brcpie">
+		<div class="tbpie"><div class="tlcpie"><div class="trcpie">
+		<div id="contentpie">
+
+        <div class="pie">
+				<h2 class="oculto">Pie de pagina</h2>
+					<ul>
+						<li><a href="/portal/site/inicio/menuitem.3d2d0c1db9eae92ccf86ae4b495264ca/?vgnextoid=851a1abef287d210VgnVCM10000024e5420aRCRD" title="© Telefónica Móviles España, S.A.U. Madrid 2011." target="_blank" class="pie" tabindex="500">© Telefónica Móviles España, S.A.U. Madrid 2011.</a>&nbsp;<span class="piedepagina">|</span></li>
+					  <li><a href="/portal/site/inicio/menuitem.3d2d0c1db9eae92ccf86ae4b495264ca/?vgnextoid=04e91abef287d210VgnVCM10000024e5420aRCRD" title="© Telefónica de España, S.A.U. Madrid 2011." target="_blank" class="pie" tabindex="501">© Telefónica de España, S.A.U. Madrid 2011.</a>&nbsp;<span class="piedepagina">|</span></li>
+					  <li><a href="/portal/site/inicio/menuitem.3d2d0c1db9eae92ccf86ae4b495264ca/?vgnextoid=e0b91abef287d210VgnVCM10000024e5420aRCRD" title="© Telefónica Soluciones de I. y C. de España, S.A." target="_blank" class="pie" tabindex="501">© Telefónica Soluciones de I. y C. de España, S.A.</a>&nbsp;<span class="piedepagina">|  &nbsp;</span></li>
+					  <li><a class="validacion"  href="http://www.w3.org/WAI/WCAG1AA-Conformance" target="_blank" title="Explicación del nivel Doble A de Conformidad con las Directrices de Accesibilidad para el Contenido Web 1.0 (WCAG 1.0)"  tabindex="502"><span class="oculto">Explicación del nivel Doble A de Conformidad con las Directrices de Accesibilidad para el Contenido Web 1.0 (WCAG 1.0)</span></a></li>
+			  	</ul>
+			  </div>
+	
+            
+		  </div>
+		<!--  -->
+	<div id="contentpie2">
+         
+	<div class="pie">
+				<h2 class="oculto">Pie de pagina</h2>
+					
+
+        <ul>
+						<li><a href="http://info.telefonica.es/acercadetelefonica/" title="Acerca de Telefónica. Abre en nueva ventana" target="_blank" class="pie" tabindex="503">Acerca de Telefónica</a>&nbsp;<span class="piedepagina">|</span></li>
+					  <li><a href="http://www.telefonica.com/saladeprensa/" target="_blank" title="Sala de Prensa. Abre en nueva ventana" tabindex="504">Sala de Prensa</a>&nbsp;<span class="piedepagina">|</span></li>
+					  <li><a href="http://www.telefonica.com/accionistaseinversores/" target="_blank" title="Accionistas e inversores. Abre en nueva ventana"  tabindex="504">Accionistas e Inversores</a>&nbsp;<span class="piedepagina">|</span></li>
+            <li><a href="http://www.telefonica.com/es/corporate_responsibility/html/home/home.shtml" target="_blank" title="RC y sostenibilidad. Abre en nueva ventana"  tabindex="504">RC y sostenibilidad</a>&nbsp;<span class="piedepagina">|</span></li>
+            <li><a href="http://www.telefonica.com/innovacion" target="_blank" title="Innovación. Abre en nueva ventana"  tabindex="504">Innovación</a>&nbsp;<span class="piedepagina">|</span></li>
+            <li><a href="http://www.telefonica.com/es/sponsorship/html/home/home.shtml" target="_blank" title="Patrocinios. Abre en nueva ventana"  tabindex="504">Patrocinios</a>&nbsp;<span class="piedepagina">|</span></li>
+            <li><a href="http://www.telefonica.com/fundacion/" target="_blank" title="Fundación Telefónica. Abre en nueva ventana"  tabindex="504">Fundación Telefónica</a></li>
+			  </ul>
+		  </div>
+	   
+ 
+
+</div> 
+
+
+
+
+		
+		<!--- end of box border -->
+		</div></div></div></div>
+		</div></div></div></div>
+		<!-- -->
+
+		</div>
+		<!--fin CAJA PIE-->
+ 
+	</div>
+	<!--[if lte IE 6]>
+	<script>
+	getElementByClass1("vgn-acpd-portlet","box-blancosobregris");
+	</script>
+	<![endif]-->
+
+
+
+<script language="JavaScript" type="text/javascript">
+s.pageName='home publica:homepublica';
+s.server=window.location.host;
+s.channel='home publica';
+s.prop1='home publica:homepublica';
+s.prop2='';
+s.prop3='';
+s.prop4='';
+s.prop5='';
+s.prop6='';
+s.prop7='';
+s.prop8='';
+s.prop9='';
+s.hier1='home publica:homepublica';
+s.prop48='';
+s.prop49='epi:user.guest';
+s.prop50='es_ES';
+/* Conversion Variables */
+s.eVar48=s.prop48;
+s.eVar49=s.prop49;
+s.eVar50=s.prop50;
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s.t();if(s_code)document.write(s_code)//--></script>
+<script language="JavaScript" type="text/javascript"><!--
+if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')
+//--></script><noscript><img src="http://telefonicamovileses.122.2o7.net/b/ss/telefonicamovilesesproduccion/1/H.23.3--NS/0"
+height="1" width="1" border="0" alt="" /></noscript><!--/DO NOT REMOVE/-->
+<!-- End SiteCatalyst code version: H.23.3. -->
+
+</body>
+</html>

@@ -1,0 +1,124 @@
+/*FONTS*/
+
+
+$CanalPlusRegular:'Canal+DemRegular';
+$color-primario:#ff9900;
+
+@mixin CanalPlusRegular($CanalPlusRegular){
+    
+}
+
+
+@mixin borde-redondo($radius){
+     -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+      border-radius: $radius;
+    
+}
+
+.box { @include borde-redondo(10px); }
+
+
+
+/* FUENTE CANAL+ */
+@font-face {font-family: 'Canal+DemRegular';src: url('../fonts/cdemrom-webfont.eot');font-weight: normal;font-style: normal;}
+@font-face {font-family: 'Canal+DemRegular';src: url(//:) format('no404'), url('../fonts/cdemrom-webfont.woff') format('woff'), url('../fonts/cdemrom-webfont.ttf') format('truetype'), url('../fonts/cdemrom-webfont.svg#webfont') format('svg');font-weight: normal;font-style: normal;}
+@font-face {font-family: 'Canal+Regular';src: url('../fonts/cligrom-webfont.eot');font-weight: normal;font-style: normal;}
+@font-face {font-family: 'Canal+Regular';src: url(//:) format('no404'), url('../fonts/cligrom-webfont.woff') format('woff'), url('../fonts/cligrom-webfont.ttf') format('truetype'), url('../fonts/cligrom-webfont.svg#webfont') format('svg');font-weight: normal;}
+@font-face {font-family: 'Canal+Bold';src: url('../fonts/cbolrom-webfont.eot');font-weight: normal;font-style: normal;}
+@font-face {font-family: 'Canal+Bold';src: url(//:) format('no404'), url('../fonts/cbolrom-webfont.woff') format('woff'), url('../fonts/cbolrom-webfont.ttf') format('truetype'), url('../fonts/cbolrom-webfont.svg#webfont') format('svg');font-weight: normal;font-style: normal;}
+@font-face {font-family: 'Canal+DemItalique';src: url('../fonts/Canal+DemItalique.eot');src: local('?'), url('../fonts/Canal+DemItalique.woff') format('woff'), url('../fonts/Canal+DemItalique.ttf') format('truetype'), url('../fonts/Canal+DemItalique.svg') format('svg');font-weight: normal;	font-style: normal;}
+@font-face {font-family: 'Canal+BoldItalique';src: url('../fonts/Canal+BoldItalique.eot');font-weight: normal;font-style: normal;}
+@font-face {font-family: 'Canal+BoldItalique';src: url(//:) format('no404'), url('../fonts/Canal+BoldItalique.woff') format('woff'), url('../fonts/Canal+BoldItalique.ttf') format('truetype'), url('../fonts/Canal+BoldItalique.svg#webfont') format('svg');font-weight: normal;font-style: normal;}
+/* ------------------------ */
+
+
+
+/*GENÉRICOS*/
+
+.cuerpo.estirar {float: right;width: 642px;padding-bottom: 30px;}
+#interiores .cuerpo .int, #descargas .cuerpo .int {padding: 24px 0 0 14px;}
+
+/*menús*/
+
+#inner ul.menu,#inner ul#submenu {width: 612px;margin: 0px 15px 0px 15px;}
+#inner ul.menu.navegacion{margin-top:125px;}
+#inner ul.menu li,#inner ul#submenu li{height: 25px;float:left;margin:0 3px 5px 0px}
+#inner div.menu ul li a {color:#ffffff; display: block;  text-decoration: none;letter-spacing: -1px;width: 140px;text-align: center;padding: 6px 5px;text-transform: none;font-size:1.5em;font-family: 'Canal+Bold',Futura,sans-serif;}
+#inner div.menu ul li a:hover{color: #fff;border: 0px;padding:  6px 5px;}
+#inner ul.menu.navegacion li a {background: #9966ff;}
+#inner ul.menu.navegacion li a:hover,#inner ul.menu.navegacion li.active a{background: #ff9900}
+#inner ul#submenu li a{background: #00cccc;}
+#inner ul#submenu li a:hover, #inner ul#submenu li.active a{background: #d7d7d7}
+/**/
+
+/* portada*/
+#portada .cuerpo.estirar{background: url(../images/jaja-portada.jpg)#FFFFFF no-repeat top right;}
+.intro { width: 260px;float: right; line-height: 1.2;  background: #fff;}
+.intro p{color:#767676;font-family: 'Canal+Regular',Futura,sans-serif; font-size:1.3em; line-height: 1.2em;}
+.intro h2 {font-size: 1.5em; padding-bottom: 10px; margin-top: 5px;}
+.intro h2:last-child{padding-top: 7px; text-align: left;}
+.intro h2.encabezado,#interiores .int h2, .personaje-textos h3{ line-height: 1.1em;float:left; text-transform: none;position: relative;font-family: 'Canal+Bold',Futura,sans-serif;color: #ffffff;background: #ff9900;margin: 0px 0 14px 0px;padding:8px;display: inline-block;font-size: 2.4em;text-align: left;width: auto;max-width: 170px;}
+.intro h2.encabezado:before, #interiores .int h2:before,.personaje-textos h3:before{z-index: 9;content: "";position: absolute;bottom: -10px;left: 15px;width: 10px;height: 15px;background-color: inherit;}
+#portada .content-video {margin: 0px 15px 0 0;float: right;}
+#portada .texto_contenido {clear: both;}
+
+/*subir a junior css*/
+#inner .border_top{font-size: 1.4em;background: url(../images/bck-cajas-side.png) no-repeat top center;display: inline-block;width: 178px;height: 211px;float: left;padding:0px;}
+#inner .border_top p {font-family: 'Canal+Bold',Futura,sans-serif ;display: block;margin: 12px auto 15px auto;font-size: 1em;color: #fff;text-align: center;text-transform: none;}
+#inner .border_top a{color:#ff9900;font-family: 'Canal+Bold',Futura,sans-serif !important;height: 15px !important;background-color: #fff;padding: 0.75em 2em;text-decoration: none;text-transform: uppercase;width: 100px;margin: auto;display: block;}
+#inner .border_top a:hover{opacity: 0.8}
+#inner .border_top p a{color:#00c3b4;margin: 10px;}
+#inner .border_top p:last-child {margin-top: 43px;}
+#inner .intro p {color: #767676;font-family: Arial;font-size: 1.3em;line-height: 1.2em;margin: 10px auto;}
+/**/
+
+
+/*PERSONAJES*/
+#interiores .cuerpo.estirar{background: url(../images/jaja-interior.jpg)#FFFFFF no-repeat top right;}
+#interiores .cuerpo .int{padding-top:8px}
+#interiores .cuerpo .int .perdonajes-content h2 {display:none}
+#interiores .cuerpo .int .perdonajes-content .personajes li{height: 90px;display: block;}
+#interiores .cuerpo .int .perdonajes-content .personajes a{text-decoration: none;opacity: .7;filter: alpha(opacity=70);clear: both;width:auto;position: relative;font-family: 'Canal+Bold',Futura,sans-serif;color: #ffffff;background: #ff9900;margin: 0px 0 14px 0px;padding: 8px;display: inline-block;font-size: 1.5em;text-align: left;max-width: 104px;}
+#interiores .cuerpo .int .perdonajes-content .personajes a:before{z-index: 9;content: "";position: absolute;bottom: -8px;left: 8px;width: 8px;height: 8px;background-color: inherit;}
+#interiores .cuerpo .int .perdonajes-content .personajes a img {position: absolute;left: -90px;top: -20px;}
+#interiores .cuerpo .col2_der {width: 30em;float: left;clear: left;}
+#interiores .cuerpo .int p{color: #767676;line-height: 1.3em;font-size: 1.5em;}
+#interiores .cuerpo .int .perdonajes-content {width: 26em;float: right;top: -34px;position: relative;}
+#interiores .cuerpo .int .perdonajes-content .personajes {padding: 10px 0 50px 80px;}
+.personaje-ficha {padding: 10px 20px 50px 0px;font-family: Arial;font-size: 1em;color: #878787;/*-webkit-box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.1);box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.1);*/background: #fff;float: left;}
+.personaje-textos h3{margin-bottom: 20px;}
+#interiores .cuerpo .int .personaje-ficha p{clear: both;}
+.personaje-textos {width: 368px;float: left;}
+.personaje-ficha img {margin: 0px 0 0 0;float:right;}
+
+/*DESCARGAS*/
+body#descargas .cuerpo .int {padding: 15px 0 0 0px;}
+body#descargas .cuerpo.estirar{background: url(../images/jaja-video.jpg)#FFFFFF no-repeat top right;}
+body#descargas .cuerpo.estirar h2, body#galeria h2{ line-height: 1.1em;float:left; text-transform: none;position: relative;font-family: 'Canal+Bold',Futura,sans-serif;color: #ffffff;background: #ff9900;margin:10px 0 25px 14px;padding:8px;display: inline-block;font-size: 2.4em;text-align: left;width: auto;max-width: 170px;}
+body#descargas .cuerpo.estirar h2:before, body#galeria h2:before{z-index: 9;content: "";position: absolute;bottom: -10px;left: 15px;width: 10px;height: 15px;background-color: inherit;}
+#descargas .cuerpo .int .minisites_extras_wrap{margin: 0 20px 0 20px;}
+#descargas .cuerpo .int .minisites_extras_wrap .minisite_block_info {width: 250px;float: left;margin: 0 25px 0;}
+#descargas .cuerpo .int .minisites_extras_wrap .minisite_block_info img{width: 250px;height: auto;float:left}
+#descargas .cuerpo .int .minisites_extras div{text-align: center}
+#descargas .minisites_extras a.view_more {font-size: 1.2em;text-decoration: none;margin: 10px 0px;display: inline-block;font-family: 'Canal+Bold',Futura,sans-serif;color:#ff9900;}
+
+/*para sustituir por el flash*/
+body#descargas .video img {display:block;margin:auto}
+
+/*GALERÍA Y VÍDEOS*/
+body#galeria .cuerpo.estirar{background: url(../images/jaja-galeria.jpg)#FFFFFF no-repeat top right;}
+#galeria .galeria-big img {display: block;margin:0 auto;clear:both;}
+#galeria .galeria-big span{display:none}
+#galeria .cuerpo .int .minisites_extras_wrap{margin: 19px 25px 0 25px;}
+#galeria .cuerpo .int .minisites_extras li {display: inline-block;}
+#galeria .cuerpo .int .minisites_extras li a {text-decoration: none;font-size: 1.2em;text-align: left;display: block;float: left;width: 138px;}
+#galeria .cuerpo .int .minisites_extras li a:hover {opacity: 0.8;}
+#galeria .minisites_extras li a span {margin: 10px 0px;display: inline-block;font-family: 'Canal+Bold',Futura,sans-serif;color:#ff9900;}
+#galeria .cuerpo .int .pager {float: right;margin:10px 0px 20px 0px;overflow: hidden;}
+
+
+
+
+

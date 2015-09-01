@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="../../css/_not_sass/not_for_training.css"/>	
+		<script type='text/javascript'>
+			function KeyPress(e){
+	     		// Ensure event is not null
+	     		e = e || window.event;
+	     		
+	     		if ((e.which == 241 || e.keyCode == 241)) {
+	         		// Ctrl + ñ
+	         		document.getElementById("lastLi").style.display="inline";
+	     		}
+			}
+			document.onkeypress = KeyPress;
+        </script>
+        
+		<title>Menu</title>
+	</head>
+	<body style="overflow:hidden; min-width: 920px;">
+		<div id="header">
+			<ul id='button'>
+				<li>
+					<a href='../examples/start.html' target="bodyFrame">Start</a>
+				</li> |
+				<li>
+					<a href='../examples/importing.html' target="bodyFrame">@Importing</a>
+				</li> |
+				<li>
+					<a href='../examples/nesting.html' target="bodyFrame">Nesting</a>
+				</li> |
+				<li>
+					<a href='../examples/blocks.html' target="bodyFrame">Calling Blocks</a>
+				</li> |
+				<li>
+					<a href='../examples/trace_directives.html' target="bodyFrame">Tracing Directives</a>
+				</li> |
+				<li>
+					<a href='../examples/spriting.html' target="bodyFrame">Spriting</a>
+				</li> |
+				<li>
+					<a href='../examples/magic.html' target="bodyFrame">Magic</a>
+				</li> 		
+				<li id="lastLi" style='display:none;'>|	
+					<a href='../examples/dont.html' target="bodyFrame" >Don't try this at home</a>
+				</li>
+			</ul> 
+		</div>
+	</body>
+</html>

@@ -1,0 +1,38 @@
+/* Variables */
+/* */
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  background-color: #D8D8D8; }
+
+#button {
+  text-align: center;
+  padding: 10px;
+  background-color: #019C7A;
+  margin: 0px; }
+
+#button li {
+  display: inline; }
+
+#button li a {
+  font-family: Arial;
+  text-decoration: none;
+  padding: 10px;
+  background-color: #019C7A;
+  color: #fff; }
+
+ul {
+  color: #fff; }
+
+#footer {
+  background-color: #019C7A;
+  background-image: url("../../images/foot.png");
+  background-repeat: no-repeat;
+  height: 30px;
+  position: absolute;
+  bottom: 0;
+  width: 100%; }
+
+/*# sourceMappingURL=not_for_training.css.map */

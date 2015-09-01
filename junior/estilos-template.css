@@ -1,0 +1,48 @@
+
+
+
+
+.wrapper{
+width: 100%;
+margin: auto;
+}
+
+
+.content{
+width: 960px;
+margin: auto;
+
+}
+nav {
+height: 50px;
+background: #65A5EE;
+}
+
+
+nav ul li{ 
+list-style: none;
+float: left;
+margin: 0 5px ;
+cursor: pointer;
+text-align: center;
+margin-right: 1em;
+width: 10.63em;
+}
+
+nav ul li a{ 
+text-decoration: none;
+color:#fff;
+}
+
+
+
+.contenido{
+clear: both;
+margin: 10px auto;
+display: block;
+}
+
+footer{
+clear: both;
+text-align: center;
+}

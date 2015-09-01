@@ -1,0 +1,194 @@
+
+
+@import "fuentes";
+
+
+////////////MIXINS
+
+@mixin border-radius ($radio){
+	-webkit-border-radius:$radio;
+	-moz-border-radius: $radio;
+	border-radius: $radio;
+}
+
+@mixin circulo ($width, $height:$width){
+	width:$width;
+	height:$height;
+	@include border-radius (100%);
+}
+
+@mixin cuadrado($width, $height:$width){
+	width:$width;
+	height:$height;
+}
+
+@mixin boton ($background-color){
+	width: 30px;
+	background: $background-color;
+	@include border-radius (10px);
+		a{ text-decoration: none;
+		   padding:8px;
+		   color:#fff;
+		}	
+}
+
+
+////////////ESTILOS
+
+//genéricos
+
+$color-1:#ff0000;//rojo
+$color-2:#176008;//verde
+$color-3:#0e9eb7;//azul
+
+$pequeno:12em;
+$grande: 25em;
+
+.pequeno{
+	width: $pequeno !important;
+	height: $pequeno !important;
+}
+
+.grande{
+	width: $grande !important;
+	height: $grande !important;
+}
+
+//prueba para interpolación
+$border: border;
+
+
+.border1{
+	#{$border}-color:$color-1 !important;
+}
+
+.border2{
+	#{$border}-color:$color-2 !important;
+}
+
+.border3{
+	#{$border}-color:$color-3 !important;
+}
+
+.color-1{
+	background-color:$color-1;
+}
+.color-2{
+	background-color:$color-2;
+}
+.color-3{
+	background-color:$color-3;
+}
+
+
+//ESTILOS DEL  CONTENIDO
+
+//variables agrupadas:
+
+$valores-colores1: #8102ff, #f28807;//lila y naranja
+$valores-colores2: #40e21f, #ffe500;//verde y amarilo
+
+@mixin colores ($border-color, $background-color){
+	border-color: $border-color;
+	background-color:$background-color;
+}
+
+//combinaciones de colores 
+.primaria {
+ @include colores ($valores-colores1...);
+}
+
+.secundaria {
+ @include colores ($valores-colores2...);
+}
+
+$width-nav:100%;
+$numero-botones:6;
+
+nav {
+	height: 50px;
+	background: #65A5EE;
+	width:$width-nav;
+		ul{
+			-webkit-padding-start: 0px;	
+			li {
+				list-style: none;
+				float: left;
+				cursor: pointer;
+				text-align: center;
+				width:$width-nav/$numero-botones;
+				@include font (400, normal);
+				font-family:$CanalPlusDemRegular;
+					a{
+					text-decoration: none;
+					color:#fff;	
+					}
+			}
+		}
+	}
+
+.contenido{
+	clear: both;
+	margin: 10px auto;
+	display: block;
+	color:#fff;
+	font-family:$CanalPlusRegular;
+}
+
+.contenedor{
+	width:auto;
+}
+
+.caja {
+	padding:2em;
+	border:1px solid #FFF;
+	color:#fff;
+	overflow: hidden;
+}
+
+.circulo{
+	@include circulo (220px);
+	float:left;
+}
+
+.cuadrado{
+	@include cuadrado (400px);
+	border:1px #fff solid;
+	clear: both;
+ }
+
+.botones{
+	width:400px;
+	margin:auto;
+	float:left;
+}
+
+.boton{
+	padding:3px;
+    border-radius: 5px;
+    width: auto;
+  	max-width: 150px;
+  	text-align: center;
+   	a{
+   		color:#fff;
+   		text-decoration: none;
+   	}
+   	&:hover{
+   	opacity: 0.5;
+   	}
+}
+
+.boton.azul{
+	@extend .boton;
+	background-color:blue;
+}
+
+.boton.rojo{
+	@extend .boton;
+	background-color:red;
+}
+
+footer{
+	clear: both;
+	text-align: center;
+}

@@ -1,0 +1,119 @@
+@import "vendor/sassy-buttons";
+
+@import "modules/all";  //Getting all modules
+@import "partials/all";  //Getting all partials
+
+
+
+//Border for all vendors
+@mixin border-radius($radius: 10px) {
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+
+
+@function set-notification-text-color($color) {   //Set the color of the text in order to be visible 
+  @if (lightness($color) > 50) {
+    @return $_colour1; // Lighter backgorund, return dark color
+  } @else {
+    @return $_colour2; // Darker background, return light color
+  }
+}
+
+
+/* Changes the properties of the global container) */ 
+.full-container {
+  @if (variable-exists(_colour14)) {    //If the colour14 doesn't exist, generate a mixed colour
+    background-color: $_colour14;
+  } @else {
+    background-color: mix($_colour4, $_colour5);
+  }
+}
+
+
+
+
+
+/*Colours of each button*/
+$type-notification: (
+  confirm: $_colour-confirm,
+  warning: $_colour-warning,
+  alert: $_colour-alert
+);
+
+
+/* Global buttons */
+.notification {  
+  display: block;
+  font-size: 1em;
+  font-family: sans-serif;
+  padding: 1em 2em;
+  margin: 1em auto 1em;
+  width: 30%;
+  text-align: center;
+  @include border-radius;
+}
+
+
+
+
+/* Activated buttons */
+@each $type in confirm, warning, alert {
+  .notification-#{$type} {
+    $color: map-get($type-notification, $type);
+    background: $color;
+    color: set-notification-text-color($color);
+    &:hover{
+      background: rgba($color, 0.6);
+    }
+  }
+}
+
+
+
+
+
+
+/* Deactivated buttons */
+@each $type in confirm, warning, alert {
+  .notification-#{$type}.disabled {
+    $color: map-get($type-notification, $type);
+    background: grayscale($color);
+    color: set-notification-text-color($color);   
+  }
+}
+
+
+
+
+
+//-------------------------------------------------
+
+button {
+  height: 45px;
+  width: 120px;
+  @include border-radius;
+  color: black !important;
+}
+
+
+.sassy1 {
+  @include sassy-button-gradient("matte", #4ba3cc);
+}
+
+.sassy2 {
+  @include sassy-button-gradient("simple", #e86a43);
+}
+
+.sassy3 {
+  @include sassy-button-gradient("glass", #8cbe5f);
+}
+
+.sassy4 {
+  @include sassy-button("shiny", 5px, 19px, orange); 
+  @include sassy-button-style("push", orange);
+}
+

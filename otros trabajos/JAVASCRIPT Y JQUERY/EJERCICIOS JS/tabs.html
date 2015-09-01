@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Documento sin título</title>
+<script type="text/javascript" src="jquery.js">
+
+
+</script>
+<script>
+
+
+ $('document').ready(function(){
+	 
+	 $('#li_1').click(function(){
+		 
+	
+	  	  $('.ulis').removeClass('activo');
+	      
+		   $('.lis').removeClass('en_activo');
+	
+	
+		 
+		 
+		 $('#li_1').addClass('activo');
+		 
+		  $('#en_1').addClass('en_activo');
+		   $('.tab').hide();
+		 
+		  $('#tab_1').fadeIn('slow');
+		   
+		 
+		 
+		 
+		 
+	 });
+	 
+	  $('#li_2').click(function(){
+		 
+		 
+		 	  $('.ulis').removeClass('activo');
+	      
+		   $('.lis').removeClass('en_activo');
+		 
+		 $('#li_2').addClass('activo');
+		 
+		  $('#en_2').addClass('en_activo');
+		  
+		  
+		   $('.tab').hide();
+		 
+		  $('#tab_2').fadeIn('slow');
+	 
+	  });
+	  
+	  
+	  
+	   $('#li_3').click(function(){
+		 
+		 
+		 	  $('.ulis').removeClass('activo');
+	      
+		   $('.lis').removeClass('en_activo');
+		 
+		 $('#li_3').addClass('activo');
+		 
+		  $('#en_3').addClass('en_activo');
+		 
+		  $('.tab').hide();
+		  
+		  $('#tab_3').fadeIn('slow');
+		  
+		  	 
+		  
+	 
+	  });
+	  
+
+	 
+	    
+	
+		 
+		
+	  
+	  
+	  
+ });
+
+
+
+
+</script>
+<style>
+a {
+	text-decoration:none;
+	color:#666;
+}
+ul {
+	float:left;
+	width:500px;
+	margin: 0;
+}
+ul li {
+	list-style:none;
+	background-image: url(imgs/pestana_izda.gif);
+	background-repeat:no-repeat;
+	width:auto;
+	float:left;
+	margin-left: 20px;
+}
+/*clase desactivada por defecto para los lis */
+
+.ulis {
+}
+/*clase activo para los lis */
+
+ .activo {
+	background-image: url(imgs/pest_blanca_izda.gif);
+	background-repeat:no-repeat;
+}
+ul li a {
+	list-style:none;
+	width:auto;
+	height:26px;
+	float:left;
+	margin-left: 10px;
+	padding-top: 15px;
+	padding-right:10px;
+	background-image: url(imgs/pestana_dcha.gif);
+	background-repeat:no-repeat;
+	background-position:right top;
+}
+/* estilo para enlaces desactivados por defecto */
+.lis {
+}
+/*estilo para enlaces ativados */
+
+ .en_activo {
+	list-style:none;
+	background-image: url(imgs/pest_blanca_dcha.gif);
+	background-repeat:no-repeat;
+	background-position:right top;
+	width:auto;
+	height:26px;
+	float:left;
+	margin-left: 10px;
+	padding-top: 15px;
+	padding-right:10px;
+}
+.tab {
+	display:none;
+}
+#tab_1, #tab_2, #tab_3 {
+	width:500px;
+ background-color:# FFF;
+	border: #CCC 1px solid;
+	padding: 5px;
+	margin-left: 60px;
+}
+</style>
+</head>
+
+<body>
+<div>
+  <ul>
+    <li id="li_1" class="ulis"><a href="#" id="en_1" class="lis">Nunc tincidunt </a></li>
+    <li id="li_2" class="ulis"> <a href="#" id="en_2" class="lis"> Proin dolor</a></li>
+    <li id="li_3" class="ulis"> <a href="#" id="en_3" class="lis"> Aenean lacinia</a></li>
+  </ul>
+  <br clear="all"/>
+  <div id="tab_1" class="tab">
+    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+  </div>
+  <div id="tab_2" class="tab">
+    <p> Phasellus mattis tincidunt nibh. Cras orci urna, blandit id, pretium vel, aliquet ornare, felis. Maecenas scelerisque sem non nisl. Fusce sed lorem in enim dictum bibendum.</p>
+  </div>
+  <div id="tab_3" class="tab">
+    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      Phasellus mattis tincidunt nibh. Cras orci urna, blandit id, pretium vel, aliquet ornare, felis. Maecenas scelerisque sem non nisl. Fusce sed lorem in enim dictum bibendum.</p>
+  </div>
+</div>
+</body>
+</html>

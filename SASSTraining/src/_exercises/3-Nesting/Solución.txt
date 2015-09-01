@@ -1,0 +1,84 @@
+A)  Resultado:
+<body>
+	<!--
+	<div class="full-container">
+		<div class="row1">
+			....		
+		</div>
+	</div>
+	-->
+		
+	<div class="full-container">
+		<div class="line1">
+			...
+		</div>
+		<div class="line2">
+			...
+		</div>			
+	</div>	
+</body>
+
+----------------------------------------------------------
+
+
+C)  Actualizar por: 
+.line1 .col1 i {
+  border: {         
+    width: 1px;
+    color: $_colour1;
+    style: solid;
+  }
+}
+
+----------------------------------------------------------
+
+D)  Actualizar por: 
+.col1, .col2 {
+  &:hover {        
+    color: $_colour2;
+  }
+}
+
+----------------------------------------------------------
+
+E)  En nesting.scss, sería necesario añadir:
+.full-container {
+  @import "modules/cell"; 
+}
+
+El fichero _cell.scss debería ser algo así:
+.line1 {
+  height: 50%;
+  width: 100%;
+}
+
+.line2 {
+  height: 50%;
+  width: 100%;
+}
+
+.col1 {
+  height: 100%;
+  width: 50%;
+  float: left;
+}
+
+.col2 {
+  height: 100%;
+  width: 50%;
+  float: left;
+}
+
+----------------------------------------------------------
+
+F) Anidar el contenido de _cell.scss
+.line1, .line2 {
+	height: 50%;
+	width: 100%;
+  
+	.col1, .col2 {		
+		height: 100%;
+		width: 50%;
+		float: left;
+ 	}  
+}

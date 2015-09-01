@@ -1,0 +1,103 @@
+A) 
+<!--
+	<div class="full-container">
+		<div class="upper-left-block">
+	....
+	....
+			<p class="lower-right-block-text">Sheets</p>
+    		</div>
+	</div>
+-->
+
+<div class="full-container">
+	<div class="block1">
+		....
+		....
+		<p>Sheets</p>
+    	</div>
+</div>
+
+----------------------------------------------------------
+
+B) 
+- Añadir previo a .block1
+	@mixin blocks-properties {
+    		width: 50%;
+    		height: 50%;
+    		float: left;
+    		border: 1px solid $_colour1; 
+	}
+
+- Incluir en los bloques
+.block1 {
+	...
+	@include blocks-properties;
+	
+
+.block2 {
+	...
+	@include blocks-properties;
+
+
+.block3 {
+	...
+	@include blocks-properties;
+	
+
+.block4 {
+	...
+	@include blocks-properties;
+
+
+----------------------------------------------------------
+
+C) Añadir selector css:
+
+.full-container {
+  @media screen and (max-width : $_container-width) { 
+        display: none;
+    }
+}
+
+----------------------------------------------------------
+
+D)  Cambiar por:
+.block1 {
+    	background-color: white;
+    	-webkit-box-sizing: border-box; 
+    	-moz-box-sizing: border-box;   
+    	box-sizing: border-box;
+	@include blocks-properties;
+}
+
+.block2 {
+	@extend .block1;
+	font-weight: bold;
+}
+
+.block3 {
+	@extend .block2;
+	font-size: 40px;
+}
+
+.block4 {
+	@extend .block3;
+	font-family: Arial;
+}
+
+----------------------------------------------------------
+
+E) 
+Añadir / sustituir este código
+%blocks-border {
+	-webkit-box-sizing: border-box; 
+	-moz-box-sizing: border-box;   
+	box-sizing: border-box;
+}
+
+.block1 {    
+	@extend %blocks-border;
+	background-color: white;
+	@include blocks-properties;
+}
+

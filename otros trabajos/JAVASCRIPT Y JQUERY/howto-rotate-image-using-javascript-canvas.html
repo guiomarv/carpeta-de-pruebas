@@ -1,0 +1,401 @@
+w3Blender — The Web Pro's Energy Source
+Explore w3Blender Network <javascript:;>
+RSS <http://www.ajaxblender.com/feed/>
+
+  * add a script <http://www.ajaxblender.com/add-script.html>
+  * about ajaxBlender <http://www.ajaxblender.com/about-us.html>
+  * custom web development
+    <http://www.ajaxblender.com/custom-web-development.html>
+  * contact us <http://www.ajaxblender.com/contact.html>
+
+ajaxBlender - A Whole Lot of AJAX! <http://www.ajaxblender.com>
+
+  * jQuery <http://www.ajaxblender.com/jquery>
+      o jQuery Scripts Directory </jquery/>
+      o jQuery Tutorials </jquery-tutorials.html>
+      o About jQuery Framework </what-is-jquery.html>
+  * Mootools <http://www.ajaxblender.com/mootools>
+      o Mootools Scripts Directory </mootools/>
+      o Mootools Tutorials </mootools-tutorials.html>
+      o About Mootools Framework </what-is-mootools.html>
+  * Ext.JS <http://www.ajaxblender.com/extjs>
+      o Ext.JS Scripts Directory </extjs/>
+      o Ext.JS Tutorials </ext-js-tutorials.html>
+      o About Ext.JS Framework </what-is-extjs.html>
+  * script.aculo.us <http://www.ajaxblender.com/script-aculo-us>
+      o script.aculo.us Scripts Directory </script-aculo-us/>
+      o script.aculo.us Tutorials </script-aculo-us-tutorials.html>
+      o About script.aculo.us Framework </what-is-script-aculo-us.html>
+
+Search
+
+
+  JavaScript Tutorials
+
+  * *All Tutorials <http://www.ajaxblender.com/tutorials>*
+  * *jQuery <http://www.ajaxblender.com/jquery-tutorials.html>*
+  * *Mootools <http://www.ajaxblender.com/mootools-tutorials.html>*
+  * *Ext.JS <http://www.ajaxblender.com/ext-js-tutorials.html>*
+  * *script.aculo.us
+    <http://www.ajaxblender.com/script-aculo-us-tutorials.html>*
+
+Subscribe to our RSS <http://www.ajaxblender.com/tutorials/feed>
+
+
+    Rotate Images Using JavaScript
+
+Rotate Images Using JavaScript
+
+Rotate images using JavaScript – is this even possible? Of course ;)
+Read this tutorial to find out how to rotate images using JavaScript,
+and the code is a cross-browser solution.
+
+Ok, let’s start from the easiest part. Let’s say we have the following
+markup:
+
+<img src="/article-sources/images/plane-1.jpg" alt="" id="image" />
+<canvas id="canvas"></canvas>
+
+The markup above adds the image that we will rotate and the *CANVAS *tag
+(which is used to display the rotated image). The CANVAS tag only works
+for current browsers such as FF, Opera, Chrome, IE8 and Safari. IE 6 and
+IE 7 do not support the CANVAS tag, so that we will remove it if browser
+is IE.
+
+Now let’s review how we will rotate the image. Most current browsers
+supports the *<canvas>* object which actually allows for ‘rotate’ and
+‘drawImage’ methods in 2D context, but the IE 6 and IE7 will not
+recognize this tag. So Microsoft invented rotation using their filters
+via *DXImageTransform.Microsoft.BasicImage* (here is a quick link to
+MSDN
+<http://msdn.microsoft.com/en-us/library/ms532918%28VS.85%29.aspx>). The
+good news is that the filter works and is easy to use, but the bad news
+is that it supports only 4 angles (0, 90, 180 and 270 degrees). The code
+to rotate images for IE will look like this:
+
+//  Use DXImageTransform.Microsoft.BasicImage filter for MSIE
+>switch(degree){
+     case 0: image.style.filter = 'progid:DXImageTransform.Microsoft.BasicImage(rotation=0)'; break;
+     case 90: image.style.filter = 'progid:DXImageTransform.Microsoft.BasicImage(rotation=1)'; break;
+     case 180: image.style.filter = 'progid:DXImageTransform.Microsoft.BasicImage(rotation=2)'; break;
+     case 270: image.style.filter = 'progid:DXImageTransform.Microsoft.BasicImage(rotation=3)'; break;
+}
+
+And for browsers that support the CNAVAS tag, the code will look like this:
+
+
+var cContext = canvas.getContext('2d');
+
+var cw = img.width, ch = img.height, cx = 0, cy = 0;
+//   Calculate new canvas size and x/y coorditates for image
+>switch(degree){
+     case 90:
+          cw = img.height;
+          ch = img.width;
+          cy = img.height * (-1);
+          break;
+     case 180:
+          cx = img.width * (-1);
+          cy = img.height * (-1);
+          break;
+     case 270:
+          cw = img.height;
+          ch = img.width;
+          cx = img.width * (-1);
+          break;
+}
+//  Rotate image
+canvas.setAttribute('width', cw);
+canvas.setAttribute('height', ch);
+cContext.rotate(degree * Math.PI / 180);
+cContext.drawImage(img, cx, cy);
+
+We have to change the X/Y coordinates for drawImage function. Otherwise
+it will not be visible in the viewport (see Figure B versus Figure C on
+the illustration below).
+
+image-rotation-canvas-illustration
+
+That’s it ;) Click the *Demo* to see it in action.
+
+*View Demo
+<http://www.ajaxblender.com/article-sources/jquery/image-rotate/index.html>*
+
+
+
+          Related Tutorials
+
+  * Slider Gallery (Apple-like Product Showcase Slider)
+    <http://www.ajaxblender.com/slider-gallery-apple-like-product-showcase-slider.html>
+  * Animations of CSS Properties in jQuery
+    <http://www.ajaxblender.com/animations-of-css-properties-in-jquery.html>
+  * How to Create Custom AJAX Tabs using jQuery
+    <http://www.ajaxblender.com/howto-create-custom-jquery-tabs.html>
+  * How to Create a Fancy Apple-style Search Suggestion
+    <http://www.ajaxblender.com/how-to-create-a-fancy-apple-style-search-suggestion.html>
+  * Customize HTML control with jQuery (Checkbox + Radio)
+    <http://www.ajaxblender.com/customize-html-control-with-jquery-checkbox-radio.html>
+
+*Leave a Comment <#commentform>*
+
+Tobias
+
+December 15, 2009
+
+Very cool! What if I wanted to have multiple rotatable images on the
+same page? How can I pass in the image ID to the function? Hopefully I
+can figure it out on my own…
+
+Tobias
+
+December 15, 2009
+
+Nope. There’s no way I’m going to figure this out by myself. I’m
+clicking on links that seem to actually load a new page with hash…or
+that’s how it looks to me. And I can’t figure out how I pass an image ID
+to the functions here. It’s a shame because this is exactly what I need
+to do, but I need to do it for 16 different images on the same page.
+
+Darren – ajaxBlender
+
+December 17, 2009
+
+Tobias,
+
+We made a slight modifation to the code we created for this tutorial.
+You can see the updated version here:
+http://www.ajaxblender.com/article-sources/jquery/image-rotate/index-updated.html
+
+This script will provide two functions: initRotateImage, which you
+should call first, to initialize the canvas. (You will notice that there
+is no CANVAS tag in the markup for this version.) Then use
+rotateImage(imageID, degree) to rotate images.
+
+Hope this helps!
+
+Sabato <http://imagenic.net>
+
+November 22, 2010
+
+Hi,
+Image dont seem to load in safari only after click on reset or rotate.
+Is there any solution for this?
+thanks
+
+cid
+
+December 30, 2010
+
+Here’s a slight variation that works for Chrome.
+
+javascript:(function ()
+{d=document;b=d.body;o=d.getElementsByTagName(’img’)[0];
+o.setAttribute(’width’,'100%’);o.setAttribute(’height’,'100%’);w=o.width;h=o.height;n=new
+Image();n.src=o.src;sw=w/n.height;sh=h/n.width;s=(sw
+
+cid
+
+December 30, 2010
+
+Let’s try that again… here’s a slight variation that works on Chrome:
+
+http://bit.ly/hlbDua
+
+Jeff Foster <http://www.webbizideas.com>
+
+June 21, 2011
+
+For the JavaScript handicapped there is also a way to do this with HTML
+– first export images as JPG or GIF, and the HTML would look something
+like this: img src=”/Images/Pic1.png” alt=”Pic1″ name=”Rotate_Me”
+width=”100″ height=”100″ id=”Rotate_Me”
+
+Paul <http://www.paulcarlton.com>
+
+September 18, 2011
+
+I got this to work with multiple images well by instantiating an array
+that gets populated with new Image() and then passing each image through
+an encapsulated function that holds the unique parameters per image. The
+encapsulated function then prints each picture out, waiting for
+img.onload(), with a title and description. Output looks like you tacked
+images on a wall.
+
+Frank
+
+February 5, 2012
+
+Very nice tutorial! Is there any chance you have a similar tutorial that
+would rotate 2 frame/second video rather than the single frame? I’ve
+been trying to alter this script without much luck. IE works fine with
+the slow video, but FF does not.
+
+Thank you!
+
+wito
+
+March 23, 2012
+
+Very Nice tutorial. the rotate is work fine for me. just i stack on size
+of the image. because on this script is use the actual size off image.
+can some one help me with fixed size. sory for my engglish
+
+Lorenzo
+
+April 2, 2012
+
+How can I autoload the image in the canvas at page load without wait
+that the user click on a rotate command?
+
+ajaxBlender.com <http://www.ajaxBlender.com/>
+
+April 3, 2012
+
+hi Lorenzo,
+
+you could try try to use Image() object and it’s method load() before
+initializing canvas.
+
+let us know if it works.
+
+:)
+
+Leave a comment
+
+Your name
+
+July 1, 2012
+
+Type Your Comment...
+
+*Spam protection.* Enter result of expression you see in the box below.
+
+3 + 8 =
+
+ 
+
+Submit
+
+
+    Shopping Cart
+
+0 item
+
+Your shopping cart is empty
+
+Visit the shop <http://www.ajaxblender.com/products-page.html>
+
+myRepono Website, WordPress & mySQL Database Backup
+<http://stats.buysellads.com/click.go?z=1247942&b=2251911&g=&s=&sw=1280&sh=800&br=firefox,13,mac&r=0.646767769057817&link=http://myRepono.com/>Load,
+Stress and Permormance Testing for Websites and Web Applications
+<http://stats.buysellads.com/click.go?z=1247942&b=2383118&g=&s=&sw=1280&sh=800&br=firefox,13,mac&r=0.7275850740492679&link=http://www.loadtestingtool.com>Kazila
+Xen VPS Hosting
+<http://stats.buysellads.com/click.go?z=1247942&b=2424698&g=&s=&sw=1280&sh=800&br=firefox,13,mac&r=0.7565438132637659&link=http://www.kazila.com/xen-vps-hosting.html>Premium
+jQuery Mobile Website Template
+<http://stats.buysellads.com/click.go?z=1247942&b=2433653&g=&s=&sw=1280&sh=800&br=firefox,13,mac&r=0.06700068076957744&link=http://themeforest.net/item/mobilize-touch-optimized-mobile-template/1712565?ref=beantowndesign>
+
+
+    Popular Categories
+
+View All <http://www.ajaxblender.com/scripts>
+
+  * Effects (8) <http://www.ajaxblender.com/jquery/effects>
+  * Forms (6) <http://www.ajaxblender.com/jquery/forms>
+  * Lightboxes (5) <http://www.ajaxblender.com/jquery/lightboxes>
+  * Photo Galleries (1) <http://www.ajaxblender.com/jquery/photo-galleries>
+  * Preloaders (1) <http://www.ajaxblender.com/jquery/preloaders>
+  * Tables (1) <http://www.ajaxblender.com/jquery/tables>
+  * Tooltips (3) <http://www.ajaxblender.com/jquery/tooltips>
+  * User Interface (11) <http://www.ajaxblender.com/jquery/user-interface>
+
+
+    AJAX Tutorials
+
+View All <http://www.ajaxblender.com/tutorials>
+
+ 1. How to Add Hints & Auto Focus Form Fields using jQuery
+    <http://www.ajaxblender.com/howto-add-hints-form-auto-focus-using-javascript.html>
+ 2. Convert Images to Grayscale
+    <http://www.ajaxblender.com/howto-convert-image-to-grayscale-using-javascript.html>
+ 3. Advanced Plugins Development with ExtJS
+    <http://www.ajaxblender.com/advanced-plugins-development-with-extjs.html>
+ 4. Rotate Images Using JavaScript
+    <http://www.ajaxblender.com/howto-rotate-image-using-javascript-canvas.html>
+ 5. Create Custom Cursors without .cur File
+    <http://www.ajaxblender.com/howto-create-custom-image-cursors.html>
+ 6. Convert ASCII Character to Hex, Decimal and Binary Code
+    <http://www.ajaxblender.com/howto-convert-ascii-hex-binary-decimal.html>
+
+ajaxBlender Script Integrations </about-us.html>
+
+
+    Helpful JavaScript Tutorials, Components & Links
+
+  * AJAX Blog <http://www.ajaxblog.com/>
+  * AJAX Rain <http://www.ajaxrain.com/>
+  * AJAX Spinner Generator <http://www.ajaxload.info/>
+  * Ajaxian <http://www.ajaxian.com/>
+  * Cool AJAX Scripts <http://www.coolajaxscripts.com>
+  * CSS Awards <http://www.thecssawards.com/>
+
+  * CSS Drive <http://www.cssdrive.com/>
+  * Developer Snippets <http://www.developersnippets.com/>
+  * Dynamic Drive <http://www.dynamicdrive.com/>
+  * Ext.JS <http://www.extjs.com/>
+  * Ext.JS Tutorials <http://www.ajaxblender.com/ext-js-tutorials.html>
+  * JavaScript Kit <http://www.javascriptkit.com/>
+
+  * jQuery <http://www.jquery.com/>
+  * jQuery for Designers <http://jqueryfordesigners.com/>
+  * jQuery Tutorials <http://www.ajaxblender.com/jquery-tutorials.html>
+  * jQuery UI <http://ui.jquery.com>
+  * Kyle Hayes <http://www.kylehayes.info/>
+  * MooTools <http://www.mootools.net/>
+
+  * Mootools Tutorials <http://www.ajaxblender.com/mootools-tutorials.html>
+  * Prototype JS <http://www.prototypejs.org/>
+  * PSD to HTML Conversion <http://www.htmlBlender.com/>
+  * script.aculo.us <http://script.aculo.us/>
+  * script.aculo.us Tutorials
+    <http://www.ajaxblender.com/script-aculo-us-tutorials.html>
+  * Speckyboy <http://www.speckyboy.com>
+
+  * Tuts+ Network <http://www.tutsplus.com/>
+  * W3 Schools <http://www.w3schools.com/>
+  * W3C <http://www.w3.org>
+  * Web Hosting Reviews <http://www.hostingBlender.com/>
+  * WordPress <http://www.wordpress.org/>
+  * Zapture It <http://www.zaptureit.com/>
+
+I'm Max with the ajaxBlender team. We're crazy about JavaScript, AJAX
+and anything else that let's us build cool web apps. Let us help you add
+a script to your site or even build some custom AJAX for you. Just
+contact us or click the button near the script you like. </contact.html>
+© 2012 ajaxBlender.com. All Rights Reserved.
+
+All trademarks and logos belong to ajaxBlender or their respective
+owners. Unauthorized use is prohibited. Privacy Policy & NDA
+</privacy-policy.html>.
+
+Powered by WordPress <http://www.wordpress.org/>.
+PSD to WordPress <http://www.htmlBlender.com> by htmlBlender.
+ajaxBlender is a w3Blender website by MediaWorks 7
+<http://www.mediaworks7.com>.
+
+  * Home <http://www.ajaxblender.com>
+  * jQuery Plugins <http://www.ajaxblender.com/jquery>
+  * Mootools Scripts <http://www.ajaxblender.com/mootools>
+  * script.aculo.us Scripts <http://www.ajaxblender.com/script-aculo-us>
+  * Ext.JS Scripts <http://www.ajaxblender.com/extjs>
+  * Add a Script <http://www.ajaxblender.com/add-script.html>
+  * Advertise With Us <http://buysellads.com/buy/detail/24012>
+
+The most comprehensive online resource for jQuery Scripts
+</what-is-jquery.html>, Ext.JS Scripts </what-is-extjs.html>, Mootools
+Scripts </what-is-mootools.html>, script.aculo.us Scripts
+</what-is-script-aculo-us.html> and Custom Development of Web 2.0 AJAX
+Applications </about-us.html>.
+
+Follow us ;) <http://twitter.com/ajaxblender>
+
+ 

@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Documento sin título</title>
+
+
+<script type="text/javascript">
+
+//función para dos parámetros numéricos
+
+var estrella=prompt("escribe una estrella");
+
+
+var star=["polaris","aldebaran","deneb","vega","altair","dubhe","regulus"];
+
+var constelaciones=["Osa Menor","Tauro","Cignus","Lyra","Aquila","Osa Mayor","Leo"];
+
+
+
+function firmamento(star,constelaciones) {
+	
+	for (var i =0; i<star.leght ;i++) 
+	
+	{
+	
+	
+	if (star[i]==estrella)  
+	
+	  {
+		
+		return constelaciones[i];
+
+	  }
+	
+	
+	return estrella+"not found";
+	
+	
+	
+	
+}                        
+
+</script>
+
+
+</head>
+
+
+
+
+
+<body>
+
+
+
+<p> 
+Funciones: 
+Siempre hay que introducir las variables con las que trabajan entre paréntesis. 
+
+Todas las operaciones se hacen usando variables. Todas. Para recoger valores tb se declaran nuevas variables. 
+
+
+Clases: son agrupaciones de objetos con mismas características. 
+
+Propiedades y variables acaban siendo lo mismo y se usan indistintamente.
+
+
+aplicar varias propiedades a un objeto: 
+
+(1)-se crea una clase que englobe todos los objetos (star)
+
+var star= {};
+
+function Star (constell, type, specclass, magnitude) {
+
+
+// para pasar las propiedades a la función se definen cuatro variables como son constell, type, specclass y magnitude. Mediante esas variables se dan los valores a cada propiedad. Para acceder a cada uno de 
+esos valores de las variables, se define otras variables que son constellation, type, spectraClass y mag. Estas variables funcionarán de la función hacia fuera, las otras primeras cuatro son sólo para pasar parámetros dentro de la función. 
+
+
+this.constellation= constell;
+this.type= type;
+this.spectralClass= specclass;
+this.mag= magnitude;
+
+}
+
+
+
+
+star["Polaris"]=new Star ("Ursa Minor","Double/Cepheid", "F7", 2.0);
+star["Mizar"]=new Star ("Ursa Major", "Spectroscopic Binary","A1", 2.3);
+
+
+</p>
+
+</body>
+</html>

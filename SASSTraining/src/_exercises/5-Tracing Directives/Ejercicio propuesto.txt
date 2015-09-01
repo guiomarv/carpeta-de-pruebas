@@ -1,0 +1,20 @@
+A) Las condiciones @if existentes en @for, @while y @each se repiten en cuanto a condiciones y resultado.   Incorporarlas e invocarlas mediante el uso de una función.
+
+B) Los primeros elementos de cada "row" poseen un color más oscuro. Cambiar el color a blanco del texto de la primera mitad de los divs de cada fila.
+
+C) Crear / forzar nuevos
+	- Debug
+	- Warn
+	- Error
+
+D) Mediante el uso de @each, crear código sass para obtener el siguiente código css:
+
+.delete-icon {
+	background-image: url('/images/delete.png');
+}
+.cancel-icon {
+	background-image: url('/images/cancel.png');
+}
+.add-icon {
+	background-image: url('/images/add.png');
+}

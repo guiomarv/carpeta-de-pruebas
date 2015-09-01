@@ -1,0 +1,15 @@
+Existe un menú oculto, Don't try at home.
+
+a) Para hacerlo aparecer.  
+	- Pulsar sobre la cabecera de la web, en la zona azul superior.
+	- Pulsar Ctrl + ñ
+
+	En caso de no funcionar. mostrar quitando el estilo que la oculta (header.html)
+	- Eliminar style='display:none;' de esta línea:
+		<li id="lastLi" style='display:none;'>	
+
+----------------------------------------------------------
+
+
+b) Compilar y comprobar resultado. 
+	Se generan distintas shadows, con un resultado css normal, pero mediante funciones que facilitan su creación ya que son muchos los valores resultantes.

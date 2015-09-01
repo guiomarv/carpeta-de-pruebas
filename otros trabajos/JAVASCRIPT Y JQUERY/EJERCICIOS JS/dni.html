@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Documento sin título</title>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+
+
+
+
+var letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 
+'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T']; 
+
+dni=prompt("introduce número de dni");
+
+letradni=prompt("introduce letra dni");
+
+letradni=letradni.toUpperCase();
+
+
+
+ if(dni>99999999 || dni<0) {
+	  
+	alert("número incorrecto, el número no puede ser mayor de 99999999"); 
+ }
+ 
+ 
+ 
+ 
+ else {  
+ 
+    var letracalculada=letras[dni % 23];
+	
+	
+	    if (letracalculada!=letradni) {
+			
+			alert("letra dni incorrecta");
+			
+			
+		}
+	
+	
+	else  {    (letracalculada=letradni)
+		
+		alert("dni correcto");
+		
+		
+	 }
+ 
+	 
+ }
+ 
+
+
+
+	
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+</body>
+</html>

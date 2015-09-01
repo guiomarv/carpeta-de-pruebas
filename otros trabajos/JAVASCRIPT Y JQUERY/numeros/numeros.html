@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script type="text/javascript" src="js/jquery-min.js">
+
+</script>
+<script type="text/javascript">
+
+
+
+
+     // valores de las imágenes
+
+        var imagenes_numeros = ["0.jpg","1.jpg", "2.jpg", "3.jpg","4.jpg" ,"5.jpg" ,"6.jpg", "7.jpg", "8.jpg","9.jpg" ];
+		
+
+	// array con los resultados de las divisiones entre potencias de 10
+	
+		var resultados;
+
+
+	// valor del número final usado para calcular la posición de la imagen
+		
+		var numero_final;
+		 
+		 
+	//variable final declarado como string vacío
+	
+		 var stringFinal = "";
+		 
+		 
+//función
+
+function actualizarContador(numero, selector) {
+	
+	if (numero < 0){
+		return false;
+	} else {
+		
+		
+		
+		//obtiene un array con todas las cifras del número inicial ///////////////////////////////
+		
+	
+	
+	    //convierte el numero a string para calcular el número de cifras 
+		
+		 var posiciones = numero.toString();
+		 
+		  
+		  for (i= posiciones.length-1; i >= 0; i--) {
+			
+			
+			// divide el número entre potencias de 10 en base al número de cifras del número -1
+			
+			var potencia= Math.pow(10,i);
+			  
+			var Rdivision= numero/potencia;
+			
+			
+			//pasar a array el resultado para coger sólo la parte entera		
+				
+			var num_como_string= Rdivision.toString();
+			  
+			var resultado_redondeado = num_como_string.split(".");
+			
+			resultados =  resultado_redondeado[0];
+							
+		}
+		
+	   
+	
+	 //recorre el array resultados para calcular el número de imagen (posición) correspondiente	 //////////////////
+		
+		
+		
+		for (i=0; i< posiciones.length; i++) {
+				 
+		   numero_final= resultados[i];
+	
+		   var posicion= imagenes_numeros[numero_final];
+		
+		   console.debug(posicion);
+	
+		   stringFinal += '<img src="imgs/img_' + posicion + '"/>';     // Cada vez que encuentro un numero, pinta una imagen
+			  
+	}
+     
+	
+	
+	
+	} // fin else
+	
+	
+	
+	
+
+	$(selector).html(stringFinal);
+	
+	
+	
+	};
+	
+
+
+
+$(document).ready(function(){
+	
+	actualizarContador(2343434, '#cartel');
+	
+});
+
+
+
+</script>
+<title>Números</title>
+</head>
+
+<body>
+
+<div id="cartel">
+  
+</div>
+</body>
+</html>
