@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <script src="http://code.createjs.com/easeljs-0.7.0.min.js"></script>
+
+  <style>
+   #lienzo {
+   	border:1px solid blue; 
+   }
+
+  </style>
+
+</head>
+
+
+<body>
+
+<canvas id ="lienzo" width="600" height="400px">
+
+
+</canvas>
+
+
+</body>
+
+<script>
+
+
+    var stage, circle;
+
+    function init() {
+      stage = new createjs.Stage("lienzo");
+      
+      circle = new createjs.Shape();
+      circle.graphics.beginFill("red").drawCircle(0, 0, 40);
+      circle.y = 50;
+      stage.addChild(circle);
+      
+      createjs.Ticker.on("tick", tick);
+      createjs.Ticker.setFPS(30);
+    }
+
+
+//function tick() { console.log("un tick"); }
+
+function tick(event) {
+      circle.x = circle.x + 5;
+      stage.update(event); // important!!
+    }
+
+  init();
+
+</script>
+
+
+
+
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <script src="http://code.createjs.com/easeljs-0.7.0.min.js"></script>
+
+  <style>
+   #lienzo {
+   	border:1px solid blue; 
+   }
+
+  </style>
+
+</head>
+
+
+<body>
+
+<canvas id ="lienzo" width="600" height="400px">
+
+
+</canvas>
+
+
+</body>
+
+<script>
+
+//var canvas = document.getElementById('lienzo');
+//var context = canvas.getContext('2d');
+var stage = new createjs.Stage("lienzo");
+
+
+           // alert("sdf");
+            var circle = new createjs.Shape();
+circle.graphics.beginFill("red").drawCircle(0, 0, 50);
+circle.x = 100;
+circle.y = 100;
+stage.addChild(circle);
+stage.update();
+  
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+</html>

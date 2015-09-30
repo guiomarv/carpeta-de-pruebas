@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+
+
+<style>
+ #lienzo {
+ 	border:1px solid blue; 
+ }
+
+</style>
+
+
+</head>
+
+
+<body>
+
+<canvas id ="lienzo" width="600" height="400px">
+
+
+
+</canvas>
+
+<div>
+
+</div>
+
+
+</body>
+
+<script>
+
+var canvas = document.getElementById('lienzo');
+var context = canvas.getContext('2d');
+
+context.translate(canvas.width / 2, canvas.height / 2);
+
+ //rotate 45 degrees clockwise
+context.rotate(Math.PI/4 );
+
+var path1 = new Path2D();
+path1.rect(10, 10, 100,120);
+
+var hypnose = new Image();
+
+hypnose.onload = function() {
+  context.drawImage(hypnose, 169, 170);
+ };
+hypnose.src = 'images/hynose.png';
+
+
+context.stroke(path1);
+
+</script>
+
+
+
+
+
+
+
+</html>

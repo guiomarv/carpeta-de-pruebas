@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <script src="http://code.createjs.com/easeljs-0.7.0.min.js"></script>
+
+  <style>
+   #lienzo {
+   	border:1px solid blue; 
+   }
+
+  </style>
+
+</head>
+
+
+<body>
+
+<canvas id ="lienzo" width="600" height="400px">
+
+
+</canvas>
+
+
+</body>
+
+<script>
+
+var stage = new createjs.Stage("lienzo");
+var circle = new createjs.Shape();
+circle.graphics.beginFill("red").drawCircle(0, 0, 50);
+circle.x = 100;
+circle.y = 100;
+stage.addChild(circle);
+stage.update();
+  
+
+circle.x = circle.x + 3;
+if (circle.x > stage.canvas.width) { circle.x = 0; }
+stage.update();
+</script>
+
+
+
+
+
+</html>
