@@ -1,0 +1,175 @@
+
+// //declara el valor de la variable que usará font face
+// $CanalPlusDemRegular:'CanalPlusDemRegular';
+// $CanalPlusRegular:'CanalPlusRegular';
+
+
+// //llamar a font face
+// @include font-face($CanalPlusDemRegular);
+// @include font-face($CanalPlusRegular);
+
+// //mixin de font face que llama a todas las "font-family"
+// @mixin font-face($family){
+// 	@font-face {
+	
+// 		font-family: $family;
+// 		src: url( '../fonts/cdemrom-webfont.eot') format('eot'), 
+// 			 url('../fonts/cdemrom-webfont.woff') format('woff'), 
+// 			 url('../fonts/cdemrom-webfont.ttf')  format('truetype'),
+// 			 url('../fonts/cdemrom-webfont.svg#') format('svg');
+// 	}
+
+// }
+
+// //mixin de estilos de fuente
+// @mixin font($font-weight,$font-style) {
+// 	$font-weight:font-weight;
+// 	$font-style:font-style;
+
+// }
+
+
+@import "fuentes";
+
+
+////////////MIXINS
+
+@mixin border-radius ($radio){
+	-webkit-border-radius:$radio;
+	-moz-border-radius: $radio;
+	border-radius: $radio;
+}
+
+@mixin circulo ($background-color, $border-width:1px, $border-color: transparent){
+	$background-color:background-color;
+	$border-width:border-width;
+	$border-color:border-color;
+	border-style:solid;
+	@include border-radius (100%);
+}
+
+@mixin boton ($background-color){
+	width: 30px;
+	background: $background-color;
+	@include border-radius (10px);
+		a{ 
+			text-decoration: none;
+			padding:8px;
+			color:#fff;
+		}	
+}
+
+
+////////////ESTILOS
+
+
+//genéricos
+
+$color-1:#ff0000;//rojo
+$color-2:#176008;//verde
+$color-3:#0e9eb7;//azul
+
+$pequeno:12em;
+$grande: 25em;
+
+.pequeno{
+	width: $pequeno !important;
+	height: $pequeno !important;
+}
+
+.grande{
+	width: $grande !important;
+	height: $grande !important;
+}
+
+
+.border1{
+	border-color:$color-1 !important;
+}
+
+.border2{
+	border-color:$color-2 !important;
+}
+
+.border3{
+	border-color:$color-3 !important;
+}
+
+
+
+//ESTILOS DEL  CONTENIDO
+
+nav {
+	height: 50px;
+	background: #65A5EE;
+	ul li {
+		list-style: none;
+		float: left;
+		margin: 0 5px ;
+		cursor: pointer;
+		text-align: center;
+		margin-right: 1em;
+		width: 10.63em;
+		@include font (400, normal);
+		font-family:$CanalPlusDemRegular;
+		a{
+			text-decoration: none;
+			color:#fff;	
+		}
+	}
+}
+
+.contenido{
+	clear: both;
+	margin: 10px auto;
+	display: block;
+	color:#fff;
+	font-family:$CanalPlusRegular;
+}
+
+.contenedor{
+	width:auto;
+}
+
+.caja {
+	padding:2em;
+	border:1px solid #FFF;
+	color:#fff;
+	&.color-1{
+	background-color:$color-1;
+	}
+	&.color-2{
+	background-color:$color-2;
+	}
+	&.color-3{
+	background-color:$color-3;
+	}
+}
+
+.circulo{
+	@include circulo (inherit, inherit, inherit);
+	border-color: transparent;
+	float:left;
+		&.color-1{ 
+			background-color:$color-1}
+		&.color-2{ 
+			background-color:$color-2}
+		&.color-3{ 
+			background-color:$color-3}
+}
+
+.boton{
+@include boton (black); 	
+		&.azul {
+		@include boton (blue); 	
+		}
+		&.rojo {
+		@include boton (rojo); 	
+		}
+}
+
+
+footer{
+	clear: both;
+	text-align: center;
+}

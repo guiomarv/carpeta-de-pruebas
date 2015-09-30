@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+
+
+<style>
+ #lienzo {
+ 	border:1px solid blue; 
+ }
+
+</style>
+
+
+</head>
+
+
+<body>
+
+<canvas id ="lienzo" width="600" height="400px">
+
+
+
+</canvas>
+
+<div>
+
+</div>
+
+
+</body>
+
+<script>
+  var canvas = document.getElementById('lienzo');
+  var context = canvas.getContext('2d');
+  var hypnose = new Image();
+
+  hypnose.onload = function() {
+    context.drawImage(hypnose, 69, 50);
+  };
+  hypnose.src = 'images/hynose.png';
+
+</script>
+
+
+
+
+
+
+
+</html>

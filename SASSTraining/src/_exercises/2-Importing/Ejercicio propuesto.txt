@@ -1,0 +1,7 @@
+1- Existe la necesidad de incorporar un elemento común (title) en las ventanas Start e Importing.  
+
+Ya hay creado, al igual que el full-container, un title-container que calcula y establece el estilo para ello. 
+
+A) Añadir el div necesario en las ventanas indicadas
+
+B) Importar en el lugar necesario y/o óptimo el componente común title-container.

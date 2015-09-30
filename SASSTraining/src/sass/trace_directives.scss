@@ -1,0 +1,106 @@
+@import "modules/all";  //Getting all modules
+@import "partials/all";  //Getting all partials
+
+
+//General vars
+$rows: 3;
+$reference-color:forest;//ocean;  // forest, city
+
+
+
+//Style declarations
+.row {
+  height: 100% / $rows;
+  border-bottom: 2px solid $_colour3; 
+}
+
+.row:last-child {
+  border-bottom: none;
+}
+
+.row > div {
+  float: left;
+  height: 100%;
+}
+
+@function obtener-colores($i){
+ $background-color:null;
+   @if $reference-color == ocean {
+      $background-color: $_colour-grill1 * ($i / 10 + 0.5); 
+    } @else if $reference-color == forest {
+      $background-color: $_colour-grill2 * ($i / 10 + 0.5);
+    } @else {
+      $background-color: $_colour-grill3 * ($i / 10 + 0.5);  
+    }
+    @return $background-color;
+}
+
+
+//FOR DIRECTIVE
+
+//Row of colours vars
+$for-elements: 5;
+
+@for $i from 1 through $for-elements {  
+  .course#{$i} {
+    width: 100% / $for-elements;  
+    background-color: obtener-colores($i);
+  }  
+}
+
+
+
+
+
+
+//WHILE DIRECTIVE
+$element: 1;
+$max-elements: 6;
+$virtual-cols: 0;
+
+@for $i from 1 through $max-elements {
+    $virtual-cols: $virtual-cols + $i;
+}
+
+//@debug "number of divisions:" + $virtual-cols;   //DEBUG
+
+@while $element <= $max-elements {  
+  .level#{$element} {
+      
+    $col-width: (100 / $virtual-cols) * $element;        
+      
+    @if unitless($col-width) {              
+      //@error "#{$col-width} May to be in percent";       //ERROR
+      //@warn "Assuming #{$col-width} to be in percent";     //WARN
+      $col-width: 1% * $col-width;
+    }    
+
+    width: $col-width;
+    background-color: obtener-colores($element); 
+      
+    $element: $element + 1;
+  }  
+}
+
+
+
+
+//EACH DIRECTIVE
+$el-group: 1;
+$n-group: 3;
+
+@each $group in "basic", "independent", "proficient" {
+  .#{$group}:before {
+    content: $group;
+   }
+   
+  .#{$group} {     
+    width: 100% / $n-group;  
+
+  background-color: obtener-colores($el-group);
+    text-transform: uppercase;
+  }
+  
+  $el-group: $el-group + 1;  
+}
+

@@ -1,0 +1,166 @@
+@import "modules/all";  //Getting all modules
+@import "partials/all";  //Getting all partials
+
+//Variables
+$block-height: 50%;
+
+$colors: (
+  light-background: $_colour4,
+  dark-background: $_colour3,
+  light-font: $_colour2,
+  dark-font:  $_colour1
+);
+
+$font-big-weight: bold;
+
+
+
+
+//Function to calculate blocks size given a width value
+@function set-block-size($w) {
+  @return ($block-height/2)+($w);
+}
+
+
+
+// Mixin for big font properties 
+@mixin font-big($font-big-weight:normal) {
+  @content;
+  font: {
+    family: $_font1;
+    size: $_font-extra-big;
+    weight: $font-big-weight;
+  }    
+}
+
+.block-font-big{
+  @include font-big {font-size:$font-big-weight;color:#ddd;}
+}
+
+
+// Mixin to apply a gradient 
+@mixin linear-gradient($fromColor, $toColor) {
+  background-color: $toColor; 
+  background-image: -webkit-gradient(linear, left top, right top, from($fromColor), to($toColor)); 
+  background-image: -webkit-linear-gradient(left, $fromColor, $toColor); 
+  background-image:    -moz-linear-gradient(left, $fromColor, $toColor); 
+  background-image:     -ms-linear-gradient(left, $fromColor, $toColor); 
+  background-image:      -o-linear-gradient(left, $fromColor, $toColor); 
+  background-image:         linear-gradient(left, $fromColor, $toColor);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#{$fromColor}', EndColorStr='#{$toColor}');
+}
+
+
+
+
+//Placeholder for block elements 
+%block {
+  height: $block-height;
+  float: left;
+}
+
+
+
+
+// Style for the upper left block 
+.upper-left-block {
+  @extend %block;   //Extending from %block style
+    
+  width: set-block-size(40%);   //Calling function
+  background: map-get($colors, light-background);
+  
+  @include font-big($font-big-weight);    //Including font-big style  
+    
+  @media screen and (max-width: 1040px) {   //Only applied if screen is smaller than X px (width)
+    color: map-get($colors, light-font);
+    background-color: map-get($colors, dark-background);
+  }
+}
+
+
+
+
+// Style for the upper right block 
+.upper-right-block {
+  @extend %block;   //Extending from %block style
+         
+  width: set-block-size(10%);   //Calling function
+  
+  @include font-big {text-decoration: underline; };  //Including font-big style
+  @include linear-gradient(map-get($colors, light-background), map-get($colors, dark-background));
+}
+
+
+
+// Style for the lower left block 
+.lower-left-block {
+  @extend .upper-right-block;    //Extending from upper right block style
+  @include linear-gradient(map-get($colors, dark-background), map-get($colors, light-background));
+}
+
+
+
+// Style for text inside the lower left block 
+.lower-left-block-text {
+  @extend .lower-left-block;   //Extending from lower left block style   
+  width: 100%;   
+}
+
+
+
+// Style for lower right block 
+.lower-right-block {
+  @extend %block;   //Extending from %block style
+     
+  width: set-block-size(40%);   //Calling function
+  background: map-get($colors, light-background);
+   
+  @include font-big ($font-big-weight);    //Including font-big style
+  
+  @media screen and (max-width: 1040px) {   //Only applied if screen is smaller than X px (width)
+    color: map-get($colors, light-font);
+    background-color: map-get($colors, dark-background);
+   }
+} 
+
+
+///////////////////////////////////////////// EXERCISE STYLE /////////////////////////////////////
+
+
+%box-size{
+-webkit-box-sizing: border-box; /* Safari 3.0 - 5.0, Chrome 1 - 9, Android 2.1 - 3.x */
+-moz-box-sizing: border-box;    /* Firefox 1 - 28 */
+box-sizing: border-box;         /* Safari 5.1+, Chrome 10+, Firefox 29+, Opera 7+, IE 8+, Android 4.0+, iOS any */
+}
+
+
+.bloque {
+  @extend %box-size;
+  width: 50%;
+  height: 50%;
+  float: left;
+  border: 1px solid $_colour1;
+  -webkit-box-sizing: border-box; 
+  -moz-box-sizing: border-box;   
+  box-sizing: border-box;
+}
+
+.block1{
+  @extend .bloque;
+  background-color: white
+}
+.block2{
+  @extend .block1;
+  font-weight: bold;
+}
+
+.block3{
+  @extend .block2;
+  font-size: 40px;
+}
+
+.block4{
+  @extend .block3;
+  font-family: arial;
+}
+

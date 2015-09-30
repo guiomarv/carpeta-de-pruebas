@@ -1,0 +1,40 @@
+@import "modules/colours";  //Getting the data from _colours.scss
+@import "modules/fonts";    //Getting the data from _fonts.scss
+
+
+/* vars declaration */
+$_container-height: 480px;
+$_container-width: 950px;
+$_container-small-width: $_container-width/4;
+$_container-gutter: 20px;
+
+/* start style declaration */
+.full-container {
+  position: fixed;  
+  height: $_container-height + ($_container-gutter * 2);                //height of the element, plus, paddins containers on it
+  width: $_container-width + ($_container-gutter * 4);                  //width of the element, plus, paddins of left and right containers
+  margin: $_container-gutter;
+  
+  /* Center the elements */
+  $half-width-container: $_container-width / 2 + $_container-gutter * 3;         //half width of the element, plus, half paddins of left and right containers
+  left: calc(50% - #{$half-width-container});      
+  left: -webkit-calc(50 - #{$half-width-container});  
+  left: -moz-calc(50% - #{$half-width-container});  
+  
+  $half-top-container: $_container-height/2 + $_container-gutter * 2;         //half height of the element, plus, paddings of elements
+  top: calc(50% - #{$half-top-container});      
+  top: -webkit-calc(50 - #{$half-top-container});  
+  top: -moz-calc(50% - #{$half-top-container});  
+  
+  background-color: $_colour0;
+  border: 2px solid $_colour3;  
+  text-align: center;
+
+$ancho-contedor: $_container-width + ($_container-gutter * 4);
+
+  @media screen and (max-width: $ancho-contedor) {
+    display: none;
+  }
+}
+
+

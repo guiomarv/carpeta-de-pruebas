@@ -1,0 +1,53 @@
+Se establecen iconos con funciones que se pueden añadir a compass / sass.
+
+a) instalar sassy buttons:
+	- consola: gem install sassy-buttons
+
+----------------------------------------------------------
+
+b) añadir botones en magic.html (comentados)
+	<button class="sassy1">The</button>
+	<button class="sassy2">SASS</button>
+	<button class="sassy3">Way</button>
+	<button class="sassy4">!!!</button>
+
+
+c) añadir a la configuración, el módulo necesario. (Descomentar en configure.rb)
+	require 'sassy-buttons'
+
+----------------------------------------------------------
+
+
+d) Importar sassy buttons (Descomentar en magic.scss)
+	@import "sassy-buttons";
+
+----------------------------------------------------------
+
+
+e) Incluir sass que genera los botones  (descomentar de magic.scss)
+button {
+  height: 45px;
+  width: 120px;
+  color: black !important;
+  @include border-radius;
+}
+
+.sassy1 {
+  @include sassy-button-gradient("matte", #4ba3cc);
+}
+
+.sassy2 {
+  @include sassy-button-gradient("simple", #e86a43);
+}
+
+.sassy3 {
+  @include sassy-button-gradient("glass", #8cbe5f);
+}
+
+.sassy4 {
+  @include sassy-button("shiny", 5px, 19px, orange); 
+  @include sassy-button-style("push", orange);
+}
+
+
+-- El resultado, botones 'al azar' creados mediante funciones predefinidas con las funciones de sassy-button.  Agiliza su creación.

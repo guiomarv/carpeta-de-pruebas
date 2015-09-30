@@ -1,0 +1,31 @@
+@import "modules/all";  //Getting all modules
+@import "partials/all";  //Getting all partials
+
+
+/* Common style for containers */
+.importing-container {
+  height: $_container-height;
+  padding: $_container-gutter;
+  text-align: justify;
+}
+
+/* Just for first container */
+.left-importing-container {  
+  width: $_container-small-width;
+  float: left;  
+  font-size: $_font-big;
+  
+  background-color: $_colour3;
+  color: $_colour2;    
+}
+
+/* Just for second container */
+.right-importing-container {
+  width: $_container-small-width * 3;
+  float: right;  
+  font-size: $_font-small;
+  
+  background-color: $_colour4;
+  color: $_colour1;
+ 
+}

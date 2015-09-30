@@ -1,0 +1,50 @@
+A)
+- En el inicio declarar $align: left;
+- Añadir: 
+	.#{$container-name}-container {
+		text-align: $align;
+
+
+	.farewell-container { 
+		text-align: $align;
+
+
+----------------------------------------------------------
+
+B)
+$version: null;     //Null variable
+$test: black;
+
+.#{$container-name}-container {
+	$test: blue;
+	background-color: $test;
+
+.farewell-container { 
+	$test: red;
+	background-color: $test;
+
+
+----------------------------------------------------------
+
+C)
+$version: null;     //Null variable
+$test: black;
+
+.#{$container-name}-container {
+	$test: blue !global;
+	background-color: $test;
+
+.farewell-container {
+	background-color: $test;
+
+----------------------------------------------------------
+
+
+D)
+$version: null;     //Null variable
+$container-down: farewell;
+
+.#{$container-down}-container { 
+.#{$container-down}-container:before { 
+.#{$container-down}-container p {
+

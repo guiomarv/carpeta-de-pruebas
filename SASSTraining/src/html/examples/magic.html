@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Start</title>
+		<link rel="stylesheet" href="../../css/magic.css">		
+    	<link rel="stylesheet" href="../../css/common.css"/>	
+    	
+    	<script type="text/javascript">    	
+    		function createPopup(button) {
+    			changeClass(button);
+    			var r = alert("bye bye shiny button!");
+    			changeClass(button);
+				
+    		};    		
+			function changeClass(button)
+			{
+				var newClass = "";			
+				if(button.className.indexOf("disabled") < 1) {	 
+					newClass = button.className.replace( 'active' , 'disabled' );    
+				} else {
+					newClass = button.className.replace( 'disabled' , 'active' );    
+				}
+				button.className = newClass;			   
+			};
+		</script>
+	</head>
+	<body>
+		<div class="full-container">
+			<p class="notification notification-confirm active" onclick="createPopup(this)">Confirmation</p>
+			<p class="notification notification-warning active" onclick="createPopup(this)">Warning</p>
+			<p class="notification notification-alert active" onclick="createPopup(this)">Alert</p>
+			
+			
+			<br><hr><br>
+			<button class="sassy1">The</button>
+			<button class="sassy2">SASS</button>
+			<button class="sassy3">Way</button>
+			<button class="sassy4">!!!</button>
+		
+			
+		</div>
+	</body>
+</html>

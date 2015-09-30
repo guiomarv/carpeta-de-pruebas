@@ -1,0 +1,89 @@
+/* vars declaration */
+/* start style declaration */
+.full-container {
+  position: fixed;
+  height: 520px;
+  width: 1030px;
+  margin: 20px;
+  /* Center the elements */
+  left: calc(50% - 535px);
+  left: -webkit-calc(50 - 535px);
+  left: -moz-calc(50% - 535px);
+  top: calc(50% - 280px);
+  top: -webkit-calc(50 - 280px);
+  top: -moz-calc(50% - 280px);
+  background-color: transparent;
+  border: 2px solid #003133;
+  text-align: center; }
+  @media screen and (max-width: 1030px) {
+    .full-container {
+      display: none; } }
+
+/* vars declaration */
+/* start style declaration */
+.title-container {
+  position: fixed;
+  height: 25px;
+  width: 1030px;
+  margin: 20px;
+  /* Center the elements */
+  left: calc(50% - 535px);
+  left: -webkit-calc(50 - 535px);
+  left: -moz-calc(50% - 535px);
+  top: calc(50% - 305px);
+  top: -webkit-calc(50 - 305px);
+  top: -moz-calc(50% - 305px);
+  background-color: black;
+  border: 2px solid #003133;
+  color: #fff;
+  text-align: center; }
+
+/* These are variables to use 
+   globally in our classes. */
+.full-container {
+  background-color: #019c7a; }
+
+/* Style for container containing welcome and farewell ones */
+.start-container {
+  margin: 0px auto;
+  top: 50%;
+  position: relative;
+  transform: translateY(-50%); }
+
+/* Style for welcome container */
+.welcome-container {
+  width: 80%;
+  height: 35%;
+  margin: 0px auto;
+  border: 2px solid black;
+  text-align: left;
+  background-color: red; }
+
+/* Style for text inside welcome container */
+.container-text {
+  font-size: 32px; }
+
+/* Style for farewell container */
+.farewell-container {
+  width: 80%;
+  height: farewell-container-height;
+  margin: 0px auto;
+  border: 2px solid black;
+  background-color: #003133;
+  text-align: left;
+  background-color: red; }
+
+/* Style for before farewell container */
+.farewell-container:before {
+  content: "Feel free to play SASS (version: 3.4.5. ) and discover.";
+  font-size: 32px;
+  font: 20px/10px Arial;
+  color: white; }
+
+/* Style for p elements in farewell container */
+.farewell-container p {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 32px;
+  color: #cc3333; }
+
+/*# sourceMappingURL=start.css.map */

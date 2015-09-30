@@ -1,0 +1,231 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Documento sin título</title>
+
+<script type="text/javascript" src="jquery.js">
+
+
+   
+	  
+	  
+	  
+    
+
+        
+		
+      </script>  
+      
+<script type="text/javascript">
+
+
+    $('document').ready(function(){
+            $('.menu').lksMenu();
+        });
+
+// Esta técnica es una forma de hacer convivir el script con el hecho de que algunas
+// páginas tienen mas de una librería que genera conflicto con el simbolo $
+// arrancando con esta funcion que pasa por parametro la misma libreria jQuery
+// nos aseguramos que todo funcione correctamente en futuros usos , algo fundamental
+// si lo que hacemos es una extensión o plugin jquery donde no sabemos donde se
+// implementará
+
+(function($){
+    // fn es un shortcut al prototipo (prototypo) de la libreria jquery
+    // declarando un método dentro de esta librería la extendemos para ser usada
+    // con cualquier selector
+    $.fn.lksMenu=function(){
+        // para mantener la posibilidad de concatenar métodos es que retornamos la función en
+        // lugar de solo ejecutar algo y ya.
+        // en este caso usamos un each, porque el selector sobre el que aplicamos la función
+        // podría contener más de un elemento , esto es , aplicaría $('.menu').menu() lo cual
+        // ejecutaría el código para todos los elementos que tengan la clase menu, como puede
+        // haber mas de uno es que ejecutamos el each para que corra sobre todos ellos
+        return this.each(function(){
+            // obtenemos el elemento que se esta analizando en esta vuelta del each
+            var menu= $(this);
+            // localizamos los links principales y le asignamos un evento click
+            menu.find('ul li > a').on('click',function(event){
+                // identificamos el elemento sobre el que se hizo click
+                var currentlink=$(event.currentTarget);
+                // los ul que tengan la clase active serán los que estan abiertos
+                // si el link sobre que presionamos ya estaba abierto , es decir tenia
+                // la clase active, lo cerramos y nada mas
+				
+				
+               if (currentlink.parent().find('ul.active').size()==1)
+                {
+                    //cerramos el link porque apretamos sobre el mismo abierto
+                    currentlink.parent().find('ul.active').slideUp('medium',function(){
+                        // le quitamos la clase
+                        currentlink.parent().find('ul.active').removeClass('active');
+                    });
+                }
+				
+				
+				
+                // si ningun link estaba apretado
+                else if (menu.find('ul li ul.active').size()==0)
+                {
+                    //no hace falta cerrar ninguno y solo abrimos el elemento al
+                    // cual se le hizo click
+                    show(currentlink);
+                }
+                else
+                {
+                    // si ya había un item abierto , simplemente lo localizamos
+                    // con find, y lo cerramos con slideup,
+                    menu.find('ul li ul.active').slideUp('medium',function(){
+                        // una vez que cerramos el que estaba abierto
+                        // le quitamos la clase active
+                        menu.find('ul li ul').removeClass('active');
+                        // abrimos uno nuevo que corresponde al que se clickeo
+                        show(currentlink);
+                    });
+                }
+            });
+ 
+            // esta función es de soporte
+            // todo lo que hace es abrir el elemento y asignarle la clase active
+            function show(currentlink){
+                currentlink.parent().find('ul').addClass('active');
+                currentlink.parent().find('ul').slideDown('medium');
+            }
+        });
+    }
+    // esto es lo que deciamos al principio , ejecutamos la función por eso los
+    // parentesis y le pasamos por parametro la libreria jQuery.
+})(jQuery);
+
+</script> 
+ 
+ 
+ 
+ 
+ 
+ <style>
+ 
+ .menu{
+      font-family: Helvetica;
+	
+
+}
+.menu ul{
+    list-style: none;
+    margin:0;
+    padding:0;
+  width: 130px;	
+}
+.menu ul li ul{
+     width: 125px;	
+}
+.menu ul li{
+    margin:0;
+    padding:5px;
+    background-color: #4B4B4B;
+	
+}
+.menu ul li a{
+    padding-top:5px;
+    border-color: #404040 #1A1A1A #1A1A1A #505050;
+    border-style: solid;
+    border-width: 1px;
+    padding-left: 10px;
+    display:block;
+    text-decoration: none;
+    color:white;
+    font:bold 17px Arial,Helvetica,sans-serif;
+    height:30px;
+    background: #5B5B5B  no-repeat center right;
+    line-height: 1.3em;
+	 width: 100px;
+}
+.menu ul li ul a{
+    border-color: #404040 #1A1A1A #1A1A1A #505050;
+    border-style: solid;
+    border-width: 1px;
+    margin-top:2px;
+    padding-left: 10px;
+    display:block;
+    text-decoration: none;
+    color:white;
+    font-size:14px;
+    height:25px;
+    font-weight: normal;
+    background: #0D0D0D;
+}
+.menu ul li a:hover{
+    background: #FF6  no-repeat center right;
+	color:#333;
+}
+.menu ul li ul a:hover{
+    background: #FCAB14;
+    color:black;
+}
+ 
+.menu ul li ul{
+    display:none;
+}
+ 
+ </style>
+</head>
+
+<body>
+
+
+<div class="menu">
+
+   <ul>  
+   
+     <li><a href="#">Item 1   </a></li>
+       <li><a href="#">Item 2   </a>
+           
+           <ul>
+              <li><a href="#">Item a   </a></li>
+               <li><a href="#">Item b   </a></li>
+               <li><a href="#">Item c   </a></li>
+                <li><a href="#">Item d   </a></li>
+           
+           </ul>
+       </li>
+       
+       
+        <li><a href="#">Item 3   </a></li>
+        <li><a href="#">Item 4   </a>
+        
+               <ul>
+              <li><a href="#">Item a   </a></li>
+               <li><a href="#">Item b   </a></li>
+               <li><a href="#">Item c   </a></li>
+                <li><a href="#">Item d   </a></li>
+           
+           </ul></li>
+        <li><a href="#">Item 5   </a>
+                <ul>
+              <li><a href="#">Item a   </a></li>
+               <li><a href="#">Item b   </a></li>
+               <li><a href="#">Item c   </a></li>
+                <li><a href="#">Item d   </a></li>
+           
+           </ul></li>
+        
+        
+        
+        <li><a href="#">Item 6   </a>   <ul>
+              <li><a href="#">Item a   </a></li>
+               <li><a href="#">Item b   </a></li>
+               <li><a href="#">Item c   </a></li>
+                <li><a href="#">Item d   </a></li>
+           
+           </ul></li>
+   
+   </ul>
+
+
+</div>
+
+
+
+</body>
+</html>

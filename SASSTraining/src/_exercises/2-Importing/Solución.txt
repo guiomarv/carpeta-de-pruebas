@@ -1,0 +1,12 @@
+A) Añadir a importing.html y start.html el div con la clase title-container.   Hacerlo justo antes del full-container
+ 	<div class="title-container">
+    		*TITLE*
+     	</div>
+	
+
+----------------------------------------------------------
+
+
+B) Añadir a all.scss el parcial que contiene el estilo de este elemento. de esta forma, en todos los .scss que importan el all, el title será visible.
+
+	@import "partials/_title_container"; 

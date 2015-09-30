@@ -1,0 +1,19 @@
+1- Cambio de propiedades de los elementos para entender su funcionamiento.
+
+A) Mediante una variable global, cambiar alineación de la letra a la izquierda de los dos containers principales.
+
+
+B) Comprobar el ámbito de las variables.
+	- Crear una variable global '$test' (al inicio del start.scss) con un color 'black'
+	- Crear una variable local '$test' (al inicio de la declaración del .#{$container-name}-container y del .farewell-container) con un color 'blue' y 'red' respectivamente.
+	- Asignar el background-color de estos dos divs con la variable creada '$test'.
+	- Ver resultado. Los divs deberían tener cada uno su color, ya que tomarán el color de su ámbito.
+
+
+C) Comprobar el funcionamiento de global.
+	- A la variable de color recientemente declarada en .#{$container-name}-container, ('$test') añadirle el valor !global.   La declarada en farewell-container, eliminarla.
+
+	- Ver resultado.
+
+D) Usar interpolación para llamar a un selector css
+	- Usar interpolación para nombrar infijo 'farewell' de .farewell-container.

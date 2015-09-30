@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+
+
+<style>
+ #lienzo {
+ 	border:1px solid blue; 
+ }
+
+</style>
+
+
+</head>
+
+
+<body>
+
+<canvas id ="lienzo" width="600" height="400px">
+
+
+
+</canvas>
+
+<div>
+
+</div>
+
+
+</body>
+
+<script>
+
+  var canvas = document.getElementById('lienzo');
+  var context = canvas.getContext('2d');
+
+
+function drawn() {
+  //hacer trazado
+var path=new Path2D();
+path.moveTo(0,0);
+path.lineTo(100,75);
+path.lineTo(200,0);
+
+var trazado2=new Path2D();
+trazado2.moveTo (150,50)
+trazado2.lineTo(10,275);
+trazado2.lineTo(0,175);
+context.closePath(trazado2);
+
+context.stroke(path);
+context.fill(trazado2);
+
+
+}
+
+drawn();
+</script>
+
+
+
+
+
+
+
+</html>

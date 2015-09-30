@@ -1,0 +1,173 @@
+@import "modules/all";  //Getting all modules
+@import "partials/all";  //Getting all partials
+
+
+//General vars
+$rows: 3;
+
+
+//General style declarations
+.row {
+  height: 100% / $rows;
+  border-bottom: 2px solid $_colour3; 
+}
+
+.row:last-child {
+  border-bottom: none;
+}
+
+.row > div {
+  float: left;
+  height: 100%;
+  margin: 1px;
+}
+
+.row h4 {
+  color: $_colour4;
+}
+
+.row h3 {
+  color: $_colour3;
+}
+
+.row h2 {
+  color: black;
+}
+
+//Change the common container
+.full-container {
+  $_container-width: 1153px;
+  width: $_container-width + ($_container-gutter * 4);
+  
+  /* Center the elements */
+  $half-width-container: $_container-width / 2 + $_container-gutter * 3;
+  left: calc(50% - #{$half-width-container});      
+  left: -webkit-calc(50 - #{$half-width-container});  
+  left: -moz-calc(50% - #{$half-width-container});  
+}
+
+
+
+
+
+/* - SASS,  INDIVIDUAL ICONS - */
+$icon-individual-size: 75px;
+$icons: $_path-icons-bunch;
+
+.icon-individuals {
+  background-image: $icons;
+  width: $icon-individual-size;
+  height: $icon-individual-size !important;
+}
+
+.icon-1 {
+  background-position: -($icon-individual-size * 0) (($icon-individual-size * 0)*(-1));
+}
+
+.icon-2 {
+  background-position: -($icon-individual-size * 1) (($icon-individual-size * 0)*(-1));
+}
+
+.icon-3 {
+  background-position: -($icon-individual-size * 2) (($icon-individual-size * 0)*(-1));
+}
+
+.icon-4 {
+  background-position: -($icon-individual-size * 3) (($icon-individual-size * 0)*(-1));
+}
+
+.icon-5 {
+  background-position: -($icon-individual-size * 4) (($icon-individual-size * 0)*(-1));
+}
+
+.icon-6 {
+  background-position: -($icon-individual-size * 5) (($icon-individual-size * 0)*(-1));
+}
+
+.icon-7 {
+  background-position: -($icon-individual-size * 6) (($icon-individual-size * 0)*(-1));
+}
+
+.icon-8 {
+  background-position: -($icon-individual-size * 7) (($icon-individual-size * 0)*(-1));
+}
+
+
+
+.icon-11 {
+  background-position: -($icon-individual-size * 0) (($icon-individual-size * 1)*(-1));
+}
+
+.icon-12 {
+  background-position: -($icon-individual-size * 1) (($icon-individual-size * 1)*(-1));
+}
+
+.icon-13 {
+  background-position: -($icon-individual-size * 2) (($icon-individual-size * 1)*(-1));
+}
+
+.icon-14 {
+  background-position: -($icon-individual-size * 3) (($icon-individual-size * 1)*(-1));
+}
+
+.icon-15 {
+  background-position: -($icon-individual-size * 4) (($icon-individual-size * 1)*(-1));
+}
+
+.icon-16 {
+  background-position: -($icon-individual-size * 5) (($icon-individual-size * 1)*(-1));
+}
+
+.icon-17 {
+  background-position: -($icon-individual-size * 6) (($icon-individual-size * 1)*(-1));
+}
+
+.icon-18 {
+  background-position: -($icon-individual-size * 7) (($icon-individual-size * 1)*(-1));
+}
+/* ----------------------------- */
+
+
+
+
+
+
+
+
+/* - SASS,  LOOP ICONS - */
+$icon-loop-size: 75px;
+$icons-loop: $_path-icons-bunch;
+
+.icon-loop {
+  background-image: $icons-loop;
+  width: $icon-loop-size;
+  height: $icon-loop-size !important;
+}
+ 
+@for $f from 0 through 1 {
+  @for $i from 0 through 7 {
+    .icon-row-#{$f+1}-col-#{$i+1} {
+      background-position: -($icon-loop-size * $i) (($icon-loop-size * $f)*(-1));
+    }
+  }
+}
+/* ----------------------------- */
+
+
+
+
+/* - SASS,  COMPASS - */
+@import "c:MAMP/htdocs/SASTraining/src/images/icons/*.png";
+@include all-icons-sprites;
+
+.icon {
+  height: icons-sprite-height(icon_b) !important;
+  width: icons-sprite-width(icon_b);
+}
+//That's all
+/* ----------------------------- */
+
+
+
+
+

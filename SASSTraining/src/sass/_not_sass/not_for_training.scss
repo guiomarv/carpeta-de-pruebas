@@ -1,0 +1,53 @@
+/* Variables */
+
+$appColor: #019C7A;
+$bodyColor: #D8D8D8;
+$fontColor: #fff;
+
+$buttonPadding: 10px;
+$noMargin: 0px;
+$noPadding: 0px;
+
+/* */
+
+html,
+body {
+   margin: $noMargin;
+   padding: $noPadding;
+   height:100%;
+   background-color: $bodyColor;
+}
+
+#button {
+  text-align: center;
+  padding: $buttonPadding;
+  background-color: $appColor;
+  margin: $noMargin;
+}
+
+#button li {
+  display: inline;
+}
+
+#button li a {
+  font-family: Arial;
+  text-decoration: none;
+  padding: $buttonPadding;
+  background-color: $appColor;
+  color: $fontColor;
+}
+
+ul {
+  color: $fontColor;
+}
+
+#footer {
+  background-color: $appColor;
+  background-image: url('../../images/foot.png');
+  background-repeat: no-repeat;
+  height: 30px;
+  position:absolute;
+  bottom:0;
+  width:100%;
+}
+

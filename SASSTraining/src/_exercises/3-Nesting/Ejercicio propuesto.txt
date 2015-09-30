@@ -1,0 +1,15 @@
+1- Existe un full-container comentado en nesting html cuyo css se encuentra en el fichero nesting.scss sin ningún tipo de regla sass así como sin optimizar su estructura. 
+
+A) Comentar el full-container actual y descomentar el oculto de nesting.html
+
+B) Comprobar el resultado obtenido en la web.   Ver que estilo tiene cada elemento, similitudes y diferencias entre los 4 divs principales.
+
+C) Aplicar 'Nested properties' o anidamiento de propiedades a el la declaración css de '.line1 .col1 i'
+
+D) Aplicar 'REFERENCING PARENTAL SELECTOR' o Referencia al selector padre a  '.col1:hover, .col2:hover'
+
+E) Crear un componente 'parcial' modules/_cell.scss de los selectores de las 2 líneas y columnas  (.line1, .line2, .col1, .col2).   Importarlo.
+
+F) Aplicar nesting al nuevo fichero 'cell'.
+
+- Tras compilar, el resultado visual de esta página debería ser igual a antes de aplicar estas reglas de nesting.

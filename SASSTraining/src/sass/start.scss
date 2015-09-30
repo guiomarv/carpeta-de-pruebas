@@ -1,0 +1,107 @@
+@import "modules/all";  //Getting all modules
+@import "partials/all";  //Getting all partials
+
+
+/* These are variables to use 
+   globally in our classes. */
+
+
+//variable texto alineado a la izda
+$texto-izda: left;
+
+//variable global
+$test:#000 ;
+
+
+//Sizes 
+$welcome-container-height: 70% * 0.5;
+$farewell-container-height: (50% / 2) + 15%;
+$half-percentage: 50%;
+
+//Font values
+$font-list : Helvetica, Arial, sans-serif; 
+$text-size: 32px; 
+
+//Colors and shapes
+$border-color: black;
+$container-border: 2px solid $border-color;
+$colors: (    //Mapping
+  light: white,
+  reddish: hsl($hue: 0, $saturation: 60%, $lightness: $half-percentage)
+);
+
+//Other values
+$container-name: welcome;
+$version: null;     //Null variable
+
+.full-container {
+    background-color: rgb(1, 156, 122); 
+}
+
+
+/* Style for container containing welcome and farewell ones */
+.start-container {
+    $container-margin: 0px auto !global;    //Global variable
+    
+    margin: $container-margin;
+    top: $half-percentage;
+    position: relative;
+    transform: translateY(-$half-percentage);
+}
+$container-name: welcome;
+/* Style for welcome container */
+.#{$container-name}-container {
+    $welcome-container-height: 40% !default;    //Default value. As it is already initialized, its value won't be changed to 40%
+    $container-width: 80% !global;    //Global variable
+    //$container-color-welcome: (#668799 + #001000); 
+    width: $container-width;
+    height: $welcome-container-height;
+    margin: $container-margin;
+    border: $container-border;
+   // background-color: $container-color-welcome;
+    text-align: $texto-izda;
+    $test:red !global;
+    background-color: $test;
+}
+
+/* Style for text inside welcome container */
+.container-text {
+    font-size: $text-size;
+}
+
+$nombre-contenedor: farewell;
+
+/* Style for farewell container */
+.#{$nombre-contenedor}-container { 
+    $container-color-farewell: rgb(0, 49, 51);    //Local variable
+    
+    width: $container-width;    //Variable declarated in .welcome-container
+    height: farewell-container-height;
+    margin: $container-margin;    //Variable declarated in .welcome-container
+    border: $container-border; 
+    background-color: $container-color-farewell;
+    text-align: $texto-izda;
+    background-color: $test;
+}
+
+/* Style for before farewell container */
+.farewell-container:before {    //Interpolation
+    $version: "3.4.5. " !default;   //Default variable. As it is not initialized, it will take value 3.4.5
+    $technology: SASS;
+    $text1: "Feel free to play #{$technology} (version: #{$version})";    //Text variable with null value and interpolation
+    $text2: " and discover.";
+    
+    content: $text1 + $text2;
+    font-size: $text-size;
+    font: 20px/10px Arial;
+    
+    color: map-get($colors, light);
+}
+
+ /* Style for p elements in farewell container */
+.farewell-container p {
+    font-family: $font-list;
+    font-size: $text-size;
+    
+    color: map-get($colors, reddish); 
+}

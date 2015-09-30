@@ -1,0 +1,16 @@
+@import "modules/all";  //Getting all modules
+
+
+/* vars declaration */
+$no-gutter: 0px;
+
+
+html,
+body {
+   margin: $no-gutter;
+   padding: $no-gutter;
+   background-color: $_colour5;
+   font-size: $_font-medium; 
+   font-family: $_font2;
+}
+

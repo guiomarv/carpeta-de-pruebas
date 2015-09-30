@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Untitled Document</title>
+
+
+<script type="text/javascript" src="jquery.js">
+</script>
+
+
+<script>
+
+
+
+
+/*añadir clases css */
+
+    $(document).ready(function(){
+   $("#caja").mouseover(function(evento){
+	 $("#caja").addClass("caja2");
+   });
+
+ $("#caja").mouseout(function(evento){
+	 $("#caja").addClass("caja3");
+   });
+
+
+});
+
+
+
+/*
+ $("#mostrar").mouseover(function(){
+
+$("#element").css("display","block");
+
+
+
+
+}); 
+*/
+
+
+
+
+
+</script>
+
+
+<script>
+
+function muestra_oculta(id){
+if (document.getElementById){ //se obtiene el id
+var el = document.getElementById(id); //se define la variable "el" igual a nuestro div
+el.style.display = (el.style.display == 'none') ? 'block' : 'none'; //damos un atributo display:none que oculta el div
+}
+}
+window.onload = function(){/*hace que se cargue la función lo que predetermina que div estará oculto hasta llamar a la función nuevamente*/
+muestra_oculta('contenido_a_mostrar');/* "contenido_a_mostrar" es el nombre de la etiqueta DIV que deseamos mostrar */
+}
+</script>
+
+<style type="text/css">
+
+.box1 {
+	
+	background-color:red;
+	border:1px solid #C60;
+	
+}
+
+
+
+
+.caja2 {
+	
+	background-color:blue;
+	
+	
+}
+
+
+.caja3 {
+	
+	background-color:green;
+	
+	
+}
+
+.elemento {
+	
+	
+	background:#39F;
+	margin-top:100px;
+	width:200px;
+
+	
+	
+}
+
+</style>
+
+
+   </head>
+<body>
+
+
+<a href="http://www.desarrolloweb.com/">DesarrolloWeb.com</a>
+
+<div class="box1" id="caja">
+
+
+caja uno
+
+</div>
+
+
+<a href="#" style='cursor: pointer;' onclick="muestra_oculta('contenido_a_mostrar')"> Mostrar elemento </a>
+
+<div id="contenido_a_mostrar" class="elemento"> elemento para mostrar u ocultar 
+
+
+</div>
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+</head>
+
+
+<body>
+</body>
+</html>
