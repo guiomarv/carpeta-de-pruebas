@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <script src="http://code.createjs.com/easeljs-0.7.0.min.js"></script>
+ <!--<script src=" http://code.jquery.com/jquery-2.1.4.min.js"></script>-->
+
+
+
+  <style>
+   #lienzo {
+   	border:1px solid blue; 
+   }
+
+  </style>
+
+</head>
+
+
+<body>
+
+<canvas id ="lienzo" width="600" height="400px">
+
+
+</canvas>
+
+<button id="boton-pausa">
+<span>pausar</span>
+</button>
+
+
+</body>
+
+
+<script>
+    
+    //declara variables, incluyendo una variable output de salida de texto
+    var stage, circulo, rect;
+
+
+    function init() {
+      stage = new createjs.Stage("lienzo");
+      
+      //crea circulo 
+      circulo = new createjs.Shape();
+      circulo.graphics.beginFill("red").drawCircle(0, 0, 40);
+      circulo.x = 100;
+      circulo.y = 100;
+
+      //crea cuadrado 1
+      var rect = new createjs.Shape();
+      rect.graphics.beginFill("blue").drawRect(0, 0, 40,500);
+
+      //crea cuadrado 2
+     var shape = new createjs.Shape();
+     shape.graphics.beginFill("green").drawRect(200, 0, 100, 100);
+
+     var forma = new createjs.Shape();
+      forma.graphics.beginFill("violet").drawRect(0, 0, 100, 100);
+
+
+ var g = new createjs.Shape();
+g.graphics.beginFill("red").drawPolyStar(100, 100, 50, 5, 0.6, -50);
+
+
+
+      //añade al stage area el elementos
+      stage.addChild( circulo, shape, rect, forma, g);   
+      stage.update();
+
+    }
+    
+
+    init();
+    
+
+  </script>
+
+
+
+
+
+
+</html>

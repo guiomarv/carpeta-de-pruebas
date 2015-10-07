@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <script src="http://code.createjs.com/easeljs-0.7.0.min.js"></script>
+ <!--<script src=" http://code.jquery.com/jquery-2.1.4.min.js"></script>-->
+
+
+
+  <style>
+   #lienzo {
+   	border:1px solid blue; 
+   }
+
+  </style>
+
+</head>
+
+
+<body>
+
+<canvas id ="lienzo" width="600" height="400px">
+
+
+</canvas>
+
+
+</body>
+
+
+<script type="text/javascript">
+
+var stage = new createjs.Stage("lienzo");
+
+var img = new Image();
+img.src = "images/hynose.png";
+
+
+img.onload = cargarImagen;
+
+function cargarImagen(){
+    var tempBitMap = new createjs.Bitmap(img);
+    stage.addChild(tempBitMap);
+    tempBitMap.x = 0;
+    tempBitMap.y = 0;
+    //transformaciones, escala en X e Y, y da una transparencia
+    tempBitMap.scaleX=2;
+    tempBitMap.scaleY = 2.5;
+    tempBitMap.alpha=0.2;
+    stage.update();
+  }
+
+
+</script>
+
+
+
+
+
+
+</html>

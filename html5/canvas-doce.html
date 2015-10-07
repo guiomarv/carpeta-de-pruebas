@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <script src="http://code.createjs.com/easeljs-0.7.0.min.js"></script>
+ <script src=" http://code.jquery.com/jquery-2.1.4.min.js"></script>
+ <script src="https://code.createjs.com/tweenjs-0.6.1.min.js"></script>
+
+
+
+  <style>
+   #lienzo {
+   	border:1px solid blue; 
+   }
+
+  </style>
+
+</head>
+
+
+<body>
+
+<canvas id ="lienzo" width="600" height="400px">
+
+
+</canvas>
+
+
+<button id="boton-pausa">pausar
+</button>
+
+</body>
+
+
+<script> 
+
+    function init() {
+
+    var stage = new createjs.Stage("lienzo");
+
+    //crea cuadrado 
+    var azul = new createjs.Shape();
+    azul.graphics.beginFill("blue").drawRect(0, 0, 40,40);
+
+    //crea otro cuadrado
+    var rojo = new createjs.Shape();
+    rojo.graphics.beginFill("red").drawRect(0,0, 60,60)
+
+    //hacen que el punto de rotación esté en el centro del cuadrado, es decir la mitad de 40, 20
+    azul.regX =  azul.regY = 20;
+    rojo.regX =  rojo.regY = 30;
+
+     //posición en el lienzo
+    azul.x = azul.y = 200
+    rojo.x = rojo.y = 100
+
+    //añade al stage area el elementos
+    stage.addChild(azul, rojo);   
+    stage.update();
+
+    createjs.Ticker.setFPS(50);
+
+    // crea tick,necesita poner"tick" antes del nombre de la función para iniciarla 
+    createjs.Ticker.on("tick", tick);
+
+  function tick(event) {
+
+   if (!createjs.Ticker.getPaused()) {
+
+    azul.rotation += event.delta/500*20; 
+    rojo.rotation -= event.delta/80*10;     
+    stage.update();
+   }
+
+   else {
+    azul.rotation += 0; 
+    rojo.rotation -= 0;    
+   }
+
+  }
+
+}
+
+
+$("#boton-pausa").click(function(){
+  var paused = !createjs.Ticker.getPaused();
+  createjs.Ticker.setPaused(paused);
+});
+
+
+init();
+
+
+
+    
+
+
+  </script>
+
+</body>
+
+
+</html>

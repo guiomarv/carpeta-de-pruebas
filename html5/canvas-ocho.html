@@ -3,6 +3,9 @@
 
 <head>
   <script src="http://code.createjs.com/easeljs-0.7.0.min.js"></script>
+ <script src=" http://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+
 
   <style>
    #lienzo {
@@ -21,37 +24,86 @@
 
 </canvas>
 
+<button id="boton-pausa">
+<span>pausar</span>
+</button>
+
 
 </body>
 
+
 <script>
-
-
-    var stage, circle;
+    
+    //declara variables, incluyendo una variable output de salida de texto
+    var stage, circulo,circulo2, output;
 
     function init() {
       stage = new createjs.Stage("lienzo");
       
-      circle = new createjs.Shape();
-      circle.graphics.beginFill("red").drawCircle(0, 0, 40);
-      circle.y = 50;
-      stage.addChild(circle);
+      //crea circulo 
+      circulo = new createjs.Shape();
+      circulo.graphics.beginFill("red").drawCircle(0, 0, 40);
+
+      //Posición x e y  del círculo
+      circulo.y = 150;
+      circulo.x = 0;
+
+      //añade al stage area el círculo
+      stage.addChild(circulo);
       
+      // crea tick,necesita poner"tick" antes del nombre de la función para iniciarla sin otro desencadenante
       createjs.Ticker.on("tick", tick);
-      createjs.Ticker.setFPS(30);
+
+      //para poner mono el texto de salida:
+      output = stage.addChild(new createjs.Text("", "14px monospace", "#000"));
+      output.lineHeight = 15;
+      output.textBaseline = "top";
+      output.x = 10;
+      output.y = stage.canvas.height-output.lineHeight*3-10;
     }
+    
+    function tick(event) {
+      
+      //si el botón No está pausado
+      if (!createjs.Ticker.getPaused()) {
+        //velocidad a la q va el circulin
+          circulo.x += 6;
+          circulo.y += 3;
 
+          //velocidad 
+          //circulo.x += event.delta/1000*100;
 
-//function tick() { console.log("un tick"); }
+          //si el circulo recorre todo el canvas, vuelve al inicio x=0 y=0
+        if (circulo.x > stage.canvas.width) { circulo.x = 0;circulo.y = 0; }
+      }
+      
+      //texto de salida donde pone el estado, dado por la variable boleana createjs.Ticker.getPaused();
+      output.text = "pausado   = " + createjs.Ticker.getPaused();
 
-function tick(event) {
-      circle.x = circle.x + 5;
       stage.update(event); // important!!
     }
+     
 
-  init();
+//función que pausa al darle al botón de boton 
 
-</script>
+$("#boton-pausa").click(function(){
+  var paused = !createjs.Ticker.getPaused();
+  createjs.Ticker.setPaused(paused);
+});
+
+   /* la antigua función usaba como Nombre togglePause, pero hacái lo mismo
+
+    function togglePause() {
+      var paused = !createjs.Ticker.getPaused();
+      createjs.Ticker.setPaused(paused);
+      //ni idea para qué era esta línea pero funciona igual
+      document.getElementById("boton-pausa").value = paused ? "unpause" : "pause";
+    }
+*/
+    init();
+
+  </script>
+
 
 
 

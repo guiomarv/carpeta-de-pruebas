@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <script src="http://code.createjs.com/easeljs-0.7.0.min.js"></script>
+ <script src=" http://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+
+
+  <style>
+   #lienzo {
+   	border:1px solid blue; 
+   }
+
+  </style>
+
+</head>
+
+
+<body>
+
+<canvas id ="lienzo" width="600" height="400px">
+
+
+</canvas>
+
+
+<button id="boton-pausa">pausar
+</button>
+
+</body>
+
+
+<script> 
+
+var stage = new createjs.Stage("lienzo");
+var imagen= new Image();
+
+//funcíon usando jquery del botón de pausa
+$("#boton-pausa").click(function(){
+
+  var paused = !createjs.Ticker.getPaused();
+  createjs.Ticker.setPaused(paused);
+     
+});
+
+
+//carga imagenes
+imagen.src="images/gear-one.svg"
+imagen.onload = cargarImagen;
+
+    function cargarImagen(){
+      //con una soloa imagen pintamos dos objetos, rueda grande y rueda peque, la misma pero escalada
+      var ruedaGrande = new createjs.Bitmap(imagen);
+      var ruedaPeque = new createjs.Bitmap(imagen);
+
+      //la posición de cada una
+        ruedaGrande.x = 200;
+        ruedaGrande.y = 200;
+        ruedaPeque.x = 120;
+        ruedaPeque.y = 100;
+
+      //pintar las ruedas en el stage
+        stage.addChild(ruedaGrande, ruedaPeque);
+
+        //escalar ruedaPeque
+        ruedaPeque.scaleX=ruedaPeque.scaleY=0.65;
+
+        //hacen que el punto de rotación esté en el centro del cuadrado, es decir la mitad de 180, 90
+        ruedaPeque.regX =  ruedaPeque.regY = 90;
+        ruedaGrande.regX =  ruedaGrande.regY = 90;
+    
+         //para la rueda pequeña se aplica ANTES de la transformaci´no, luego es igual que el de la rueda grande. Para la rueda pequeña será el mismo pues se aplica antes de escalar la rueda.
+      
+        //velocidad de fps de la animación (es independiente de la velocidad de rotación de las ruedas)
+          createjs.Ticker.setFPS(50);
+
+          // crea tick,necesita poner"tick" antes del nombre de la función para iniciarla 
+          createjs.Ticker.on("tick", tick);
+
+          //para que el mov sea eterno, con el bucle if si no existe el parámetro getPaused, las ruedas se mueven, si no se paran.
+
+
+
+          function tick(event) {
+
+           if (!createjs.Ticker.getPaused()) {
+            ruedaGrande.rotation += event.delta/500*20; 
+
+            stage.update();
+           }
+           else {
+            ruedaPeque.rotation -= event.delta/500*50; 
+            stage.update();
+           }
+
+
+   
+
+          }
+    }
+    
+
+
+
+  </script>
+
+</body>
+
+
+</html>

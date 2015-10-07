@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <script src="http://code.createjs.com/easeljs-0.7.0.min.js"></script>
+ <!--<script src=" http://code.jquery.com/jquery-2.1.4.min.js"></script>-->
+
+
+
+  <style>
+   #lienzo {
+   	border:1px solid blue; 
+   }
+
+  </style>
+
+</head>
+
+
+<body>
+
+<canvas id ="lienzo" width="600" height="400px">
+
+
+</canvas>
+
+
+<button id="boton-pausa">pausar
+</button>
+
+</body>
+
+
+<script> 
+
+    function init() {
+     var stage = new createjs.Stage("lienzo");
+
+      //crea cuadrado 
+      var rect = new createjs.Shape();
+      rect.graphics.beginFill("blue").drawRect(0, 0, 40,40);
+
+      //crea otro cuadrado
+      var ugui = new createjs.Shape();
+      ugui.graphics.beginFill("red").drawRect(0,0, 60,60)
+
+    //hacen que el punto de rotación esté en el centro del cuadrado, es decir la mitad de 40, 20
+    rect.regX =  rect.regY = 20;
+    ugui.regX =  ugui.regY = 30;
+
+
+     //posición en el lienzo
+     rect.x = rect.y = 200
+
+    ugui.x = ugui.y = 100
+
+      //añade al stage area el elementos
+      stage.addChild(rect, ugui);   
+      stage.update();
+
+      createjs.Ticker.setFPS(160);
+
+      // crea tick,necesita poner"tick" antes del nombre de la función para iniciarla sin otro desencadenante
+    createjs.Ticker.on("tick", tick);
+
+
+    function tick() {
+    rect.rotation++;
+    ugui.rotation--;
+    stage.update();
+    }
+
+}
+    
+
+    init();
+
+
+
+
+
+
+
+
+
+
+
+    
+
+  </script>
+
+</body>
+
+
+</html>
