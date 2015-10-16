@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8"/>
+<script src="http://code.createjs.com/easeljs-0.7.0.min.js"></script>
+<script src=" http://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+
+
+  <style>
+   #lienzo {
+   	border:1px solid blue; 
+   }
+
+   div {
+    height: 200px;
+    width: 200px;
+    border: 1px solid blue; 
+   }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+<h1>Eventos sobre objetos y generar con números aleatorios</h1>
+  <H2> Hit area</h2>
+<canvas id ="lienzo" width="600" height="400px">
+
+
+</canvas>
+<button id="boton-pausa">pausar
+</button>
+
+</body>
+
+
+<script> 
+
+  var stage, arm;
+
+//funcion usando jquery del botón de pausa
+$("#boton-pausa").click(function(){
+  var paused = !createjs.Ticker.getPaused();
+  createjs.Ticker.setPaused(paused);
+     
+});
+    function init() {
+      stage = new createjs.Stage("lienzo");
+      diana = stage.addChild(new createjs.Shape());
+      diana.graphics.beginFill("red").drawCircle(0,0,45)
+        .beginFill("white").drawCircle(0,0,30)
+        .beginFill("red").drawCircle(0,0,15);
+      diana.x = 120;
+      diana.y = 100;
+      
+      //dibujo del brazo
+      arm = stage.addChild(new createjs.Shape());
+
+      //el círculo va a rotar desde el eje 0 0, así que no hay que ponerlo en el punto 0 0 o de lo contrario no se verá su rotación, por éso le damos la posición 20, 0, que será la misma que hay que indicar al convertir la variable
+      arm.graphics.beginFill("blue").drawCircle(40,0,8);
+      arm.x = 150;
+      arm.y = 100;
+      
+      createjs.Ticker.on("tick", tick);
+    }
+    
+
+function tick(event) {
+
+   if (!createjs.Ticker.getPaused()) {
+    arm.rotation += 5;
+    diana.alpha = 0.2;
+    //transforma variable local en global y luego en local
+    //se pone entre paréntesis la posición del objeto que rota (la bola azul) y con respecto a quíen, q es el objeto diana 
+    var pt = arm.localToLocal(40,0,diana);
+
+    if (diana.hitTest(pt.x, pt.y)) 
+    { diana.alpha = 1; }  
+    stage.update();
+   }
+   else {
+    arm.rotation += 0;
+   } 
+  }
+
+
+
+init();
+
+</script>
+
+</body>
+
+
+</html>

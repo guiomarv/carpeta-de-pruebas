@@ -81,27 +81,19 @@ imagen.onload = cargarImagen;
           //para que el mov sea eterno, con el bucle if si no existe el parámetro getPaused, las ruedas se mueven, si no se paran.
 
 
-
           function tick(event) {
 
            if (!createjs.Ticker.getPaused()) {
             ruedaGrande.rotation += event.delta/500*20; 
-
             stage.update();
            }
            else {
             ruedaPeque.rotation -= event.delta/500*50; 
             stage.update();
-           }
-
-
-   
-
+           } 
           }
     }
     
-
-
 
   </script>
 

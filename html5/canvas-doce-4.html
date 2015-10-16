@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8"/>
+<script src="http://code.createjs.com/easeljs-0.7.0.min.js"></script>
+<script src=" http://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+
+
+  <style>
+   #lienzo {
+   	border:1px solid blue; 
+   }
+
+   div {
+    height: 200px;
+    width: 200px;
+    border: 1px solid blue; 
+   }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+<h1>Eventos sobre objetos y generar con números aleatorios</h1>
+  <H2> Hit area</h2>
+<canvas id ="lienzo" width="600" height="400px">
+
+
+</canvas>
+  <div class="caja-primera">
+    <div class="caja-segunda">
+      <div id="esperando" class="caja-tercera">esperando </div>
+    </div>
+  </div>
+</body>
+
+
+<script> 
+
+    var stage, holder;
+    function init() {
+      stage = new createjs.Stage("lienzo");
+
+      //crea un contenedor para todo lo que va a rotan dentro de él
+      holder = stage.addChild(new createjs.Container());
+      holder.x = holder.y = 150;
+      
+
+      //crea tantos confetis como máxinmo número de i´s pintando cada vez, como es aleatorio su color y radio, salen diferentes 
+      for (var i=0; i<65; i++) {
+        var shape = new createjs.Shape();
+        //los colores se obtienen con getHSL y son aleatorios,(son los valores de tono (aleatorio, saturación y luminosidad))el alpha se aplica después
+        shape.graphics.beginFill(createjs.Graphics.getHSL(Math.random()*360,30,50)).drawCircle(0,0,(Math.random()*50));
+        //hacerlo semi transparente
+        shape.alpha = 0.3;
+        //dar posiciones aleatorias
+        shape.x = Math.random()*330-150;
+        shape.y = Math.random()*300-150;
+        var randomizado= Math.random()*300-150;
+
+        //muestra la posición obtenida en la consola
+        console.log("número " + randomizado);
+        holder.addChild(shape); 
+      }
+      stage.update(event);
+      createjs.Ticker.on("tick", tick);
+    }
+  
+  
+    function tick(event) {
+      //rota el contenedor
+      holder.rotation += 3;
+
+      //recoge el total de bolitas para usarlo en un bucle que recorre el total asignándoles unas coordenadas a cada una 
+      var l = holder.getNumChildren();
+      var totalBolitas = holder.getNumChildren();
+
+      for (var i=0; i<l; i++) {
+        var child = holder.getChildAt(i);
+        child.alpha = 0.3;
+        var pt = child.globalToLocal(stage.mouseX, stage.mouseY);
+        if (stage.mouseInBounds && child.hitTest(pt.x, pt.y)) { child.alpha = 1; }
+      }
+      
+      stage.update(event);
+    }
+  
+
+init();
+
+
+</script>
+
+</body>
+
+
+</html>

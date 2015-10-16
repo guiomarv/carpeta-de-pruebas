@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8"/>
+<script src="http://code.createjs.com/easeljs-0.7.0.min.js"></script>
+<script src=" http://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+
+
+  <style>
+   #lienzo {
+   	border:1px solid blue; 
+   }
+
+   div {
+    height: 200px;
+    width: 200px;
+    border: 1px solid blue; 
+   }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+<h1>Eventos de ratón </h1>
+  <H2> arrastrar</h2>
+<canvas id ="lienzo" width="600" height="400px">
+
+
+</canvas>
+
+
+</body>
+
+<script>
+    var stage, output;
+    
+    function init() {
+      stage = new createjs.Stage("lienzo");
+      
+      // activa la función drag and drop
+      stage.mouseMoveOutside = true; 
+      
+      var circle2 = new createjs.Shape();
+      circle2.graphics.beginFill("blue").drawCircle(100, 300, 50);
+
+      var circle = new createjs.Shape();
+      circle.graphics.beginFill("red").drawCircle(0, 0, 50);
+      circle.alpha=0.8;
+
+      var texto = new createjs.Text("arrástrame", "bold 14px Arial", "#FFFFFF");
+      texto.textAlign = "center";
+
+      var pt = texto.LocalToGlobal(stage.mouseX, stage.mouseY);
+      texto.y = 0;
+
+
+      //crea el arrastrador, para ello creamos un contenedor asignándolo a la variable dragger y luego le añadimos el círculo 
+      var dragger = new createjs.Container();
+      //posición inicial
+      dragger.x = dragger.y = 100;
+      dragger.addChild(circle, texto);
+
+
+      //la posición de los elementos (uno delante de otro) depende de cúal se añada al stage el primero y cúal después, normalmente el primero en aparecer será tapado por el último.
+
+      stage.addChild(circle2,dragger);
+      
+
+      dragger.on("pressmove",function(evt) {
+        // currentTarget will be the container that the event listener was added to:
+        evt.currentTarget.x = evt.stageX;
+        evt.currentTarget.y = evt.stageY;
+        // make sure to redraw the stage to show the change:
+        stage.update();   
+      });
+      
+      stage.update();
+    }
+    init();
+  </script>
+
+</body>
+
+
+</html>

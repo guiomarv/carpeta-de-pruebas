@@ -26,12 +26,13 @@
 
 <body>
 
+
+<h1>Eventos sobre objetos</h1>
+  <H2> Hit area</h2>
 <canvas id ="lienzo" width="600" height="400px">
 
 
 </canvas>
-
-<h1>Eventos sobre objetos</h1
   <div class="caja-primera">
     <div class="caja-segunda">
       <div id="esperando" class="caja-tercera">esperando </div>
@@ -48,26 +49,21 @@ var stage = new createjs.Stage("lienzo");
 var circle =new createjs.Shape();
 circle.graphics.beginFill("blue").drawCircle(100, 100, 40,40);
 
-var divs = document.getElementsByTagName('div')
+stage.enableMouseOver(20);  
 
 //añade al stage area el elementos
+circle.x = 250;
 stage.addChild(circle);   
-stage.update();
+stage.update();    
 
-circle.addEventListener("click", function(event) { alert("click en círculo jermoso"); })
+ circle.addEventListener("mouseover", function() {
+  circle.alpha *= .80;
+  
+   stage.update();
+});   
 
-
-//como divs hay varios, se hace este bucle para ir recorriendo cada uno y aplicarle el surrayado por medio de this
-for(var i=0; i<divs.length; i++) {
-  divs[i].addEventListener("click", highlightThis, true)
 }
 
-  function highlightThis() {
-    this.style.backgroundColor='yellow'
-    alert(this.className)
-    this.style.backgroundColor = ''
-  }
-}
 
 init();
 
