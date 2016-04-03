@@ -8,27 +8,22 @@
 <script type="text/javascript">
 
 
+//FUNCIONALIDAD:  en función de un número dado (en este ejemplo es fijo porque lo proporcionaría el servidor), cogería pintaría cada cifra como una imagen. 
 
 //primero se delcaran todas las variables (las que sea posible) para que en el caso de tener que ser cambiadas, pueda ser fácil acceder a ellas:///////////////
 
 
      // terminación de los archivos para las imágenes
-
         var imagenes_numeros = ["0.jpg","1.jpg", "2.jpg", "3.jpg","4.jpg" ,"5.jpg" ,"6.jpg", "7.jpg", "8.jpg","9.jpg" ];
-		
 
 	// array con los resultados de las divisiones entre potencias de 10 
-	
 		var resultados;
 
-
 	// valor del número final usado para calcular la posición de la imagen
-		
 		var numero_final;
 		 
 		 
 	//variable final declarado como string vacío (para que la coja como string, la declaramos "", así se le indica que de tipo string
-	
 		 var stringFinal = "";
 		 
 		 
@@ -40,16 +35,13 @@ function actualizarContador(numero, selector) {
 		return false;
 	} else {
 		
-		
-		
-		//obtiene un array con todas las cifras del número inicial ///////////////////////////////
-		
-	
+			
+		//obtiene un array con todas las cifras del número inicial ////////
 	
 	    //convierte el numero a string para calcular el número de cifras 
 		
 		 var posiciones = numero.toString();
-		 
+
 		  
 		  for (i= posiciones.length-1; i >= 0; i--) {
 			
@@ -71,35 +63,25 @@ function actualizarContador(numero, selector) {
 							
 		}
 		
-	   
+	
 	
 	 //recorre el array resultados para calcular el número de imagen (posición) correspondiente	 //////////////////
-		
 		
 		
 		for (i=0; i< posiciones.length; i++) {
 				 
 		   numero_final= resultados[i];
-	
 		   var posicion= imagenes_numeros[numero_final];
-		
 		   console.debug(posicion);
-	
 		   stringFinal += '<img src="imgs/img_' + posicion + '"/>';     // Cada vez que encuentro un numero, pinta una imagen. Se pone el + porque se van sumando las diferentes imágenes que se van generando con el bucle
-			  
-	}
-     
-	
-	
-	
-	} // fin else
-	
+		}
+
+	} 
 	
 	
 	//significa: dentro del selector, (.html es acceder a su interior) incluir la variable stringFinal. StringFinal son varias imágenes generadas mediante la función
 
 	$(selector).html(stringFinal);
-	
 	
 	
 	};
@@ -109,7 +91,10 @@ function actualizarContador(numero, selector) {
 
 $(document).ready(function(){
 	
-	actualizarContador(2343434, '#cartel');
+
+	numero=prompt("introduce un número");
+
+	actualizarContador(numero, '#cartel');
 	
 });
 
@@ -120,10 +105,7 @@ $(document).ready(function(){
 </head>
 
 <body>
-<form name="randform">
-  <input type="button" value="Número"  id="boton">
-  &nbsp;
-</form>
+
 <div id="cartel">
   
 </div>
