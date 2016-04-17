@@ -67,7 +67,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <!--           <span class="logo-mini"><b>A</b>LT</span>
           -->
           <!-- logo for regular state and mobile devices -->
-          <img src="/img/logo-mk.jpg" alt="mk media logo"/>
+          <img src="img/logo-mk.jpg" alt="mk media logo"/>
           <!--        <span class="logo-lg"><b>Admin</b>LTE</span> -->
         </a>
         <!-- Header Navbar -->
@@ -293,22 +293,21 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <div class="modal-body">
 
                 <div class="box default" id="marco-encuesta">
-                   <div class="progress">
-                        <div class="progress-bar  barra-progreso progress-bar-green" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
-                        </div>
+                  <div class="diapo-estado content-estado"> Diapositiva <span class="localizacion"></span> de <span class="numero-diapos"> </span>
+                     <div class="progress">
+                          <div class="progress-bar  barra-progreso progress-bar-green" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
+                          </div>
                       </div> 
-
+                  </div>
 
                     <div class="marco-diapos">
-                     <span class="fa fa-angle-right pase flecha-dcha" data-diapo="1"></span>
-                    
+                     <span class="fa fa-angle-right pase flecha-dcha"></span> 
+                    <span class="fa fa-angle-left pase-anterior flecha-izda"></span>                    
                     <div class="contenedor-diapos">
                     <form>
                       <!-- primera diapo -->
-                      <div class="diapo" data-num="2">
-                      
+                      <div class="diapo" >                      
                         <div class="content-diapo">
-                          <span class="diapo-estado">Pregunta 1 de 3</span>
                           <legend> Te ha gustado el evento? </legend>
                           <div class="form-group">
                             <div class="radio">
@@ -337,9 +336,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                       </div>
                       <!-- fin primera diapo -->
                       <!-- segunda diapo -->
-                      <div class="diapo" data-num="3">
+                      <div class="diapo" >
                         <div class="content-diapo">
-                          <span class="diapo-estado">Pregunta 2 de 3</span>
                           <legend>Valora el evento </legend>
                           <div class="center">
                             <label>
@@ -349,10 +347,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         </div>
                         <!-- fin segunda diapo  -->
                         <!-- tercera diapo -->
-                        <div class="diapo" data-num="3">
+                        <div class="diapo">
 
                           <div class="content-diapo">                 
-                            <span class="diapo-estado">Pregunta 3 de 3</span>
                             <legend>Escribe tus sugerencias </legend>
                             <div class="center">
                               <!--           <label>Textarea</label>-->
@@ -369,6 +366,77 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <!-- fin tercera diapo  -->
                         
                         <!-- cuarta diapo final -->
+                         <div class="diapo">
+
+                          <div class="content-diapo">                 
+                            <legend>Escribe tus sugerencias </legend>
+                            <div class="center">
+                              <!--           <label>Textarea</label>-->
+                              <div class="form-group">
+                                <textarea class="form-control" rows="8" placeholder="Escribe ..."></textarea >
+                              </div>
+                            </div>
+                            <div class="form-group pull-right">
+                              <button type="submit" class="btn btn-lg btn-primary">Enviar</button>
+                            </div>
+                          </div>
+                        </div>
+
+                      <!-- fin cuarta diapo  -->
+
+                       <!-- quinta diapo final -->
+                         <div class="diapo">
+
+                          <div class="content-diapo">                 
+                            <legend>Escribe tus sugerencias </legend>
+                            <div class="center">
+                              <!--           <label>Textarea</label>-->
+                              <div class="form-group">
+                                <textarea class="form-control" rows="8" placeholder="Escribe ..."></textarea >
+                              </div>
+                            </div>
+                            <div class="form-group pull-right">
+                              <button type="submit" class="btn btn-lg btn-primary">Enviar</button>
+                            </div>
+                          </div>
+                        </div>
+
+                      <!-- fin cuarta diapo -->
+                 <!-- quinta diapo -->
+                      <div class="diapo" >                      
+                        <div class="content-diapo">
+                          <legend> Te ha gustado el evento? </legend>
+                          <div class="form-group">
+                            <div class="radio">
+                              <div class="btn-block btn-primary btn-lg">
+                                <label>
+                                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked=""> Como lo esperaba, nada más. Otro año más alcohol.
+                                </label>
+                              </div>
+                            </div>
+                            <div class="radio">
+                              <div class="btn-block btn-primary btn-lg">
+                                <label>
+                                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked=""> Regulero, hay cosas que no esperaba.
+                                </label>
+                              </div>
+                            </div>
+                            <div class="radio">
+                              <div class="btn-block btn-primary btn-lg">
+                                <label>
+                                  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"> Ha sido un desastre absoluto.
+                                </label>
+                              </div>
+                            </div>
+
+                             <div class="form-group pull-right">
+                              <button type="submit" class="btn btn-lg btn-primary enviar">Enviar</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- fin quinta diapo -->
+
                     </form>
                   
 </div> 
@@ -597,10 +665,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                       <!-- Page specific script -->
                                       <!-- JAVASCRITP GUIO MODALES -->
 
-                                    <script src="/plugins/slimScroll/jquery.slimscroll.js"></script>
+                                    <script src="plugins/slimScroll/jquery.slimscroll.js"></script>
 
-                                      <script src="/dist/js/guio.js"></script>
-                                      <script src="/dist/js/star-rating.js" type="text/javascript"></script>
+                                      <script src="dist/js/guio.js"></script>
+                                      <script src="dist/js/star-rating.js" type="text/javascript"></script>
                                       <script>
                                       jQuery(document).ready(function () {
                                       $("#input-21f").rating({

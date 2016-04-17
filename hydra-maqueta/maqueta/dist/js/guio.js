@@ -1,7 +1,5 @@
 
 
-
-
 (function() {
 
 
@@ -9,6 +7,9 @@ var modal = $("#ventana");
 var btn=  $("#open-modal");
 
 var contentModal =$(".modal-content")
+
+var NumeroDiapos =$(".diapo").length;
+var NumeroClicks = NumeroDiapos -1;
 
   btn.click(function() {
 
@@ -22,80 +23,70 @@ var contentModal =$(".modal-content")
 	contentModal.css("width", anchototal+"px");
 	contentModal.css("height", altototal+"px");
 
-	$('.barra-progreso').width('0px');
-
-
-
-
-
 	//cerrar 
 	var cerrar = $("#cerrar-modal");
 	  cerrar.click(function() {
 	  	  modal.fadeOut();
 	 });
 
-    //avanzar cada diapo
+	//calcular ancho de la barra 
+	var NumeroDiapos = $(".diapo").length;
+	var incremento= 100/NumeroDiapos;
+
+	var AnchoBarra = incremento;
+	$(".barra-progreso").css("width", AnchoBarra+"%");
+
+	$(".numero-diapos").text(NumeroDiapos);
+	var localizacionDiapo = 1;
+	$(".diapo-estado .localizacion").text(localizacionDiapo);
+
+    //avanzar cada diapo, añadir tamaño a la barra 
+    var pulsar=1;
 	var avanzar=  $(".flecha-dcha");		
-	  	avanzar.click(function(e) {
+	  	avanzar.click(function() {
+	  		
 		    $(".marco-diapos").animate({
 				    left: "-=800",
-				  }, 800, function() {
-				  			  
+				  }, 800, function() {				  			  
 			});
+		pulsar++;
+		var AnchoBarra = incremento * pulsar;
+		$(".barra-progreso").css("width", AnchoBarra+"%");
+		var localizacionDiapo =pulsar;
+		$(".diapo-estado .localizacion").text(localizacionDiapo);
 
-		// $(".diapo").each(function(){
-	 //        valorDiapo = this.getAttribute('data-num');
-
-	 //        valorFlecha = $('.pase').data('diapo');
-
-		// 	$('.pase').data('diapo',valorDiapo); 
-		// 	console.log(valorFlecha);
-
-		// 	e.preventDefault();
-		// 	return(valorFlecha);
-
-	 //   		 })	    
-
-
-	
-
-      $('.barra-progreso').animate( {'width': '33%'}, 2000);
-
-
-
-
+		if (pulsar==NumeroDiapos) {
+			$(".flecha-dcha").hide();
+			$(".enviar").click(function(){
+			   modal.fadeOut();			  
+			});  
+		}
+		});			
 	});
 
+    	var retroceder=  $(".flecha-izda");
+  		retroceder.click(function() { 
+  			var pulsarAtras=1;
+  			pulsarAtras++;
+			var pulsar=1;
+				//calcular ancho de la barra 
+	var NumeroDiapos = $(".diapo").length;
+	var incremento= 100/NumeroDiapos;
 
-	(function(valorFlecha){
+			var AnchoBarra = incremento *(pulsar -pulsarAtras);
+			$(".marco-diapos").animate({
+					    left: "+=800",
+					  }, 800, function() {
 
-	 	 if(valorFlecha ==1 ) {
-			 console.log("entra el 1");
-		 }	
+			
 
-
-	 	 if(valorFlecha ==2 ) {
-			 console.log("entra el dos");
-		 }	
-
-		 if(valorFlecha ==3 ) {
-			 console.log("entra el 3");
-		 }	  
-      		
-
-		});      	
-
-
-
-    
-
-
-
-	});
-
-
+			});
+		});
 
 })();
+
+
+
 
 
 

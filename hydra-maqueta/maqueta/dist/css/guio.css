@@ -12,9 +12,7 @@
 	margin:auto;
 }
 
-
 /*CARRUSEL PARA PÓSTERS*/
-
 
 .carousel.posters .box-body-carousel {
     padding: 0 0 70px 0;
@@ -27,7 +25,6 @@
 .carousel-caption {
 	color:black;
 }
-
 
 
 /* CAJA MIEMBROS */
@@ -110,7 +107,6 @@
     width: 800px;
     margin: auto;
     position: relative;
-    height: 400px;
 }
 
 
@@ -118,7 +114,7 @@
     width: 9000px;
     padding: 0;
     margin: 0;
-    }
+}
 
 #marco-encuesta .contenedor-diapos .diapo {
     text-align: center;
@@ -129,25 +125,33 @@
     width: 800px;
     }
 
+#marco-encuesta .content-estado {
+    padding: 15px;
+}
+
+
+#marco-encuesta .flecha-dcha,#marco-encuesta .flecha-izda {
+    font-size: 3em;
+    z-index: 999;
+    top: 190px;
+    position: fixed;
+}
+
+#marco-encuesta .flecha-dcha {
+    right: 25px;
+}
+
+#marco-encuesta .flecha-izda {
+    left: 25px;
+}
+
+
+
+
 #marco-encuesta .contenedor-diapos .diapo .content-diapo {
     margin: 10px auto 0;
     height: 400px;
     width: 450px;
-
-}
-
-#marco-encuesta .pase {
-    position: fixed;
-    right: 25px;
-    font-size: 3em;
-    z-index: 999;
-    top: 190px;
-}
-
-
-
-#marco-encuesta .contenedor-diapos .diapo .content-diapo .diapo-estado {
-    float: left;
 }
 
 #marco-encuesta .contenedor-diapos .form-group {
@@ -165,11 +169,10 @@
 #marco-encuesta .rating-md {
     font-size: 3em;
     text-align: center;
-    }
-
+}
 
 #marco-encuesta form .radio {
-     margin: 20px 0;
+    margin: 20px 0;
 
 }
 
@@ -177,11 +180,9 @@
     height: 50px;
 }
 
-
 #marco-encuesta form input[type=radio] {
     top: 15px;
 }
-
 
 /*TIMELINE ADAPTADA PARA CALENDARIO*/
 
@@ -263,11 +264,12 @@ button#open-modal {
     color: #b8c7ce;
     position: relative;
     padding: 12px 5px 12px 15px;
-
 }
  
 #ventana button.close {
     z-index: 999;
     position: absolute;
-    }
+    right: 15px;
+    font-size: 2.2em;
+}
     
