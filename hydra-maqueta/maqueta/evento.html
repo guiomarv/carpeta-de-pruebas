@@ -330,28 +330,27 @@
                         <!-- Optionally, you can add icons to the links -->
                         <li class="treeview">
                             <a href="#">
-                                <i class="fa fa-envelope"></i> <span>Mailbox</span>
+                                <i class="fa fa-envelope"></i> <span>Mensajes</span>
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li class="active"><a href="/pages/mailbox/mailbox.html">Inbox <span class="label label-primary pull-right">13</span></a></li>
+                                <li class="active"><a href="/pages/mailbox/mailbox.html">no leídos <span class="label label-primary pull-right">13</span></a></li>
                                 <li><a href="/pages/mailbox/compose.html">Redactar</a></li>
-                                <li><a href="/pages/mailbox/read-mail.html">Bandeja de entrada</a></li>
+                                <li><a href="/pages/mailbox/read-mail.html">Leer mensajes</a></li>
                             </ul>
                         </li>
-                        <li ><a href="/pages/calendario-evento.html"><i class="fa fa-calendar"></i> <span>Calendario</span></a></li>
+                        <li><a href="/pages/calendario-evento.html"><i class="fa fa-calendar"></i> <span>Agenda</span></a></li>
                         <li><a href="/pages/posters.html"><i class="fa fa-link"></i> <span>Pósters</span></a></li>
-                        <li><a href="/pages/maps.html"><i class="fa fa-map-o"></i> <span>Mapas</span></a></li>
                         <li><a href="/pages/perfil.html"><i class="fa fa-user"></i> <span>Perfil</span></a></li>
-                        <li><a href="/pages/miembros.html"><i class="fa fa-users"></i> <span>Miembros</span></a></li>
-                        <li><a href="/pages/chat.html"><i class="fa fa-commenting-o"></i> <span>Chat</span></a></li>
-                        <li class="treeview">
-                            <a href="#"><i class="fa fa-link"></i> <span>Multilevel</span> <i class="fa fa-angle-left pull-right"></i></a>
-                            <ul class="treeview-menu">
-                                <li><a href="#">Link in level 2</a></li>
-                                <li><a href="#">Link in level 2</a></li>
-                            </ul>
+                        <li><a href="/pages/miembros.html"><i class="fa fa-users"></i> <span>Asistentes</span></a></li>
+                        <li><a href="/pages/miembros.html"><i class="fa fa-fw fa-user-md"></i> <span>Ponentes</span></a></li>
+                        <li>
+                            <button id="open-modal"><i class="fa fa-pencil-square-o"></i> <span>Encuesta</span></button>
                         </li>
+                        <li><a href="/pages/chat.html"><i class="fa fa-comments"></i> <span>Chat</span></a></li>
+                        <li><a href="/pages/preguntas.html"><i class="fa fa fa-question"></i> <span>Preguntas</span></a></li>
+                        <li ><a href="/pages/documentos.html"><i class="fa fa-book"></i> <span>Documentos</span></a></li>
+                        <li><a href="/pages/social.html"><i class="fa fa-thumbs-o-up"></i> <span>Redes Sociales</span></a></li>
                     </ul>
                     <!-- /.sidebar-menu -->
                 </section>
@@ -363,7 +362,6 @@
                 <section class="content-header">
                     <h1>
                     Información del Evento
-                    <small>Control panel</small>
                     </h1>
                     <ol class="breadcrumb">
                         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
@@ -418,29 +416,12 @@
                     <div class="row">
                         <!-- Left col -->
                         <section class="col-lg-7 connectedSortable">
-                            <!-- lista de miembros y talleres-->
-                            <div class="box box-primary">
-                                <div class="box-header">
-                                    <i class="ion ion-clipboard"></i>
-                                    <h3 class="box-title">Información</h3>
-                                </div>
-                                <!-- /.box-header -->
-                                <div class="box-body">
-                                    <ul class="nav nav-stacked">
-                                        <li><a href="#">Ponentes <span class="pull-right badge bg-blue">8</span></a></li>
-                                        <li><a href="#">Asistentes <span class="pull-right badge bg-aqua">50</span></a></li>
-                                        <li><a href="#">Proyectos <span class="pull-right badge bg-green">12</span></a></li>
-                                        <li><a href="#">Talleres <span class="pull-right badge bg-red">24</span></a></li>
-                                    </ul>
-                                </div>
-                                <!-- /.box-body -->
-                            </div>
-                            <!-- /.box -->
+                            
                             <!-- fin lista de miembros y talleres -->
                             <!-- PRODUCT LIST -->
                             <div class="box box-warning">
                                 <div class="box-header with-border">
-                                    <h3 class="box-title">Otra información de interés</h3>
+                                    <h3 class="box-title">Información de interés</h3>
                                     <!--                                     <i class="fa fa-bed"></i><h4></h4>
                                     -->                                    <div class="box-tools pull-right">
                                         <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
@@ -450,19 +431,7 @@
                                 <!-- /.box-header -->
                                 <div class="box-body">
                                     <ul class="products-list product-list-in-box">
-                                        <!--                            <li class="item">
-                                            <div class="product-img">
-                                                <strong>Alojamiento</strong>
-                                            </div>
-                                            <div class="product-info">
-                                                <a href="javascript::;" class="product-title">
-                                                </a>
-                                                <span class="product-description">
-                                                    Samsung 32" 1080p 60Hz LED Smart HDTV.
-                                                </span>
-                                            </div>
-                                        </li> -->
-                                        <!-- /.item -->
+                                        
                                         <li class="item">
                                             <div class="product-img">
                                                 <img src="/img/taxi.jpg" alt="Product Image">
@@ -517,82 +486,7 @@
                             </div>
                             <!-- /.box -->
                             <!-- Calendar -->
-                            <div class="box box-success">
-                                <div class="box box-solid">
-                                    <div class="box-header">
-                                        <i class="fa fa-calendar"></i>
-                                        <h3 class="box-title">Calendario</h3>
-                                        <!-- tools box -->
-                                        <div class="pull-right box-tools">
-                                            <!-- button with a dropdown -->
-                                            <div class="btn-group">
-                                                <button class="btn btn-success btn-sm dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bars"></i></button>
-                                                <ul class="dropdown-menu pull-right" role="menu">
-                                                    <li><a href="#">Add new event</a></li>
-                                                    <li><a href="#">Clear events</a></li>
-                                                    <li class="divider"></li>
-                                                    <li><a href="#">View calendar</a></li>
-                                                </ul>
-                                            </div>
-                                            <button class="btn btn-success btn-sm" data-widget="collapse"><i class="fa fa-minus"></i></button>
-                                            <button class="btn btn-success btn-sm" data-widget="remove"><i class="fa fa-times"></i></button>
-                                        </div>
-                                        <!-- /. tools -->
-                                    </div>
-                                    <!-- /.box-header -->
-                                    <div class="box-body no-padding">
-                                        <!--The calendar -->
-                                        <div id="calendar" style="width: 100%"></div>
-                                    </div>
-                                    <!-- /.box-body -->
-                                    <div class="box-footer text-black">
-                                        <h4 class="box-title">Lista de eventos</h4>
-                                        <div class="box-body">
-                                            <!-- the events -->
-                                            <div id="external-events">
-                                                <div class="external-event bg-green">Comida 12-14h</div>
-                                                <div class="external-event bg-yellow">Seminario</div>
-                                                <div class="external-event bg-aqua">Ponencias</div>
-                                                <div class="checkbox">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- /.row -->
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- /.box -->
-                        </section>
-                        <!-- /.Left col -->
-                        <!-- right col (We are only adding the ID to make the widgets sortable)-->
-                        <section class="col-lg-5 connectedSortable">
-                            <!-- Map box -->
-                            <div class="box box-solid bg-light-blue-gradient">
-                                <div class="box-header">
-                                    <!-- tools box -->
-                                    <div class="pull-right box-tools">
-                                        <button class="btn btn-primary btn-sm pull-right" data-widget="collapse" data-toggle="tooltip" title="Collapse" style="margin-right: 5px;"><i class="fa fa-minus"></i></button>
-                                    </div>
-                                    <!-- /. tools -->
-                                    <i class="fa fa-map-marker"></i>
-                                    <h3 class="box-title">
-                                    Localización
-                                    </h3>
-                                    <div class="box-body">
-                                        <ul class="nav nav-pills nav-stacked">
-                                            <li>United States of America EEUU, 5245 Nº 8</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="box-body">
-                                    <div>
-                                        <img src="img/Google-Maps.gif" class="img-responsive pad auto" alt="map">
-                                    </div>
-                                </div>
-                                <!-- /.box-body-->
-                            </div>
-                            <!-- /.box -->
-                            <!-- USERS LIST -->
+                                          <!-- USERS LIST -->
                             <div class="box box-danger">
                                 <div class="box-header with-border">
                                     <h3 class="box-title">Ponentes</h3>
@@ -654,6 +548,38 @@
                                 <!-- /.box-footer -->
                             </div>
                             <!--/.box -->
+                            <!-- /.box -->
+                        </section>
+                        <!-- /.Left col -->
+                        <!-- right col (We are only adding the ID to make the widgets sortable)-->
+                        <section class="col-lg-5 connectedSortable">
+                            <!-- Map box -->
+                            <div class="box box-solid bg-light-blue-gradient">
+                                <div class="box-header">
+                                    <!-- tools box -->
+                                    <div class="pull-right box-tools">
+                                        <button class="btn btn-primary btn-sm pull-right" data-widget="collapse" data-toggle="tooltip" title="Collapse" style="margin-right: 5px;"><i class="fa fa-minus"></i></button>
+                                    </div>
+                                    <!-- /. tools -->
+                                    <i class="fa fa-map-marker"></i>
+                                    <h3 class="box-title">
+                                    Localización
+                                    </h3>
+                                    <div class="box-body">
+                                        <ul class="nav nav-pills nav-stacked">
+                                            <li>United States of America EEUU, 5245 Nº 8</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="box-body">
+                                    <div>
+                                        <img src="img/Google-Maps.gif" class="img-responsive pad auto" alt="map">
+                                    </div>
+                                </div>
+                                <!-- /.box-body-->
+                            </div>
+                            <!-- /.box -->
+      
                         </section>
                         <!-- right col -->
                     </div>

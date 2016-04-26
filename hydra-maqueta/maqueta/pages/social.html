@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>AdminLTE 2 | Calendar</title>
+    <title>AdminLTE 2 | Widgets</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.5 -->
@@ -12,27 +12,39 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <!-- Ionicons -->
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-    <!-- fullCalendar 2.2.5-->
-    <link rel="stylesheet" href="../plugins/fullcalendar/fullcalendar.min.css">
-    <link rel="stylesheet" href="../plugins/fullcalendar/fullcalendar.print.css" media="print">
     <!-- Theme style -->
     <link rel="stylesheet" href="../dist/css/AdminLTE.min.css">
     <!-- AdminLTE Skins. Choose a skin from the css/skins
     folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="../dist/css/skins/_all-skins.min.css">
-    <link rel="stylesheet" href="../dist/css/guio.css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <link rel="stylesheet" href="../plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+    <link rel="stylesheet" href="../dist/css/guio.css">
+
+
+
+    <<style type="text/css" media="screen">
+      
+
+
+
+    .fb-page, 
+.fb-page span, 
+.fb-page span iframe[style] { 
+    width: 100% !important; 
+}
+     </style>
   </head>
-  <body class="hold-transition skin-blue sidebar-mini">
+  <body class="hold-transition skin-blue sidebar-mini fixed">
     <div class="wrapper">
       <header class="main-header">
         <!-- Logo -->
-        <a href="../index2.html" class="logo">
+        <a href="index2.html" class="logo">
           <!-- mini logo for sidebar mini 50x50 pixels -->
           <span class="logo-mini"><b>A</b>LT</span>
           <!-- logo for regular state and mobile devices -->
@@ -160,7 +172,7 @@
                       </li>
                       <li>
                         <a href="#">
-                          <i class="fa fa-user text-red"></i> You changed your username
+                          <i class="fa fa-user text-light-blue"></i> You changed your username
                         </a>
                       </li>
                     </ul>
@@ -284,6 +296,10 @@
                   </li>
                 </ul>
               </li>
+              <!-- Control Sidebar Toggle Button -->
+              <li>
+                <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+              </li>
             </ul>
           </div>
         </nav>
@@ -312,7 +328,7 @@
             </div>
           </form>
           <!-- /.search form -->
-          <!-- Sidebar Menu -->
+          <!-- sidebar menu: : style can be found in sidebar.less -->
           <ul class="sidebar-menu">
             <li><a href="../inicio.html"><i class="fa fa-home"></i> <span>Inicio</span></a></li>
             <li class="header">CONTENIDOS</li>
@@ -324,12 +340,12 @@
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="/pages/mailbox/mailbox.html">no leídos <span class="label label-primary pull-right">13</span></a></li>
+                <li class="active"><a href="/pages/mailbox/mailbox.html">no leídos <span class="label label-primary pull-right">13</span></a></li>
                 <li><a href="/pages/mailbox/compose.html">Redactar</a></li>
                 <li><a href="/pages/mailbox/read-mail.html">Leer mensajes</a></li>
               </ul>
             </li>
-            <li class="active"><a href="/pages/calendario-evento.html"><i class="fa fa-calendar"></i> <span>Agenda</span></a></li>
+            <li><a href="/pages/calendario-evento.html"><i class="fa fa-calendar"></i> <span>Agenda</span></a></li>
             <li><a href="/pages/posters.html"><i class="fa fa-link"></i> <span>Pósters</span></a></li>
             <li><a href="/pages/perfil.html"><i class="fa fa-user"></i> <span>Perfil</span></a></li>
             <li><a href="/pages/miembros.html"><i class="fa fa-users"></i> <span>Asistentes</span></a></li>
@@ -337,10 +353,11 @@
             <li>
               <button id="open-modal"><i class="fa fa-pencil-square-o"></i> <span>Encuesta</span></button>
             </li>
-            <li><a href="/pages/chat.html"><i class="fa fa-comments"></i> <span>Chat</span></a></li>
-            <li><a href="/pages/preguntas.html"><i class="fa fa fa-question"></i> <span>Preguntas</span></a></li>
-            <li ><a href="/pages/documentos.html"><i class="fa fa-book"></i> <span>Documentos</span></a></li>
-            <li><a href="/pages/social.html"><i class="fa fa-thumbs-o-up"></i> <span>Redes Sociales</span></a></li>
+            <li><a href="/pages/chat.html"><i class="fa fa-commenting-o"></i> <span>Chat</span></a></li>
+            <li><a href="/pages/preguntas.html"><i class="fa fa-question"></i> <span>Preguntas</span></a></li>
+            <li><a href="/pages/documentos.html"><i class="fa fa-book"></i> <span>Documentos</span></a></li>
+            <li class="active"><a href="/pages/social.html"><i class="fa fa-thumbs-o-up"></i> <span>Redes Sociales</span></a></li>
+
           </ul>
         </section>
         <!-- /.sidebar -->
@@ -350,200 +367,395 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
           <h1>
-          Agenda<a name="top"> </a>
+          Actividad social
+          <small>del evento</small>
           </h1>
           <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-            <li class="active">Calendario</li>
+            <li class="active">Actividad social </li>
           </ol>
         </section>
         <!-- Main content -->
         <section class="content">
           <div class="row">
-            <div class="col-md-12">
-              <div class="box box-primary">
-                <div class="box-body no-padding">
-                  <div class="box-header">
-                    <div class="well">
-                      <span>Ir al día</span>
-                      <a class="btn btn-xs btn-warning" href="#jueves"> Jueves 11</a>
-                      <a href="#viernes" class="btn btn-xs btn-warning">Viernes 12</a>
-                      <a href="#sabado" class="btn btn-xs btn-warning" id="anchor">Sábado 13</a>
-                    </div>
-                  </div>
-                  <!-- The time line -->
-                  <div class="timeline-agenda">
-                    <ul class="timeline">
-                      <!-- timeline time label -->
-                      <li class="time-label">
-                        <span class="bg-red">
-                        Jueves 11   </span>
-                      </li>
-                      <!-- /.timeline-label -->
-                      <!-- timeline item -->
-                      <li>
-                        <div class="timeline-item">
-                          <span class="time"><i class="fa fa-clock-o"></i> 12:00-13:00h </span>
-                          <h3 class="timeline-header">CONFERENCIA INAUGURAL: <span> LA IMPORTANCIA
-                          DEL BRANDING Y EL POSICIONAMIENTO DE LA MEDICINA Y ENFERMERIA DEL TRABAJO: EL TRABAJO DE CUIDAR </span>
-                          </h3>
-                          <div class="timeline-body">
-                            <p class="text-muted">
-                              Moderador:<i> <a href="/pages/perfil-otro-usuario.html">Alfredo Ribelles Villalba.</a> Jefe de Servicio de Prevención y Salud. Tesorería General de la Seguridad Social (TGSS). Dirección Provincial Valencia </i></p>
-                              <h4>Criterios de Calidad Servicios Medicina del Trabajo Grandes Empresas</h4>
-                              <i>Guillermo Rodriguez Delgado. Responsable de los Servicios Médicos de Iberdrola</i>
-                              <h4>Criterios de Calidad Servicios Medicina del Trabajo. Visión de los SPA</h4>
-                              <i>Rosa Sánchez Lloris. Coordinadora Regional Medicina Trabajo. PREMAP</i>
-                              <h4>Criterios básicos para la sostenibilidad económica de los servicios de Medicina del Trabajo </h4>
-                              <p class="text-muted">Concepcion Martin de Bustamante. Presidenta de AESPLA</p>
-                              <h4>Propuestas de Mejora futuras. Criterios de calidad para el desarrollo de la Gestión Integral Salud Trabajador </h4>
-                              <p class="text-muted"><i>Javier Sanz González. Director SPPM Deloitte</i></p>
-                            </div>
-                          </div>
-                        </li>
-                        <!-- END timeline item -->
-                        <!-- timeline item -->
-                        <li>
-                          <div class="timeline-item">
-                            <span class="time"><i class="fa fa-clock-o"></i> 18:30h </span>
-                            <h3 class="timeline-header no-border"> PONENCIA
-                            <span>  CRITERIOS DE CALIDAD EN LOS SERVICIOS DE MEDICINA DEL TRABAJO
-                            </span>
-                            </h3>
-                            <div class="timeline-body">
-                              <p class="text-muted"> Moderador: <i>Alfredo Ribelles Villalba. Jefe de Servicio de Prevención y Salud. Tesorería General de la Seguridad Social (TGSS). Dirección Provincial Valencia</i>
-                              </div>
-                            </div>
-                          </li>
-                          <!-- END timeline item -->
-                          <!-- timeline item -->
-                          <li>
-                            <div class="timeline-item">
-                              <span class="time"><i class="fa fa-clock-o"></i> 19:30h</span>
-                              <h3 class="timeline-header">
-                              CRITERIOS DE CALIDAD EN LOS SERVICIOS DE MEDICINA DEL TRABAJO </h3>
-                              <div class="timeline-body">
-                                <p class="text-muted">
-                                Moderador:<i> Alfredo Ribelles Villalba. Jefe de Servicio de Prevención y Salud. Tesorería General de la Seguridad Social (TGSS). Dirección Provincial Valencia </i></p>
-                                <h4>Criterios de Calidad Servicios Medicina del Trabajo Grandes Empresas</h4>
-                                <i>Guillermo Rodriguez Delgado. Responsable de los Servicios Médicos de Iberdrola</i>
-                              </div>
-                            </div>
-                          </li>
-                          <!-- END timeline item -->
-                          <!-- timeline time label -->
-                          <li class="time-label">
-                            <span class="bg-green"><a name="viernes">
-                              Viernes 12
-                            </a>
-                          </span>
-                        </li>
-                        <!-- /.timeline-label -->
-                        <!-- timeline item -->
-                        <li>
-                          <div class="timeline-item">
-                            <span class="time"><i class="fa fa-clock-o"></i> 19:30h </span>
-                            <h3 class="timeline-header">TALLER OSALAN
-                            <span> GUÍA PARA LA IMPLANTACIÓN DE LA VIGILANCIA COLECTIVA POR PARTE DE LOS SERVICIOS DE PREVENCIÓN</span></h3>
-                            <div class="timeline-body">
-                              <h4>Criterios de Calidad Servicios Medicina del Trabajo Grandes Empresas</h4>
-                              <i>Guillermo Rodriguez Delgado. Responsable de los Servicios Médicos de Iberdrola</i>
-                              <h4>Criterios de Calidad Servicios Medicina del Trabajo. Visión de los SPA</h4>
-                              <i>Rosa Sánchez Lloris. Coordinadora Regional Medicina Trabajo. PREMAP</i>
-                              <h4>Criterios básicos para la sostenibilidad económica de los servicios de Medicina del Trabajo </h4>
-                              <p class="text-muted">Concepcion Martin de Bustamante. Presidenta de AESPLA</p>
-                              <h4>Propuestas de Mejora futuras. Criterios de calidad para el desarrollo de la Gestión Integral Salud Trabajador </h4>
-                              <p class="text-muted"><i>Javier Sanz González. Director SPPM Deloitte</i></p>
-                            </div>
-                          </div>
-                        </li>
-                        <!-- END timeline item -->
-                        <!-- timeline item -->
-                        <li>
-                          <div class="timeline-item">
-                            <span class="time"><i class="fa fa-clock-o"></i> 20:30h</span>
-                            <h3 class="timeline-header">
-                            CRITERIOS DE CALIDAD EN LOS SERVICIOS DE MEDICINA DEL TRABAJO </h3>
-                            <div class="timeline-body">
-                              Criterios de Calidad Servicios Medicina del Trabajo Grandes Empresas Guillermo Rodriguez Delgado. Responsable de los Servicios Médicos de Iberdrola Criterios de Calidad Servicios Medicina del Trabajo. Visión de los SPA Rosa Sánchez Lloris. Coordinadora Regional Medicina Trabajo. PREMAP Criterios básicos para la sostenibilidad económica de los servicios de Medicina del Trabajo Concepcion Martin de Bustamante. Presidenta de AESPLA Propuestas de Mejora futuras. Criterios de calidad para el desarrollo de la Gestión Integral Salud Trabajador Javier Sanz González. Director SPPM Deloitte
-                            </div>
-                          </div>
-                        </li>
-                        <!-- END timeline item -->
-                        <!-- timeline time label -->
-                        <li class="time-label">
-                          <span class="bg-red">  <a name="sabado">
-                          Sábado 13   </a></span>
-                        </li>
-                        <!-- /.timeline-label -->
-                        <!-- timeline item -->
-                        <li>
-                          <div class="timeline-item">
-                            <span class="time"><i class="fa fa-clock-o"></i> 11:30h </span>
-                            <h3 class="timeline-header">TALLER UGUISID
-                            <span> GUÍA PARA LA IMPLANTACIÓN DE LA VIGILANCIA COLECTIVA POR PARTE DE LOS SERVICIOS DE PREVENCIÓN</span></h3>
-                            <div class="timeline-body">
-                              Criterios de Calidad Servicios Medicina del Trabajo Grandes Empresas Guillermo Rodriguez Delgado. Responsable de los Servicios Médicos de Iberdrola Criterios de Calidad Servicios Medicina del Trabajo. Visión de los SPA Rosa Sánchez Lloris. Coordinadora Regional Medicina Trabajo. PREMAP Criterios básicos para la sostenibilidad económica de los servicios de Medicina del Trabajo Concepcion Martin de Bustamante. Presidenta de AESPLA Propuestas de Mejora futuras. Criterios de calidad para el desarrollo de la Gestión Integral Salud Trabajador Javier Sanz González. Director SPPM Deloitte
-                            </div>
-                          </div>
-                        </li>
-                        <!-- END timeline item -->
-                      </ul>
-                    </div>
-                  </div>
-                  <!-- /.box-body -->
+    
+          <!-- .col -->
+          <div class="col-md-4">
+             <div class="box box box-primary">
+              <div class="box-header">
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+              <h3 class="box-title">Actividad en twitter</h3>
+              <div class="box-tools pull-right">
+                    <button class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                    <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
                 </div>
-                <!-- /. box -->
-                <!-- ronda botones -->
-                <div class="row">
-                  <div class="col-xs-12">
-                    <div class="pull-left">
-                      <a href="invoice-print.html" target="_blank" class="btn-primary btn"><i class="fa fa-download"></i> Generar PDF</a>
-                      <a href="invoice-print.html" target="_blank" class="btn btn-primary"><i class="fa fa-print"></i> Imprimir</a>
-                    </div>
-                    <a href="#top" class="btn btn-default btn-fixed"><i class="fa fa-arrow-up">volver arriba</i></a>
-                  </div>
-                </div>
-                <!-- fin ronda botones-->
               </div>
-              <!-- /.col -->
+              <div class="box-body">
+               <a class="twitter-timeline" id="twiter-timeline"
+                  data-widget-id="600720083413962752"  data-height="665" 
+                  href="https://twitter.com/fabric"
+                  data-screen-name="fabric">
+                  Tweets by @fabric
+                </a> 
+              </div>
+              </div>   
+          </div>
+          <!-- /.col -->
+
+          <!-- .col -->
+          <div class="col-md-4">
+            <div class="box box-primary" >
+              <div class="box-header">
+              <i class="fa fa-facebook" aria-hidden="true"></i>
+              <h3 class="box-title">Actividad en Facebook</h3>
+              <div class="box-tools pull-right">
+                    <button class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                    <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                </div>
+              </div>
+              <div class="box-body" id="container-fb">
+              <div class="fb-page" id="fb-feed" data-href="https://www.facebook.com/facebook" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                <div class="fb-xfbml-parse-ignore" >
+                  <blockquote cite="https://www.facebook.com/facebook">
+                  <a href="https://www.facebook.com/facebook">Facebook</a></blockquote>
+                </div>
+              </div>
+              </div>
             </div>
-          </section>
+          </div>  <!-- /.col -->
+
+                    <!-- .col -->
+          <div class="col-md-4">
+            <div class="box box box-primary">
+              <div class="box-header">
+              <i class="fa fa-instagram" aria-hidden="true"></i>
+
+              <h3 class="box-title">Actividad en Instagram</h3>
+              <div class="box-tools pull-right">
+                    <button class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                    <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                </div>
+              </div>
+              <div class="box-body">
+
+
+              <!-- LightWidget WIDGET --><script src="//lightwidget.com/widgets/lightwidget.js"></script>
+
+              <iframe src="//lightwidget.com/widgets/c2f76fb7c2835042bb34cd7ac8234cfb.html" id="lightwidget_c2f76fb7c2" name="lightwidget_c2f76fb7c2"  scrolling="no"allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;">
+                
+              </iframe>
+
+ 
+              </div>
+            </div>
+          </div>  <!-- /.col -->
+
+
+         
+
+          </div>
+
+
+
+          <!-- /.row -->
+        </section>
+        <!-- /.content -->
+      </div>
+      <!-- /.content-wrapper -->
+      <footer class="main-footer">
+        <div class="pull-right hidden-xs">
+          <b>Version</b> 2.3.0
         </div>
-        <!-- ./wrapper -->
-        <!-- jQuery 2.1.4 -->
-        <script src="../plugins/jQuery/jQuery-2.1.4.min.js"></script>
-        <!-- Bootstrap 3.3.5 -->
-        <script src="../bootstrap/js/bootstrap.min.js"></script>
-        <!-- jQuery UI 1.11.4 -->
-        <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
-        <!-- Slimscroll -->
-        <script src="../plugins/slimScroll/jquery.slimscroll.min.js"></script>
-        <!-- FastClick -->
-        <script src="../plugins/fastclick/fastclick.min.js"></script>
-        <!-- AdminLTE App -->
-        <script src="../dist/js/app.min.js"></script>
-        <!-- AdminLTE for demo purposes -->
-        <script src="../dist/js/demo.js"></script>
-        <!-- fullCalendar 2.2.5 -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js"></script>
-        <!-- Page specific script -->
-        <!-- SCRIP PARA HACER TRANSICIONES MÁS SUAVES -->
-        <script>
-        $(function() {
-        $('a[href*="#"]:not([href="#"])').click(function() {
-        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-        var target = $(this.hash);
-        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-        if (target.length) {
-        $('html, body').animate({
-        scrollTop: target.offset().top
-        }, 1000);
-        return false;
-        }
-        }
-        });
-        });
-        </script>
-      </body>
-    </html>
+        <strong>Copyright &copy; 2014-2015 <a href="http://almsaeedstudio.com">Almsaeed Studio</a>.</strong> All rights reserved.
+      </footer>
+      <!-- Control Sidebar -->
+      <aside class="control-sidebar control-sidebar-dark">
+        <!-- Create the tabs -->
+        <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
+          <li><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
+          <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
+        </ul>
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <!-- Home tab content -->
+          <div class="tab-pane" id="control-sidebar-home-tab">
+            <h3 class="control-sidebar-heading">Recent Activity</h3>
+            <ul class="control-sidebar-menu">
+              <li>
+                <a href="javascript::;">
+                  <i class="menu-icon fa fa-birthday-cake bg-red"></i>
+                  <div class="menu-info">
+                    <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
+                    <p>Will be 23 on April 24th</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="javascript::;">
+                  <i class="menu-icon fa fa-user bg-yellow"></i>
+                  <div class="menu-info">
+                    <h4 class="control-sidebar-subheading">Frodo Updated His Profile</h4>
+                    <p>New phone +1(800)555-1234</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="javascript::;">
+                  <i class="menu-icon fa fa-envelope-o bg-light-blue"></i>
+                  <div class="menu-info">
+                    <h4 class="control-sidebar-subheading">Nora Joined Mailing List</h4>
+                    <p>nora@example.com</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="javascript::;">
+                  <i class="menu-icon fa fa-file-code-o bg-green"></i>
+                  <div class="menu-info">
+                    <h4 class="control-sidebar-subheading">Cron Job 254 Executed</h4>
+                    <p>Execution time 5 seconds</p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+            <!-- /.control-sidebar-menu -->
+            <h3 class="control-sidebar-heading">Tasks Progress</h3>
+            <ul class="control-sidebar-menu">
+              <li>
+                <a href="javascript::;">
+                  <h4 class="control-sidebar-subheading">
+                  Custom Template Design
+                  <span class="label label-danger pull-right">70%</span>
+                  </h4>
+                  <div class="progress progress-xxs">
+                    <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="javascript::;">
+                  <h4 class="control-sidebar-subheading">
+                  Update Resume
+                  <span class="label label-success pull-right">95%</span>
+                  </h4>
+                  <div class="progress progress-xxs">
+                    <div class="progress-bar progress-bar-success" style="width: 95%"></div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="javascript::;">
+                  <h4 class="control-sidebar-subheading">
+                  Laravel Integration
+                  <span class="label label-warning pull-right">50%</span>
+                  </h4>
+                  <div class="progress progress-xxs">
+                    <div class="progress-bar progress-bar-warning" style="width: 50%"></div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="javascript::;">
+                  <h4 class="control-sidebar-subheading">
+                  Back End Framework
+                  <span class="label label-primary pull-right">68%</span>
+                  </h4>
+                  <div class="progress progress-xxs">
+                    <div class="progress-bar progress-bar-primary" style="width: 68%"></div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+            <!-- /.control-sidebar-menu -->
+          </div>
+          <!-- /.tab-pane -->
+          <!-- Stats tab content -->
+          <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>
+          <!-- /.tab-pane -->
+          <!-- Settings tab content -->
+          <div class="tab-pane" id="control-sidebar-settings-tab">
+            <form method="post">
+              <h3 class="control-sidebar-heading">General Settings</h3>
+              <div class="form-group">
+                <label class="control-sidebar-subheading">
+                  Report panel usage
+                  <input type="checkbox" class="pull-right" checked>
+                </label>
+                <p>
+                  Some information about this general settings option
+                </p>
+              </div>
+              <!-- /.form-group -->
+              <div class="form-group">
+                <label class="control-sidebar-subheading">
+                  Allow mail redirect
+                  <input type="checkbox" class="pull-right" checked>
+                </label>
+                <p>
+                  Other sets of options are available
+                </p>
+              </div>
+              <!-- /.form-group -->
+              <div class="form-group">
+                <label class="control-sidebar-subheading">
+                  Expose author name in posts
+                  <input type="checkbox" class="pull-right" checked>
+                </label>
+                <p>
+                  Allow the user to show his name in blog posts
+                </p>
+              </div>
+              <!-- /.form-group -->
+              <h3 class="control-sidebar-heading">Chat Settings</h3>
+              <div class="form-group">
+                <label class="control-sidebar-subheading">
+                  Show me as online
+                  <input type="checkbox" class="pull-right" checked>
+                </label>
+              </div>
+              <!-- /.form-group -->
+              <div class="form-group">
+                <label class="control-sidebar-subheading">
+                  Turn off notifications
+                  <input type="checkbox" class="pull-right">
+                </label>
+              </div>
+              <!-- /.form-group -->
+              <div class="form-group">
+                <label class="control-sidebar-subheading">
+                  Delete chat history
+                  <a href="javascript::;" class="text-red pull-right"><i class="fa fa-trash-o"></i></a>
+                </label>
+              </div>
+              <!-- /.form-group -->
+            </form>
+          </div>
+          <!-- /.tab-pane -->
+        </div>
+      </aside>
+      <!-- /.control-sidebar -->
+      <!-- Add the sidebar's background. This div must be placed
+      immediately after the control sidebar -->
+      <div class="control-sidebar-bg"></div>
+    </div>
+    <!-- ./wrapper -->
+    <!-- jQuery 2.1.4 -->
+    <script src="../plugins/jQuery/jQuery-2.1.4.min.js"></script>
+    <!-- Bootstrap 3.3.5 -->
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <!-- Slimscroll -->
+    <script src="../plugins/slimScroll/jquery.slimscroll.min.js"></script>
+    <!-- FastClick -->
+    <script src="../plugins/fastclick/fastclick.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="../dist/js/app.min.js"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="../dist/js/demo.js"></script>
+
+  <script>
+  jQuery(document).ready(function() {
+  $("#input-21f").rating({
+  starCaptions: function(val) {
+  if (val < 3) {
+  return val;
+  } else {
+  return 'high';
+  }
+  },
+  starCaptionClasses: function(val) {
+  if (val < 3) {
+  return 'label label-danger';
+  } else {
+  return 'label label-success';
+  }
+  },
+  hoverOnClear: false
+  });
+  $('#rating-input').rating({
+  min: 0,
+  max: 5,
+  step: 1,
+  size: 'lg',
+  showClear: false
+  });
+  $('#btn-rating-input').on('click', function() {
+  $('#rating-input').rating('refresh', {
+  showClear: true,
+  disabled: !$('#rating-input').attr('disabled')
+  });
+  });
+  $('.btn-danger').on('click', function() {
+  $("#kartik").rating('destroy');
+  });
+  $('.btn-success').on('click', function() {
+  $("#kartik").rating('create');
+  });
+  $('#rating-input').on('rating.change', function() {
+  alert($('#rating-input').val());
+  });
+  </script>
+  <!-- scripts para twitter -->
+  <script>window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+  t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+  
+  t._e = [];
+  t.ready = function(f) {
+  t._e.push(f);
+  };
+  
+  return t;
+  }(document, "script", "twitter-wjs"));</script>
+  
+  <script>
+  twttr.widgets.createTimeline(
+  "600720083413962752",
+  document.getElementById("#twiter-timeline"),
+  {
+  screenName: "fabric"
+  }
+  );
+  </script>
+<!-- fb scripts -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v2.6";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById("#fb-feed")) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=443271375714375";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+jQuery(document).ready(function($) {
+  $(window).bind("load resize", function(){  
+  setTimeout(function() {
+  var container_width = $('#container-fb').width();    
+    $('#container-fb').html('<div class="fb-page" ' + 
+    'data-href="http://www.facebook.com/IniciativaAutoMat"' +
+    ' data-width="' + container_width + '" data-tabs="timeline" data-height="665" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="http://www.facebook.com/IniciativaAutoMat"><a href="http://www.facebook.com/IniciativaAutoMat">Auto*Mat</a></blockquote></div></div>');
+    FB.XFBML.parse( );    
+  }, 100);  
+}); 
+});
+
+</script>
+
+
+  </body>
+</html>

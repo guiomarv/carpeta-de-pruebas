@@ -4,38 +4,112 @@
 
 
 
+/*MK COLORES */
+
+.skin-blue .sidebar-menu>li:hover>a, .skin-blue .sidebar-menu>li.active>a, .skin-blue .main-header .navbar, .skin-blue .main-header .logo {
+    background: #00776E;
+}
+
+
 
 
 /*GENÉRCOS*/
 
-.auto {
-	margin:auto;
+.position-relative {
+    position: relative;
+}
+
+.margin-r-2em {
+    margin-right: 2.8em;
 }
 
 
 /*CARRUSEL PARA PÓSTERS*/
 
-
-.carousel.posters .box-body-carousel {
-    padding: 0 0 70px 0;
+.carousel.posters .inner {
+    padding: 10px;
 }
 
-.carousel.posters .carousel-inner>.item>img {
+.carousel.posters .carousel-inner .box img {
     margin: auto;
+    display: block;
+    max-height: 500px;
 }
 
-.carousel-caption {
-	color:black;
+.carousel.posters .carousel-inner>.item .box .box-footer {
+    position: relative;
+}
+
+.carousel.posters .carousel-caption {
+    position: relative;
+    color: black;
+    text-align: center;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    text-shadow: none;
+    padding: 0px;
+    margin: 0px auto 10px auto;
+}
+
+.carousel.posters .carousel-control.left, .carousel-control.right {
+    height: 20px;
+    z-index: 999;
+    top: 50%;
+}
+
+.carousel.posters .box {
+    border: none;
+    box-shadow:none;
+}
+
+.carousel.posters .box-footer {
+    border: none;
+}
+
+.carousel.posters .box-footer span.title {
+    display: block;
+    font-style: italic;
+}
+
+.carousel.posters .box-footer span.autor {
+    display: block;
+}
+
+.carousel.posters .box-footer legend {
+    text-align: center;
+    font-size: 15pt;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: none;
+    padding: 10px 0 0 0;
+    margin: 0;
+}
+
+.carousel.posters .box-footer .rating-md {
+    font-size: 2.5em;
+}
+
+.carousel.posters .carousel-indicators {
+    bottom: 0px;
+}
+
+.carousel.posters .carousel-indicators li,.carousel.posters .carousel-indicators .active  {
+    background-color:#b5bbc8;
+}
+
+
+.carousel.posters .carousel-control {
+    color: #b5bbc8;
 }
 
 
 
-/* CAJA MIEMBROS */
+
+/* CAJA asistenteS */
 
 .box.miembro.widget-user-2 .widget-user-header {
     padding: 10px;
 }
-
 
 .box.miembro.widget-user-2 .widget-user-username , .box.miembro.widget-user-2 .widget-user-desc {
     margin-left: 90px;
@@ -49,7 +123,6 @@
 	    box-shadow:        none;
 }
 
-
 .box.miembro img {
   width: 80px;
 }
@@ -62,6 +135,78 @@
 .box.miembro .widget-user-header:hover {
 	opacity: 0.8;
 }
+
+
+
+
+/* CAJA ASISTENTES */
+
+
+ul.listado-asistentes {
+    height: 677px;
+   /* overflow-y: auto;*/
+   overflow: hidden; 
+}
+
+
+ul.listado-asistentes .box-widget {
+    box-shadow: none;
+    margin: 0;
+}
+
+ul.listado-asistentes .list-group-item {
+    padding: 0px;
+    width: 95%;
+    margin: auto;
+}
+
+ul.listado-asistentes .box-widget .widget-user-username , ul.listado-asistentes .box-widget .widget-user-desc {
+    margin-left: 50px;
+    color: #676565;
+}
+
+ul.listado-asistentes .box-widget img {
+  width: 40px;
+}
+
+
+ul.listado-asistentes .box-widget .widget-user-header {
+    padding: 5px;
+}
+
+
+ul.listado-asistentes .box-widget .widget-user-header > a {
+    display: inline-block;
+
+}
+
+
+ul.listado-asistentes .box-widget .widget-user-header:hover a {
+    opacity: 0.5;
+}
+
+
+ul.listado-asistentes .box-widget {
+    background: #f4f4f4;
+}
+
+
+ul.listado-asistentes .box-widget .box-tools  {
+    margin: 15px 0;
+}
+
+.filtro-abc {
+    margin: auto;
+    width: 80%;
+    display: block;
+}
+
+.filtro-abc.btn-group-sm>.btn, .filtro-abc.btn-sm {
+    padding: 4px 8px;
+}
+
+
+
 
 
 
@@ -94,7 +239,7 @@
 }
 
 .content-buscar {
-	    margin: 20px 0px 0 0;
+	    margin: 25px 0px 0 0;
 }
 
 
@@ -110,7 +255,6 @@
     width: 800px;
     margin: auto;
     position: relative;
-    height: 400px;
 }
 
 
@@ -118,7 +262,7 @@
     width: 9000px;
     padding: 0;
     margin: 0;
-    }
+}
 
 #marco-encuesta .contenedor-diapos .diapo {
     text-align: center;
@@ -129,25 +273,33 @@
     width: 800px;
     }
 
+#marco-encuesta .content-estado {
+    padding: 15px;
+}
+
+
+#marco-encuesta .flecha-dcha,#marco-encuesta .flecha-izda {
+    font-size: 3em;
+    z-index: 999;
+    top: 190px;
+    position: fixed;
+}
+
+#marco-encuesta .flecha-dcha {
+    right: 25px;
+}
+
+#marco-encuesta .flecha-izda {
+    left: 25px;
+}
+
+
+
+
 #marco-encuesta .contenedor-diapos .diapo .content-diapo {
     margin: 10px auto 0;
     height: 400px;
     width: 450px;
-
-}
-
-#marco-encuesta .pase {
-    position: fixed;
-    right: 25px;
-    font-size: 3em;
-    z-index: 999;
-    top: 190px;
-}
-
-
-
-#marco-encuesta .contenedor-diapos .diapo .content-diapo .diapo-estado {
-    float: left;
 }
 
 #marco-encuesta .contenedor-diapos .form-group {
@@ -165,11 +317,10 @@
 #marco-encuesta .rating-md {
     font-size: 3em;
     text-align: center;
-    }
-
+}
 
 #marco-encuesta form .radio {
-     margin: 20px 0;
+    margin: 20px 0;
 
 }
 
@@ -177,11 +328,9 @@
     height: 50px;
 }
 
-
 #marco-encuesta form input[type=radio] {
     top: 15px;
 }
-
 
 /*TIMELINE ADAPTADA PARA CALENDARIO*/
 
@@ -263,11 +412,228 @@ button#open-modal {
     color: #b8c7ce;
     position: relative;
     padding: 12px 5px 12px 15px;
-
 }
  
 #ventana button.close {
     z-index: 999;
     position: absolute;
-    }
+    right: 15px;
+    font-size: 2.2em;
+}
     
+
+/*CHAT  vieja versión (sin bocadillos), se puede borrar si no se usa al final*/
+
+.chat .item.yo {
+    position: relative;
+}
+
+.chat .item.yo:before, .chat .item.yo:after {
+    content: none;
+    display: inherit;
+}
+
+.chat .item.yo img {
+    width: 40px;
+    height: 40px;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.chat .item.yo img.online {
+    border: 2px solid #00a65a;
+}
+
+.chat .item.yo .name {
+    position: relative;
+    right: 0px;
+    padding-left: 20px;
+    font-weight: 600;
+}
+
+.chat .item.yo small {
+position: relative;
+    position: relative;
+    left: 10px;
+}
+
+.chat .item.yo>.message {
+    margin: 0px 40px 0 45px;
+
+}
+
+.chat .item.yo img {
+    float: right;
+}
+
+.chat .item i.status {
+    position: relative;
+    top: 25px;
+    left: -23px;
+}
+
+.chat .item.yo i.status {
+left: 10px;
+top: 28px;
+}
+
+.chat .item {
+    position: relative;
+}
+
+
+
+/*listado asistentes chat*/
+
+.users-list.chat li {
+    width: 100%;
+    text-align: left;
+    border-bottom: 1px solid #Fff;
+    padding: 10px 10px 15px 10px;
+    background: #d2d6de;
+    position: relative;
+}
+
+.users-list.chat li a {
+    height: 30px;
+    display: block;
+}
+
+.users-list.chat li a:hover {
+    opacity: 0.2;
+}
+
+.users-list.chat li img {
+    width: 27px;
+    float: left;
+    margin: 0 7px 0 0;
+}
+
+.users-list.chat li i.status {
+    position: absolute;
+    top: 25px;
+    left: 32px;
+}
+
+.nav-tabs.verticales li{
+    width: 100%;
+    margin-bottom: 0px; 
+}
+
+.nav-tabs.verticales>li>a {
+    border-radius: 0 ;
+    margin-right: 0px;
+}
+
+.nav-tabs.verticales>li.active>a, .nav-tabs.verticales>li.active>a:focus, .nav-tabs.verticales>li.active>a:hover {
+    cursor: pointer;
+    background: #B5D7EA;
+    border: none;
+}
+
+.nav-tabs.verticales .status {
+    padding-right: 5px;
+}
+
+
+/*DIRECT CHAT */
+
+.direct-chat.custom .pull-left, .direct-chat.custom .pull-right {
+    position: relative;
+}
+
+.direct-chat.custom .box-body {
+    width: 100%;
+}
+
+.direct-chat.custom .direct-chat-text {
+    margin: 5px 0 0 60px;
+}
+
+.direct-chat.custom .right .direct-chat-text {
+    margin: 5px 60px 0 0;
+}
+
+.direct-chat.custom .status {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+.direct-chat.custom .direct-chat-messages {
+    height: auto;
+}
+
+/* rueda customizar chat*/
+.gear {
+    height: 30px;
+    border: none;
+    width: 30px;
+}
+
+
+
+/*PREGUNTAS */
+
+.timeline.preguntas .timeline-item.box {
+    width: auto;
+}
+
+.timeline.preguntas .timeline-item.box .content {
+    min-height: 150px; 
+ }
+
+.timeline.preguntas .box-title {
+    margin: 0.5em 0 0 1em;
+    height: 40px;
+    font-weight: 700;
+}
+
+
+
+/* DOCUMENTOS */
+
+.timeline.documentos >li {
+    margin-right: 0px; 
+}
+
+.timeline.documentos >li>.timeline-item {
+    margin:0 0 0 0; 
+}
+
+.timeline.documentos .document-icon i{
+    font-size: 2em;
+    float: left;
+}
+
+.timeline.documentos h3  {
+    font-size: 1.3em;
+    margin-left: 40px;
+    font-weight: 700;
+}
+
+.timeline.documentos >li>.timeline-item>.timeline-body{
+    padding:0 20px;
+}
+
+.timeline.documentos span.autor {
+    margin: 0 0 0px 40px;
+    float: left;
+    clear: both;
+}
+
+.timeline.documentos >li>.timeline-item {
+        overflow: auto;
+        padding-bottom: 10px;
+}
+
+
+.timeline.documentos .box-tools {
+    
+    margin-top: 20px;
+}
+
+
+
