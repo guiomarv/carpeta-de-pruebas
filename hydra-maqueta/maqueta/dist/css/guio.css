@@ -1,4 +1,4 @@
-
+f
 
 /*estilos guio para hydra*/
 
@@ -228,6 +228,33 @@ ul.listado-asistentes .box-widget .box-tools  {
 
 
 /*FILTROS */
+.box.filtros {
+    padding: 20px 20px 0 20px;
+}
+
+
+.box.filtros .buscador .input-group {
+    max-width: 25em;
+}
+
+.box.filtros .filtro-abc {
+    margin: auto;
+    display: block;
+    width: auto;
+}
+
+.box.filtros .intereses-container .input-group {
+        max-width: 25em;
+}
+
+
+.box.filtros .content-buscar {
+        margin:0px 0px 0 0;
+}
+
+
+
+/*borrar en el futuro al no usarse en el nuevo buscador de ponentes*/
 .box-tools.buscador  {
 	margin: 25px 0 0 0;
 }

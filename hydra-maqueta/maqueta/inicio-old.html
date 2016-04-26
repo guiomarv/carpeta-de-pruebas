@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<!--
+This is a starter template page. Use this page to start your new project from
+scratch. This page gets rid of all links and provides the needed markup only.
+-->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>AdminLTE 2 | Starter</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.5 -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
+    <!-- AdminLTE Skins. We have chosen the skin-blue for this starter
+    page. However, you can choose any other skin. Make sure you
+    apply the skin class to the body tag so the changes take effect.
+    -->
+    <link rel="stylesheet" href="dist/css/skins/skin-blue.min.css">
+    <link rel="stylesheet" href="dist/css/star-rating.css">
+    <link rel="stylesheet" href="dist/css/guio.css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <!--
+  BODY TAG OPTIONS:
+  =================
+  Apply one or more of the following classes to get the
+  desired effect
+  |---------------------------------------------------------|
+  | SKINS         | skin-blue                               |
+  |               | skin-black                              |
+  |               | skin-purple                             |
+  |               | skin-yellow                             |
+  |               | skin-red                                |
+  |               | skin-green                              |
+  |---------------------------------------------------------|
+  |LAYOUT OPTIONS | fixed                                   |
+  |               | layout-boxed                            |
+  |               | layout-top-nav                          |
+  |               | sidebar-collapse                        |
+  |               | sidebar-mini                            |
+  |---------------------------------------------------------|
+  -->
+  <body class="hold-transition skin-blue sidebar-mini fixed">
+    <div class="wrapper">
+      <!-- Main Header -->
+      <header class="main-header">
+        <!-- Logo -->
+        <a href="index2.html" class="logo">
+          <!-- mini logo for sidebar mini 50x50 pixels -->
+          <img src="img/logo-mk-mini.jpg" alt="mk media logo" />
+          <!--           <span class="logo-mini"><b>A</b>LT</span>
+          -->
+          <!-- logo for regular state and mobile devices -->
+          <img src="img/logo-mk.jpg" alt="mk media logo" />
+          <!--        <span class="logo-lg"><b>Admin</b>LTE</span> -->
+        </a>
+        <!-- Header Navbar -->
+        <nav class="navbar navbar-static-top" role="navigation">
+          <!-- Sidebar toggle button-->
+          <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+            <span class="sr-only">Toggle navigation</span>
+          </a>
+          <!-- Navbar Right Menu -->
+          <div class="navbar-custom-menu">
+            <ul class="nav navbar-nav">
+              <!-- Messages: style can be found in dropdown.less-->
+              <li class="dropdown messages-menu">
+                <!-- Menu toggle button -->
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <i class="fa fa-envelope-o"></i>
+                  <span class="label label-success">4</span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li class="header">You have 4 messages</li>
+                  <li>
+                    <!-- inner menu: contains the messages -->
+                    <ul class="menu">
+                      <li>
+                        <!-- start message -->
+                        <a href="#">
+                          <div class="pull-left">
+                            <!-- User Image -->
+                            <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                          </div>
+                          <!-- Message title and timestamp -->
+                          <h4>
+                          Support Team
+                          <small><i class="fa fa-clock-o"></i> 5 mins</small>
+                          </h4>
+                          <!-- The message -->
+                          <p>Why not buy a new awesome theme?</p>
+                        </a>
+                      </li>
+                      <!-- end message -->
+                    </ul>
+                    <!-- /.menu -->
+                  </li>
+                  <li class="footer"><a href="#">See All Messages</a></li>
+                </ul>
+              </li>
+              <!-- /.messages-menu -->
+              <!-- Notifications Menu -->
+              <li class="dropdown notifications-menu">
+                <!-- Menu toggle button -->
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <i class="fa fa-bell-o"></i>
+                  <span class="label label-warning">10</span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li class="header">You have 10 notifications</li>
+                  <li>
+                    <!-- Inner Menu: contains the notifications -->
+                    <ul class="menu">
+                      <li>
+                        <!-- start notification -->
+                        <a href="#">
+                          <i class="fa fa-users text-aqua"></i> 5 new members joined today
+                        </a>
+                      </li>
+                      <!-- end notification -->
+                    </ul>
+                  </li>
+                  <li class="footer"><a href="#">View all</a></li>
+                </ul>
+              </li>
+              <!-- Tasks Menu -->
+              <li class="dropdown tasks-menu">
+                <!-- Menu Toggle Button -->
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <i class="fa fa-flag-o"></i>
+                  <span class="label label-danger">9</span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li class="header">You have 9 tasks</li>
+                  <li>
+                    <!-- Inner menu: contains the tasks -->
+                    <ul class="menu">
+                      <li>
+                        <!-- Task item -->
+                        <a href="#">
+                          <!-- Task title and progress text -->
+                          <h3>
+                          Design some buttons
+                          <small class="pull-right">20%</small>
+                          </h3>
+                          <!-- The progress bar -->
+                          <div class="progress xs">
+                            <!-- Change the css width attribute to simulate progress -->
+                            <div class="progress-bar progress-bar-aqua" style="width: 20%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                              <span class="sr-only">20% Complete</span>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                      <!-- end task item -->
+                    </ul>
+                  </li>
+                  <li class="footer">
+                    <a href="#">View all tasks</a>
+                  </li>
+                </ul>
+              </li>
+              <!-- User Account Menu -->
+              <li class="dropdown user user-menu">
+                <!-- Menu Toggle Button -->
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <!-- The user image in the navbar-->
+                  <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+                  <!-- hidden-xs hides the username on small devices so only the image appears. -->
+                  <span class="hidden-xs">Alexander Pierce</span>
+                </a>
+                <ul class="dropdown-menu">
+                  <!-- The user image in the menu -->
+                  <li class="user-header">
+                    <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                    <p>
+                      Alexander Pierce - Web Developer
+                      <small>Member since Nov. 2012</small>
+                    </p>
+                  </li>
+                  <!-- Menu Body -->
+                  <li class="user-body">
+                    <div class="col-xs-4 text-center">
+                      <a href="#">Followers</a>
+                    </div>
+                    <div class="col-xs-4 text-center">
+                      <a href="/pages/contactos.html">Amigos</a>
+                    </div>
+                  </li>
+                  <!-- Menu Footer-->
+                  <li class="user-footer">
+                    <div class="pull-left">
+                      <a href="/pages/perfil.html" class="btn btn-default btn-flat">Perfil</a>
+                    </div>
+                    <div class="pull-right">
+                      <a href="/pages/login-usuario.html" class="btn btn-default btn-flat">Sign out</a>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <!-- Control Sidebar Toggle Button -->
+              <li>
+                <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <!-- Left side column. contains the logo and sidebar -->
+      <aside class="main-sidebar">
+        <!-- sidebar: style can be found in sidebar.less -->
+        <section class="sidebar">
+          <!-- Sidebar user panel (optional) -->
+          <div class="user-panel">
+            <div class="pull-left image">
+              <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+            </div>
+            <div class="pull-left info">
+              <p>Alexander Pierce</p>
+              <!-- Status -->
+              <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+            </div>
+          </div>
+          <!-- search form (Optional) -->
+          <form action="#" method="get" class="sidebar-form">
+            <div class="input-group">
+              <input type="text" name="q" class="form-control" placeholder="Search...">
+              <span class="input-group-btn">
+                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i></button>
+              </span>
+            </div>
+          </form>
+          <!-- /.search form -->
+          <!-- Sidebar Menu -->
+          <ul class="sidebar-menu">
+            <li class="active"><a href="inicio.html"><i class="fa fa-home"></i> <span>Inicio</span></a></li>
+            <li class="header">CONTENIDOS</li>
+            <li><a href="evento.html"><i class="fa fa-briefcase"></i> <span>Evento</span></a></li>
+            <!-- Optionally, you can add icons to the links -->
+            <li class="treeview">
+              <a href="#">
+                <i class="fa fa-envelope"></i> <span>Mensajes</span>
+                <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+                <li class="active"><a href="/pages/mailbox/mailbox.html">no leídos <span class="label label-primary pull-right">13</span></a></li>
+                <li><a href="/pages/mailbox/compose.html">Redactar</a></li>
+                <li><a href="/pages/mailbox/read-mail.html">Leer mensajes</a></li>
+              </ul>
+            </li>
+            <li><a href="/pages/calendario-evento.html"><i class="fa fa-calendar"></i> <span>Agenda</span></a></li>
+            <li><a href="/pages/posters.html"><i class="fa fa-link"></i> <span>Pósters</span></a></li>
+            <li><a href="/pages/perfil.html"><i class="fa fa-user"></i> <span>Perfil</span></a></li>
+            <li><a href="/pages/asistentes.html"><i class="fa fa-users"></i> <span>Asistentes</span></a></li>
+            <li><a href="/pages/ponentes.html"><i class="fa fa-fw fa-user-md"></i> <span>Ponentes</span></a></li>
+            <li>
+              <a id="open-modal"><i class="fa fa-pencil-square-o"></i> <span>Encuesta</span></a>
+            </li>
+            <li><a href="/pages/chat.html"><i class="fa fa-comments"></i> <span>Chat</span></a></li>
+            <li><a href="/pages/preguntas.html"><i class="fa fa fa-question"></i> <span>Preguntas</span></a></li>
+            <li><a href="/pages/documentos.html"><i class="fa fa-book"></i> <span>Documentos</span></a></li>
+            <li><a href="/pages/social.html"><i class="fa fa-thumbs-o-up"></i> <span>Redes Sociales</span></a></li>        
+          </ul>
+          <!-- /.sidebar-menu -->
+        </section>
+        <!-- /.sidebar -->
+      </aside>
+      <!-- Content Wrapper. Contains page content -->
+      <div class="content-wrapper">
+        <!-- modal -->
+        <div class="modal" id="ventana">
+          <div class="modal-content">
+            <button type="button" class="close" id="cerrar-modal">
+            <span aria-hidden="true">&times;</span></button>
+            <div class="modal-body">
+              <div class="box default" id="marco-encuesta">
+                <div class="diapo-estado content-estado"> Diapositiva <span class="localizacion"></span> de <span class="numero-diapos"> </span>
+                <div class="progress">
+                  <div class="progress-bar  barra-progreso progress-bar-green" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
+                  </div>
+                </div>
+              </div>
+              <div class="marco-diapos">
+                <span class="fa fa-angle-right pase flecha-dcha"></span>
+                <div class="contenedor-diapos">
+                  <form>
+                    <!-- primera diapo -->
+                    <div class="diapo">
+                      <div class="content-diapo">
+                        <legend> Te ha gustado el evento? </legend>
+                        <div class="form-group">
+                          <div class="radio">
+                            <div class="btn-block btn-primary btn-lg">
+                              <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">Me encantó, me lo pasé de lujo.
+                              </label>
+                            </div>
+                          </div>
+                          <div class="radio">
+                            <div class="btn-block btn-primary btn-lg">
+                              <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked=""> Como lo esperaba, nada más. Otro año más alcohol.
+                              </label>
+                            </div>
+                          </div>
+                          <div class="radio">
+                            <div class="btn-block btn-primary btn-lg">
+                              <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked=""> Regulero, hay cosas que no esperaba.
+                              </label>
+                            </div>
+                          </div>
+                          <div class="radio">
+                            <div class="btn-block btn-primary btn-lg">
+                              <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"> Ha sido un desastre absoluto.
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- fin primera diapo -->
+                    <!-- segunda diapo -->
+                    <div class="diapo">
+                      <div class="content-diapo">
+                        <legend> ¿Dónde te has alojado? </legend>
+                        <div class="form-group">
+                          <label>Selecciona un alojamiento</label>
+                          <select class="form-control">
+                            <option>Hotel 1</option>
+                            <option>Casa rural</option>
+                            <option>Pensión</option>
+                            <option>Hotel 2</option>
+                            <option>Hostal</option>
+                          </select>
+                        </div>
+                        <div class="form-group">
+                          <label>Selecciona la modalidad</label>
+                          <select class="form-control">
+                            <option>con desayuno incluído</option>
+                            <option>media pensión</option>
+                            <option>sin desayuno</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- fin segunda diapo  -->
+                    <!-- tercera diapo -->
+                    <div class="diapo">
+                      <div class="content-diapo">
+                        <legend>¿Te importa escribir tu mail para futuros eventos?</legend>
+                        <div class="form-group">
+                          <div class="box-body">
+                            <input class="form-control input-lg" type="text">
+                          </div>
+                        </div>
+                        <div class="checkbox">
+                          <input type="checkbox" /> No quiero que me enviéis nada.
+                        </div>
+                      </div>
+                    </div>
+                    <!-- fin tercera diapo  -->
+                    <!-- cuarta diapo  -->
+                    <div class="diapo">
+                      <legend>Valora el evento </legend>
+                      <div class="center">
+                        <label>
+                          <input id="rating-input" class="rating" data-stars="5" data-step="1" />
+                        </label>
+                      </div>
+                    </div>
+                    <!-- fin cuarta diapo  -->
+                    <!-- quinta diapo -->
+                    <div class="diapo">
+                      <div class="content-diapo">
+                        <legend>Escribe tus sugerencias </legend>
+                        <div class="center">
+                          <!--           <label>Textarea</label>-->
+                          <div class="form-group">
+                            <textarea class="form-control" rows="8" placeholder="Escribe ..."></textarea>
+                          </div>
+                          <div class="form-group">
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox"> Acepto la política de privacidad
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group pull-right">
+                          <button type="submit" class="btn btn-lg btn-primary">Enviar</button>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- fin quinta diapo -->
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /.modal-content -->
+      </div>
+      <!-- /.modal -->
+      <!--  fin modal  -->
+      <!-- Content Header (Page header) -->
+      <section class="content-header">
+        <h1>
+        Dashboard
+        <small>Actividad del evento</small>
+        </h1>
+        <ol class="breadcrumb">
+          <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
+          <li class="active">Here</li>
+        </ol>
+      </section>
+      <!-- Main content -->
+      <section class="content">
+        <!-- Your Page Content Here -->
+        <div class="row">
+          <div class="col-md-6">
+
+
+
+                     <a class="twitter-timeline" id="twiter-timeline"
+                data-widget-id="600720083413962752"
+                href="https://twitter.com/fabric"
+                data-screen-name="fabric">
+                Tweets by @fabric
+              </a>
+       
+          </div>
+          <!-- /.col -->
+          <div class="col-md-6">
+            <div class="box box-primary">
+              <div class="box-body no-padding">
+                <!-- THE CALENDAR -->
+                <div id="calendar"></div>
+              </div>
+              <!-- /.box-body -->
+            </div>
+            <!-- /. box -->
+          </div>
+          <!-- /.col -->
+        </div>
+      </section>
+      <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+    <!-- Main Footer -->
+    <footer class="main-footer">
+      <!-- To the right -->
+      <div class="pull-right hidden-xs">
+        Anything you want
+      </div>
+      <!-- Default to the left -->
+      <strong>Copyright &copy; 2015 <a href="#">Company</a>.</strong> All rights reserved.
+    </footer>
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+      <!-- Create the tabs -->
+      <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
+        <li class="active"><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
+        <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
+      </ul>
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <!-- Home tab content -->
+        <div class="tab-pane active" id="control-sidebar-home-tab">
+          <h3 class="control-sidebar-heading">Recent Activity</h3>
+          <ul class="control-sidebar-menu">
+            <li>
+              <a href="javascript::;">
+                <i class="menu-icon fa fa-birthday-cake bg-red"></i>
+                <div class="menu-info">
+                  <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
+                  <p>Will be 23 on April 24th</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+          <!-- /.control-sidebar-menu -->
+          <h3 class="control-sidebar-heading">Tasks Progress</h3>
+          <ul class="control-sidebar-menu">
+            <li>
+              <a href="javascript::;">
+                <h4 class="control-sidebar-subheading">
+                Custom Template Design
+                <span class="label label-danger pull-right">70%</span>
+                </h4>
+                <div class="progress progress-xxs">
+                  <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
+                </div>
+              </a>
+            </li>
+          </ul>
+          <!-- /.control-sidebar-menu -->
+        </div>
+        <!-- /.tab-pane -->
+        <!-- Stats tab content -->
+        <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>
+        <!-- /.tab-pane -->
+        <!-- Settings tab content -->
+        <div class="tab-pane" id="control-sidebar-settings-tab">
+          <form method="post">
+            <h3 class="control-sidebar-heading">General Settings</h3>
+            <div class="form-group">
+              <label class="control-sidebar-subheading">
+                Report panel usage
+                <input type="checkbox" class="pull-right" checked>
+              </label>
+              <p>
+                Some information about this general settings option
+              </p>
+            </div>
+            <!-- /.form-group -->
+          </form>
+        </div>
+        <!-- /.tab-pane -->
+      </div>
+    </aside>
+    <!-- /.control-sidebar -->
+    <!-- Add the sidebar's background. This div must be placed
+    immediately after the control sidebar -->
+    <div class="control-sidebar-bg"></div>
+  </div>
+  <!-- ./wrapper -->
+  <!-- REQUIRED JS SCRIPTS -->
+  <!-- jQuery 2.1.4 -->
+  <script src="plugins/jQuery/jQuery-2.1.4.min.js"></script>
+  <!-- Bootstrap 3.3.5 -->
+  <script src="bootstrap/js/bootstrap.min.js"></script>
+  <!-- AdminLTE App -->
+  <script src="dist/js/app.min.js"></script>
+  <!-- Optionally, you can add Slimscroll and FastClick plugins.
+  Both of these plugins are recommended to enhance the
+  user experience. Slimscroll is required when using the
+  fixed layout. -->
+  <!-- fullCalendar 2.2.5 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js"></script>
+  <!-- Page specific script -->
+
+
+  <!-- JAVASCRITP GUIO MODALES -->
+  <script src="plugins/slimScroll/jquery.slimscroll.js"></script>
+
+  <script src="dist/js/guio.js"></script>
+
+  <script src="dist/js/star-rating.js" type="text/javascript"></script>
+  <script>
+  jQuery(document).ready(function() {
+  $("#input-21f").rating({
+  starCaptions: function(val) {
+  if (val < 3) {
+  return val;
+  } else {
+  return 'high';
+  }
+  },
+  starCaptionClasses: function(val) {
+  if (val < 3) {
+  return 'label label-danger';
+  } else {
+  return 'label label-success';
+  }
+  },
+  hoverOnClear: false
+  });
+  $('#rating-input').rating({
+  min: 0,
+  max: 5,
+  step: 1,
+  size: 'lg',
+  showClear: false
+  });
+  $('#btn-rating-input').on('click', function() {
+  $('#rating-input').rating('refresh', {
+  showClear: true,
+  disabled: !$('#rating-input').attr('disabled')
+  });
+  });
+  $('.btn-danger').on('click', function() {
+  $("#kartik").rating('destroy');
+  });
+  $('.btn-success').on('click', function() {
+  $("#kartik").rating('create');
+  });
+  $('#rating-input').on('rating.change', function() {
+  alert($('#rating-input').val());
+  });
+  </script>
+  <!-- scripts para twitter -->
+  <script>window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+  t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+  
+  t._e = [];
+  t.ready = function(f) {
+  t._e.push(f);
+  };
+  
+  return t;
+  }(document, "script", "twitter-wjs"));</script>
+  
+  <script>
+  twttr.widgets.createTimeline(
+  "600720083413962752",
+  document.getElementById("#twiter-timeline"),
+  {
+  screenName: "fabric"
+  }
+  );
+  </script>
+</body>
+</html>
